@@ -27,8 +27,6 @@ class Fastphp
         $this->unregisterGlobals();
         $this->setDbConfig();
         $this->route();
-
-
     }
 
     public function autoload($className)
