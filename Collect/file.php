@@ -1,7 +1,9 @@
 <?php
-
-if(isset($_POST['submit'])):
-
+// +----------------------------------------------------------------------
+// | Author: jiexianluo@hotmail.com
+// | Date  : 2018/2/28
+// | Time  : 15:00
+// +----------------------------------------------------------------------
 /**
  * 文件处理类
  * Class File
@@ -202,23 +204,7 @@ class File
 
 }
 
-$file = new File(__DIR__.'/uploads');
-
-$res = $file->uploads('file');
-
-var_dump($res,$file->error);
-
-else:
-
-$file = new File();
-
-$res = $file->download(__DIR__.'/uploads/180228/9f2da6d02298c01fd2444c369104ff99.jpg');
-
-var_dump($res,$file->error);
-
-?>
-
-<html>
+/*<html>
 <head>
     <title>upload file</title>
 </head>
@@ -231,6 +217,20 @@ var_dump($res,$file->error);
 </form>
 </div>
 </body>
-</html>
+</html>*/
 
-<?php endif;?>
+/*// 文件上传
+
+$file = new File(__DIR__.'/uploads');
+
+$res = $file->uploads('file');
+
+var_dump($res,$file->error);
+
+// 文件下载
+
+$file = new File();
+
+$res = $file->download(__DIR__.'/uploads/180228/9f2da6d02298c01fd2444c369104ff99.jpg');
+
+var_dump($res,$file->error);*/

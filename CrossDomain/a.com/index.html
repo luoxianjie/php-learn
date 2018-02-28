@@ -1,0 +1,14 @@
+<html>
+<head>
+    <title>title</title>
+</head>
+<body>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+    $.post('http://b.com',{a:'hello'},function(rsp){
+        console.log(rsp.action);
+        alert(rsp.action);
+    },'json');
+</script>
+</body>
+</html>
