@@ -24,7 +24,7 @@ class WeixinLogin
      * 获取跳转至微信OAuth2.0 服务器的连接地址
      * @return string
      */
-    public function getUrl()
+    public function getCode()
     {
         return "https://open.weixin.qq.com/connect/qrconnect?appid={$this->AppID}&redirect_uri={$this->RedirectUrl}&response_type=code&scope=snsapi_login&state=123#wechat_redirect";
     }
@@ -59,6 +59,7 @@ class WeixinLogin
         $url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid={$this->AppID}&secret={$this->AppSecret}&code={$code}&grant_type=authorization_code";
 
         $data = $this->_curlGet($url);
+        return json_decode($data,true);
     }
 
     /**
@@ -72,7 +73,7 @@ class WeixinLogin
         $url = "https://api.weixin.qq.com/sns/userinfo?access_token={$access_token}&openid={$open_id}";
 
         $data = $this->_curlGet($url);
-        return $data;
+        return json_decode($data,true);
     }
 
     /**
