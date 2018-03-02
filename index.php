@@ -1,89 +1,61 @@
 <?php
 
+require __DIR__.'/vendor/autoload.php';
+
 
 /**
- * 详见(http://open.weibo.com/wiki/Connect/login)
- * Class WeiboLogin
+ * 微信支付之扫码支付
+ *
+ * Class WeixinPay
  */
-class WeiboLogin
+class WeixinPay
 {
-
-    private $appKey = '';
-    private $appSecret = '';
-
-    private $redirect_url = '';
+    /**
+     * 业务流程
+     * （1）商户后台系统根据用户选购的商品生成订单。
+     * （2）用户确认支付后调用微信支付【统一下单API】生成预支付交易；
+     * （3）微信支付系统收到请求后生成预支付交易单，并返回交易会话的二维码链接code_url。
+     * （4）商户后台系统根据返回的code_url生成二维码。
+     * （5）用户打开微信“扫一扫”扫描二维码，微信客户端将扫码内容发送到微信支付系统。
+     * （6）微信支付系统收到客户端请求，验证链接有效性后发起用户支付，要求用户授权。
+     * （7）用户在微信客户端输入密码，确认支付后，微信客户端提交授权。
+     * （8）微信支付系统根据用户授权完成支付交易。
+     * （9）微信支付系统完成支付交易后给微信客户端返回交易结果，并将交易结果通过短信、微信消息提示用户。微信客户端展示支付交易结果页面。
+     * （10）微信支付系统通过发送异步消息通知商户后台系统支付结果。商户后台系统需回复接收情况，通知微信后台系统不再发送该单的支付通知。
+     * （11）未收到支付通知的情况，商户后台系统调用【查询订单API】。
+     * （12）商户确认订单已支付后给用户发货。
+     */
 
     /**
-     * 获取跳转至微博OAuth2.0 服务器的连接地址
-     * @return string
+     * 统一下单
      */
-    public function getCode()
+    private function unifiedOrder()
     {
-        return "https://api.weibo.com/oauth2/authorize?client_id={$this->appKey}&response_type=code&redirect_uri={$this->redirect_url}";
-    }
-
-    /**
-     * 回调方法，当用户确权后会跳转到该方法
-     * 我们可以再此方法中获取用户信息在进行数据库操作
-     * 最后引导到相应页面
-     */
-    public function callback()
-    {
-        $code = $_GET['code'];
-
-        $accessToken = $this->_getAccessToken($code);
-        $uid = $this->_getUid($accessToken);
-        $user_info = $this->_getUserInfo($accessToken,$uid);
-
-        // 执行相关操作 如将用户信息存入数据库......
-
-
-        // 跳转到首页
-        $url = '/index.php';
-        header('Location:',$url);
 
     }
 
     /**
-     * 获取accessToken
-     * @param $code
-     * @return mixed
+     * 获取code_url
      */
-    private function _getAccessToken($code)
+    public function getCodeUrl()
     {
-        $url = "https://api.weibo.com/oauth2/access_token?client_id={$this->appKey}&client_secret={$this->appSecret}&grant_type=authorization_code&redirect_uri={$this->redirect_url}&code={$code}";
 
-        $data = file_get_contents($url);
-        $arr = json_decode($data,true);
-        return $arr['access_token'];
     }
 
     /**
-     * 获取用户id
-     * @param $accessToken
-     * @return mixed
+     * 获生成支付二维码
      */
-    private function _getUid($accessToken)
+    public function QRCode()
     {
-        $url = "https://api.weibo.com/2/account/get_uid.json?access_token={$accessToken}";
 
-        $data = file_get_contents($url);
-        $arr = json_decode($data,true);
-        return $arr['uid'];
     }
 
     /**
-     * 获取用户信息
-     * @param $accessToken
-     * @param $uid
-     * @return mixed
+     * 异步通知
      */
-    private function _getUserInfo($accessToken,$uid)
+    public function notify()
     {
-        $url = "https://api.weibo.com/2/users/show.json?access_token={$accessToken}&uid={$uid}";
 
-        $data = file_get_contents($url);
-        $arr = json_decode($data,true);
-        return $arr;
     }
+
 }

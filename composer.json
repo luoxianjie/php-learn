@@ -1,0 +1,15 @@
+{
+    "name": "jack/php",
+    "authors": [
+        {
+            "name": "luoxianjie",
+            "email": "jiexianluo@hotmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "WeixinPay\\":"plugin/WeixinPay"
+        }
+    }
+}
