@@ -1,14 +1,11 @@
 <?php
-
-
 // +----------------------------------------------------------------------
 // | Author: jiexianluo@hotmail.com
 // | Date  : 2018/3/5
-// | Time  : 14:57
+// | Time  : 16:32
 // +----------------------------------------------------------------------
 
-
-class PDF
+class Pdf
 {
     private $pdf;
 
@@ -56,18 +53,18 @@ class PDF
 
     public function output()
     {
-        $htmlFile = dirname(__FILE__) . "/../../tpl/pi.html";
-
-        $html = file_get_contents($htmlFile);
+        $html = <<<html
+        <p>{title}</p>
+        <p>{body}</p>
+html;
 
         //填充订单数据
         $finder = [
-            '{invoiceDate}','{invoiceDueDate}','{invoicedName}',
-            '{invoicedAddr}','{invoicedCountry}'
+            '{title}','{body}'
         ];
 
         $replace = [
-            '','','','',''
+            '测试','test......'
         ];
 
         $html = str_replace($finder,$replace,$html);
@@ -77,7 +74,7 @@ class PDF
 
         $this->pdf->lastPage();
 
-        $this->pdf->Output('pi.pdf', 'I');
+        $this->pdf->Output('test.pdf', 'I');
     }
 
 }

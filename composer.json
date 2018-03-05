@@ -12,7 +12,11 @@
             "QRcode\\":"plugin/QRcode"
         },
         "classmap":[
-            "plugin/TCPDF/tcpdf.php"
+            "class/Db.php",
+            "class/Excel.php",
+            "class/Pdf.php",
+            "plugin/TCPDF/tcpdf.php",
+            "plugin/PHPExcel/PHPExcel.php"
         ]
     }
 }

@@ -2,6 +2,8 @@
 
 require __DIR__."/vendor/autoload.php";
 
-$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+$pdf = new Pdf();
 
-var_dump($pdf);
+$res = $pdf->output();
+
+var_dump($res);
