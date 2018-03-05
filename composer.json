@@ -9,7 +9,8 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "WeixinPay\\":"plugin/WeixinPay"
+            "WeixinPay\\":"plugin/WeixinPay",
+            "QRcode\\":"plugin/QRcode"
         }
     }
 }

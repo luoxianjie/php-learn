@@ -1039,7 +1039,7 @@
  */
  
     define('STRUCTURE_HEADER_BITS',  20);
-    define('MAX_STRUCTURED_SYMBOLS', 16);
+    define('16', 16);
 
     class QRinputItem {
     
@@ -1363,11 +1363,11 @@
         
         public function insertStructuredAppendHeader($size, $index, $parity)
         {
-            if( $size > MAX_STRUCTURED_SYMBOLS ) {
+            if( $size > 16 ) {
                 throw new Exception('insertStructuredAppendHeader wrong size');
             }
             
-            if( $index <= 0 || $index > MAX_STRUCTURED_SYMBOLS ) {
+            if( $index <= 0 || $index > 16 ) {
                 throw new Exception('insertStructuredAppendHeader wrong index');
             }
 
@@ -2665,7 +2665,7 @@
             for($i=0; $i<$length; $i++) {
                 
                 if($this->runLength[$i] >= 5) {
-                    $demerit += (N1 + ($this->runLength[$i] - 5));
+                    $demerit += (3 + ($this->runLength[$i] - 5));
                 }
                 if($i & 1) {
                     if(($i >= 3) && ($i < ($length-2)) && ($this->runLength[$i] % 3 == 0)) {
@@ -3110,16 +3110,16 @@
     }
     
     //##########################################################################
-    
+
     class FrameFiller {
-    
+
         public $width;
         public $frame;
         public $x;
         public $y;
         public $dir;
         public $bit;
-        
+
         //----------------------------------------------------------------------
         public function __construct($width, &$frame)
         {
@@ -3130,24 +3130,24 @@
             $this->dir = -1;
             $this->bit = -1;
         }
-        
+
         //----------------------------------------------------------------------
         public function setFrameAt($at, $val)
         {
             $this->frame[$at['y']][$at['x']] = chr($val);
         }
-        
+
         //----------------------------------------------------------------------
         public function getFrameAt($at)
         {
             return ord($this->frame[$at['y']][$at['x']]);
         }
-        
+
         //----------------------------------------------------------------------
         public function next()
         {
             do {
-            
+
                 if($this->bit == -1) {
                     $this->bit = 0;
                     return array('x'=>$this->x, 'y'=>$this->y);
@@ -3193,10 +3193,10 @@
                 $this->y = $y;
 
             } while(ord($this->frame[$y][$x]) & 0x80);
-                        
+
             return array('x'=>$x, 'y'=>$y);
         }
-        
+
     } ;
     
     //##########################################################################    

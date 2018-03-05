@@ -59,3 +59,5 @@ class WeixinPay
     }
 
 }
+
+\QRcode\QRcode::png('www.baidu.com');
