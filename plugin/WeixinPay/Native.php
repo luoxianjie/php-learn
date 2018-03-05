@@ -31,16 +31,6 @@ class Native
     }
 
     /**
-     * 异步通知
-     */
-    public function notify()
-    {
-        // 改变预支付订单状态
-
-        // 改变订单状态
-    }
-
-    /**
      * ajax 检测订单状态
      */
     public function checkOrderStatus()

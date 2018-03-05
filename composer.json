@@ -6,11 +6,13 @@
             "email": "jiexianluo@hotmail.com"
         }
     ],
-    "require": {},
     "autoload": {
         "psr-4": {
             "WeixinPay\\":"plugin/WeixinPay",
             "QRcode\\":"plugin/QRcode"
-        }
+        },
+        "classmap":[
+            "plugin/TCPDF/tcpdf.php"
+        ]
     }
 }

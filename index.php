@@ -1,14 +1,7 @@
+<?php
 
+require __DIR__."/vendor/autoload.php";
 
-<html>
-<head>
-    <title>测试</title>
-    <style>
-        img{height:200px;width:200px;}
-    </style>
-</head>
-<body>
-    <img src="/a.php" />
-</body>
-</html>
+$pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
+var_dump($pdf);
