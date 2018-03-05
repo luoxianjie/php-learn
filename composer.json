@@ -9,12 +9,14 @@
     "autoload": {
         "psr-4": {
             "WeixinPay\\":"plugin/WeixinPay",
-            "QRcode\\":"plugin/QRcode"
+            "QRcode\\":"plugin/QRcode",
+            "PHPMailer\\":"plugin/PHPMailer"
         },
         "classmap":[
             "class/Db.php",
             "class/Excel.php",
             "class/Pdf.php",
+            "class/Mail.php",
             "plugin/TCPDF/tcpdf.php",
             "plugin/PHPExcel/PHPExcel.php"
         ]

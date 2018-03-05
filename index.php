@@ -2,8 +2,9 @@
 
 require __DIR__."/vendor/autoload.php";
 
-$pdf = new Pdf();
+$mail = new Mail('2860899420@qq.com','pgygvackxgzideih');
 
-$res = $pdf->output();
+$res = $mail->send('Jack','2860899420@qq.com','jiexianluo@hotmail.com','test','test...');
+
 
 var_dump($res);
