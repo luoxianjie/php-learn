@@ -1,5 +1,9 @@
 <?php
-require_once "../lib/WxPay.Api.php";
+
+namespace WeixinPay\lib;
+
+use WeixinPay\data\WxPayJsApiPay;
+
 /**
  * 
  * JSAPI支付实现类
