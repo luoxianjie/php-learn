@@ -2,9 +2,10 @@
 
 require __DIR__."/vendor/autoload.php";
 
-$mail = new Mail('2860899420@qq.com','pgygvackxgzideih');
+$config = new Config();
 
-$res = $mail->send('Jack','2860899420@qq.com','jiexianluo@hotmail.com','test','test...');
+$config['test'] = 'hehe';
+$config['test1'] = 'hehe1';
 
+var_dump($config->get());
 
-var_dump($res);

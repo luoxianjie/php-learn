@@ -17,6 +17,7 @@
             "class/Excel.php",
             "class/Pdf.php",
             "class/Mail.php",
+            "class/Config.php",
             "plugin/TCPDF/tcpdf.php",
             "plugin/PHPExcel/PHPExcel.php"
         ]
