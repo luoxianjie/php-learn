@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>秒杀系统</title>
+    <style>
+        #toBuy{display: inline-block;padding: 5px 10px;text-decoration: none;}
+        .grey{background: grey;color:#fff}
+    </style>
+</head>
+<body>
+    <div style="margin:0 auto;width:100px;">
+        <a href="###" id="toBuy">点击购买</a>
+    </div>
+    <script type="text/javascript" src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript">
+        var start_time = new Date('2018-3-9 18:31:00').getTime();
+        var end_time = new Date('2018-3-9 19:00:00').getTime();
+        var now_time = new Date().getTime();
+
+        var getUrl = 'a.php?act=get_url';
+        if(now_time > start_time && now_time < end_time){
+            $.get(getUrl,{},function(rsp){
+                if(rsp.status == 200){
+                    $('#toBuy').attr('href',rsp.url).removeClass('grey');
+                }else{
+                    $('#toBuy').attr('href','###').addClass('grey');
+                }
+            },'json');
+        }else{
+            $('#toBuy').attr('href','###').addClass('grey');
+        }
+
+    </script>
+</body>
+</html>

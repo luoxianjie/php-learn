@@ -10,7 +10,8 @@
         "psr-4": {
             "WeixinPay\\":"plugin/WeixinPay",
             "QRcode\\":"plugin/QRcode",
-            "PHPMailer\\":"plugin/PHPMailer"
+            "PHPMailer\\":"plugin/PHPMailer",
+            "PayPal\\":"plugin/PayPal"
         },
         "classmap":[
             "class/Db.php",
@@ -18,8 +19,15 @@
             "class/Pdf.php",
             "class/Mail.php",
             "class/Config.php",
+            "class/PayPal.php",
             "plugin/TCPDF/tcpdf.php",
             "plugin/PHPExcel/PHPExcel.php"
+        ],
+        "files":[
+            "function/functions.php"
         ]
+    },
+    "require": {
+        "psr/log": "^1.0"
     }
 }
