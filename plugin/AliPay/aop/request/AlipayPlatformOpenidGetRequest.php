@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.platform.openid.get request
  *
  * @author auto create
- * @since 1.0, 2015-04-24 17:17:50
+ * @since 1.0, 2016-06-06 17:38:21
  */
 class AlipayPlatformOpenidGetRequest
 {

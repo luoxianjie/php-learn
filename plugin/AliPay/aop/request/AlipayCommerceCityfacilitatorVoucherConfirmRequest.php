@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.commerce.cityfacilitator.voucher.confirm request
  *
  * @author auto create
- * @since 1.0, 2016-04-28 14:25:46
+ * @since 1.0, 2016-07-07 13:14:52
  */
 class AlipayCommerceCityfacilitatorVoucherConfirmRequest
 {

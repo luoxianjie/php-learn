@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.offline.market.shop.public.bind request
  *
  * @author auto create
- * @since 1.0, 2016-02-18 20:22:23
+ * @since 1.0, 2016-07-29 19:57:30
  */
 class AlipayOfflineMarketShopPublicBindRequest
 {

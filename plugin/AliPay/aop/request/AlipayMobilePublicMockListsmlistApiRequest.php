@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.mobile.public.mock.listsmlist.api request
  *
  * @author auto create
- * @since 1.0, 2016-03-30 19:35:58
+ * @since 1.0, 2017-04-07 20:38:03
  */
 class AlipayMobilePublicMockListsmlistApiRequest
 {

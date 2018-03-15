@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.mobile.std.public.express.user.query request
  *
  * @author auto create
- * @since 1.0, 2016-03-31 21:06:14
+ * @since 1.0, 2017-04-07 20:21:15
  */
 class AlipayMobileStdPublicExpressUserQueryRequest
 {

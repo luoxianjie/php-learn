@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.offline.market.leads.qrcode.query request
  *
  * @author auto create
- * @since 1.0, 2016-03-24 11:28:21
+ * @since 1.0, 2016-07-26 17:42:58
  */
 class AlipayOfflineMarketLeadsQrcodeQueryRequest
 {

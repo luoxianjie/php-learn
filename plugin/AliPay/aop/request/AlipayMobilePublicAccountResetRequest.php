@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.mobile.public.account.reset request
  *
  * @author auto create
- * @since 1.0, 2016-03-24 21:17:49
+ * @since 1.0, 2016-12-19 20:52:24
  */
 class AlipayMobilePublicAccountResetRequest
 {

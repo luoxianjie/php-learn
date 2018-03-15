@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.user.userinfo.share request
  *
  * @author auto create
- * @since 1.0, 2016-05-03 11:40:13
+ * @since 1.0, 2016-09-20 16:36:18
  */
 class AlipayUserUserinfoShareRequest
 {

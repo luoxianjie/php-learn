@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.exsc.user.currentsign.get request
  *
  * @author auto create
- * @since 1.0, 2014-10-30 22:34:50
+ * @since 1.0, 2017-03-29 17:12:42
  */
 class AlipayExscUserCurrentsignGetRequest
 {

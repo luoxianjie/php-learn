@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.offline.provider.equipment.auth.remove request
  *
  * @author auto create
- * @since 1.0, 2016-03-04 12:12:42
+ * @since 1.0, 2017-03-29 17:01:40
  */
 class AlipayOfflineProviderEquipmentAuthRemoveRequest
 {

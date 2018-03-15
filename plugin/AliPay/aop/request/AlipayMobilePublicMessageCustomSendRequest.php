@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.mobile.public.message.custom.send request
  *
  * @author auto create
- * @since 1.0, 2016-03-31 21:05:42
+ * @since 1.0, 2016-10-09 11:58:04
  */
 class AlipayMobilePublicMessageCustomSendRequest
 {

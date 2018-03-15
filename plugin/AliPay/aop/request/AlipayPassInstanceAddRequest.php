@@ -1,14 +1,18 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.pass.instance.add request
  *
  * @author auto create
- * @since 1.0, 2016-03-23 19:02:05
+ * @since 1.0, 2017-03-31 15:33:21
  */
 class AlipayPassInstanceAddRequest
 {
 	/** 
-	 * 详见<a href="https://doc.open.alipay.com/doc2/detail.htm?treeId=50&articleId=103401&docType=1">文档中心文档</a>
+	 * 支付宝pass新建卡券实例接口
 	 **/
 	private $bizContent;
 

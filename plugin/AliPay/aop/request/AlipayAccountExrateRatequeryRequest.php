@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.account.exrate.ratequery request
  *
  * @author auto create
- * @since 1.0, 2015-12-08 15:25:12
+ * @since 1.0, 2017-03-27 18:11:27
  */
 class AlipayAccountExrateRatequeryRequest
 {

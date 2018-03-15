@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.pass.sync.update request
  *
  * @author auto create
- * @since 1.0, 2015-06-01 17:22:13
+ * @since 1.0, 2016-07-01 15:32:40
  */
 class AlipayPassSyncUpdateRequest
 {

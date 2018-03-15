@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.offline.material.image.download request
  *
  * @author auto create
- * @since 1.0, 2015-12-31 16:09:07
+ * @since 1.0, 2017-04-07 16:14:01
  */
 class AlipayOfflineMaterialImageDownloadRequest
 {

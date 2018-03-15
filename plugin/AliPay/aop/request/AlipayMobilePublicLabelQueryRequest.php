@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.mobile.public.label.query request
  *
  * @author auto create
- * @since 1.0, 2016-03-31 21:04:26
+ * @since 1.0, 2016-07-29 20:00:13
  */
 class AlipayMobilePublicLabelQueryRequest
 {

@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.user.account.userid.batchquery request
  *
  * @author auto create
- * @since 1.0, 2016-03-24 21:17:56
+ * @since 1.0, 2016-06-06 21:37:53
  */
 class AlipayUserAccountUseridBatchqueryRequest
 {

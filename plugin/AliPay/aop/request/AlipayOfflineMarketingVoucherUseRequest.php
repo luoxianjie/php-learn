@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.offline.marketing.voucher.use request
  *
  * @author auto create
- * @since 1.0, 2016-04-25 11:38:55
+ * @since 1.0, 2016-06-23 17:57:58
  */
 class AlipayOfflineMarketingVoucherUseRequest
 {

@@ -1,4 +1,8 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.trust.user.standard.verify.get request
  *

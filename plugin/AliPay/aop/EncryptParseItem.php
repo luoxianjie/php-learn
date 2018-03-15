@@ -1,4 +1,6 @@
 <?php
+
+namespace AliPay\Aop;
 /**
  *  TODO 补充说明 
  *

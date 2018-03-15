@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.mobile.public.label.delete request
  *
  * @author auto create
- * @since 1.0, 2016-03-31 21:03:47
+ * @since 1.0, 2016-07-29 19:59:03
  */
 class AlipayMobilePublicLabelDeleteRequest
 {

@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.app.token.get request
  *
  * @author auto create
- * @since 1.0, 2016-01-28 17:51:22
+ * @since 1.0, 2016-07-29 19:56:12
  */
 class AlipayAppTokenGetRequest
 {

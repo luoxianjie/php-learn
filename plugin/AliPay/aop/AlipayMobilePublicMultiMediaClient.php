@@ -1,5 +1,6 @@
 <?php
 
+namespace AliPay\Aop;
 /**
  * 多媒体文件客户端
  * @author yikai.hu
@@ -7,8 +8,6 @@
  */
 
 //namespace alipay\api ;
-
-include("AlipayMobilePublicMultiMediaExecute.php");
 
 
 class AlipayMobilePublicMultiMediaClient{

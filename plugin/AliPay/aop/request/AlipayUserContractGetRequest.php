@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.user.contract.get request
  *
  * @author auto create
- * @since 1.0, 2016-03-04 11:43:21
+ * @since 1.0, 2016-06-06 20:23:18
  */
 class AlipayUserContractGetRequest
 {

@@ -1,14 +1,18 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.pass.template.update request
  *
  * @author auto create
- * @since 1.0, 2016-03-23 19:02:11
+ * @since 1.0, 2017-03-31 15:32:46
  */
 class AlipayPassTemplateUpdateRequest
 {
 	/** 
-	 * 详见<a href="https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.LrFyGS&treeId=50&articleId=103396&docType=1">文档中心文档</a>
+	 * 支付宝pass更新模版接口
 	 **/
 	private $bizContent;
 

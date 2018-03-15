@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.offline.market.shop.modify request
  *
  * @author auto create
- * @since 1.0, 2016-03-23 11:18:37
+ * @since 1.0, 2017-04-07 18:29:56
  */
 class AlipayOfflineMarketShopModifyRequest
 {

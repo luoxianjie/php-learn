@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.offline.market.product.querydetail request
  *
  * @author auto create
- * @since 1.0, 2016-05-04 15:55:13
+ * @since 1.0, 2017-04-07 17:44:02
  */
 class AlipayOfflineMarketProductQuerydetailRequest
 {

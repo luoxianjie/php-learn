@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.open.public.partner.menu.query request
  *
  * @author auto create
- * @since 1.0, 2016-03-31 21:03:11
+ * @since 1.0, 2017-04-07 20:23:56
  */
 class AlipayOpenPublicPartnerMenuQueryRequest
 {

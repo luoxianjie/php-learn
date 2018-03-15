@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.trade.cancel request
  *
  * @author auto create
- * @since 1.0, 2016-04-27 16:35:52
+ * @since 1.0, 2017-03-23 10:05:50
  */
 class AlipayTradeCancelRequest
 {

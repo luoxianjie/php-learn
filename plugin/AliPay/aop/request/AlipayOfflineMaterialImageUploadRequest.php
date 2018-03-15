@@ -1,29 +1,33 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.offline.material.image.upload request
  *
  * @author auto create
- * @since 1.0, 2016-03-09 19:13:02
+ * @since 1.0, 2017-04-07 16:11:37
  */
 class AlipayOfflineMaterialImageUploadRequest
 {
 	/** 
-	 * 图片二进制内容
+	 * 图片/视频二进制内容，图片/视频大小不能超过5M
 	 **/
 	private $imageContent;
 	
 	/** 
-	 * 图片名称
+	 * 图片/视频名称
 	 **/
 	private $imageName;
 	
 	/** 
-	 * 用于显示指定图片所属的partnerId（支付宝内部使用，外部商户无需填写此字段）
+	 * 用于显示指定图片/视频所属的partnerId（支付宝内部使用，外部商户无需填写此字段）
 	 **/
 	private $imagePid;
 	
 	/** 
-	 * 图片格式
+	 * 图片/视频格式
 	 **/
 	private $imageType;
 

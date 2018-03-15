@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.mobile.public.gis.get request
  *
  * @author auto create
- * @since 1.0, 2016-05-11 20:15:28
+ * @since 1.0, 2016-10-09 11:38:26
  */
 class AlipayMobilePublicGisGetRequest
 {

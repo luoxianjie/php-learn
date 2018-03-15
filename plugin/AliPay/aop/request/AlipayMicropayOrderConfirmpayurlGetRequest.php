@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.micropay.order.confirmpayurl.get request
  *
  * @author auto create
- * @since 1.0, 2016-01-14 17:44:54
+ * @since 1.0, 2016-06-06 17:53:18
  */
 class AlipayMicropayOrderConfirmpayurlGetRequest
 {

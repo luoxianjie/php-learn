@@ -1,5 +1,6 @@
 <?php
 
+namespace AliPay\Aop;
 /**
  * 多媒体文件客户端
  * @author yuanwai.wang

@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.offline.market.leads.batchquery request
  *
  * @author auto create
- * @since 1.0, 2016-03-24 00:35:58
+ * @since 1.0, 2017-02-07 16:46:29
  */
 class AlipayOfflineMarketLeadsBatchqueryRequest
 {

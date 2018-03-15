@@ -1,14 +1,18 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.ebpp.pdeduct.bill.pay.status request
  *
  * @author auto create
- * @since 1.0, 2015-01-16 22:48:35
+ * @since 1.0, 2017-04-07 17:06:14
  */
 class AlipayEbppPdeductBillPayStatusRequest
 {
 	/** 
-	 * 支付宝代扣协议ID
+	 * 支付宝用户ID
 	 **/
 	private $agreementId;
 	

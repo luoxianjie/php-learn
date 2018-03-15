@@ -11,7 +11,8 @@
             "WeixinPay\\":"plugin/WeixinPay",
             "QRcode\\":"plugin/QRcode",
             "PHPMailer\\":"plugin/PHPMailer",
-            "PayPal\\":"plugin/PayPal"
+            "PayPal\\":"plugin/PayPal",
+            "AliPay\\":"plugin/AliPay"
         },
         "classmap":[
             "class/Db.php",
@@ -20,11 +21,13 @@
             "class/Mail.php",
             "class/Config.php",
             "class/PayPal.php",
+            "class/AliPay.php",
             "plugin/TCPDF/tcpdf.php",
             "plugin/PHPExcel/PHPExcel.php"
         ],
         "files":[
-            "function/functions.php"
+            "function/functions.php",
+            "plugin/AliPay/AopSdk.php"
         ]
     },
     "require": {

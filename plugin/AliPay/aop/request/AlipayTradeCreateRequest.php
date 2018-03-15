@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.trade.create request
  *
  * @author auto create
- * @since 1.0, 2016-05-05 16:27:28
+ * @since 1.0, 2017-01-13 10:48:42
  */
 class AlipayTradeCreateRequest
 {

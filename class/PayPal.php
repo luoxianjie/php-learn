@@ -11,7 +11,19 @@
  * 2, paypal服务端返回一个用户授权地址
  * 3，转链到用户授权地址，用户授权
  * 4, 用户授权完毕，paypal返回到客户端设置的execute地址，付款实现
+ *
  * Class PayPal
+ */
+
+/**
+ * $config = [
+ *   'clientId'      =>'AYl9tFRD8f3Di-j-8Ysea7__fNXL_h3HWpcSjZqL415DX_FdD0HU1wzUoVZ9lRKIbj3EypLbOkzXWKAq',
+ *   'clientSecret'  =>'EAcL6WkKLMvyw91wJ2UdyoWZhijqQIv8IrprOyHmZjJOloAIbOWp1R-9bMol65nxC7VPVrDfis4yuzLf'
+ * ];
+ *
+ * $act = isset($_GET['act'])?trim($_GET['act']):'payment';
+ *
+ * (new \PayPal($config))->$act();
  */
 class PayPal
 {
@@ -177,3 +189,5 @@ class PayPal
     }
 
 }
+
+

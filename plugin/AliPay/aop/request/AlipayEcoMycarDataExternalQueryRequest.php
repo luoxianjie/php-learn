@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.eco.mycar.data.external.query request
  *
  * @author auto create
- * @since 1.0, 2016-05-12 10:25:00
+ * @since 1.0, 2016-09-20 16:38:11
  */
 class AlipayEcoMycarDataExternalQueryRequest
 {

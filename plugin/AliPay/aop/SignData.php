@@ -1,4 +1,6 @@
 <?php
+
+namespace AliPay\Aop;
 /**
  * Created by PhpStorm.
  * User: jiehua

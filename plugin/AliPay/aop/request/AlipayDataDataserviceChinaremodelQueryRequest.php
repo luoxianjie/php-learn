@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.data.dataservice.chinaremodel.query request
  *
  * @author auto create
- * @since 1.0, 2016-05-11 15:49:11
+ * @since 1.0, 2016-06-02 14:27:15
  */
 class AlipayDataDataserviceChinaremodelQueryRequest
 {

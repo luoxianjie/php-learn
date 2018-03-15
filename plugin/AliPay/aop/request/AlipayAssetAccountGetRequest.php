@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.asset.account.get request
  *
  * @author auto create
- * @since 1.0, 2014-06-12 17:17:01
+ * @since 1.0, 2017-04-07 18:05:33
  */
 class AlipayAssetAccountGetRequest
 {

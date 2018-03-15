@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.commerce.educate.studentinfo.share request
  *
  * @author auto create
- * @since 1.0, 2016-04-19 16:32:26
+ * @since 1.0, 2016-07-19 14:49:22
  */
 class AlipayCommerceEducateStudentinfoShareRequest
 {

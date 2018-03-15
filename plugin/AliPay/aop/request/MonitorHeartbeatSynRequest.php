@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: monitor.heartbeat.syn request
  *
  * @author auto create
- * @since 1.0, 2015-07-16 17:40:53
+ * @since 1.0, 2016-06-06 22:21:41
  */
 class MonitorHeartbeatSynRequest
 {

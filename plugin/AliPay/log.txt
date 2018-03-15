@@ -1,0 +1,263 @@
+2018-03-15 03:21:21  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831511832456"}
+2018-03-15 03:23:18  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831511832456"}
+2018-03-15 03:24:24  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831511832456"}
+2018-03-15 03:25:42  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831511832456"}
+2018-03-15 03:30:51  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831511832456"}
+2018-03-15 03:37:09  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831511832456"}
+2018-03-15 03:37:38  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831511832456"}
+2018-03-15 07:01:44  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831511832456"}
+2018-03-15 07:08:20  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831511832456"}
+2018-03-15 07:08:20  response: '<form id=\'alipaysubmit\' name=\'alipaysubmit\' action=\'https://openapi.alipaydev.com/gateway.do?charset=UTF-8\' method=\'POST\'><input type=\'hidden\' name=\'biz_content\' value=\'{"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831511832456"}\'/><input type=\'hidden\' name=\'app_id\' value=\'2016091100490007\'/><input type=\'hidden\' name=\'version\' value=\'1.0\'/><input type=\'hidden\' name=\'format\' value=\'json\'/><input type=\'hidden\' name=\'sign_type\' value=\'RSA2\'/><input type=\'hidden\' name=\'method\' value=\'alipay.trade.page.pay\'/><input type=\'hidden\' name=\'timestamp\' value=\'2018-03-15 07:08:20\'/><input type=\'hidden\' name=\'alipay_sdk\' value=\'alipay-sdk-php-20161101\'/><input type=\'hidden\' name=\'charset\' value=\'UTF-8\'/><input type=\'hidden\' name=\'sign\' value=\'W7LktnQOPfRFerfpgvQddUyi2ndHUu271WA3HsBl902Mxwe/xWGrkDsb3xNzapQAVvRmvyoeEiomG/SLbJuIJMhIocKVB2E+t7UBZH2Ppv3J3s+rJZHp3n63/+aBhYWkZCBiBGpjIuKUBRnRdTkU9QdIPwk07kFRH1RUb7qy0I4q30SCVfoxgXnD8wiFswQcWq1lGZNAcJs3+Bq2tqbKgf0EaId3E3EctSGSUXOKuq7TccWh/YEvakddkBPD/xQv1bS92GIC0s8BSoqxlxnnffc0Bbw8rOu+1A8fqXTQ76/NEuxjRjUKB8AV0vHA6SaKYyFgLxq9Kb3NAXVv3Sp7NA==\'/><input type=\'submit\' value=\'ok\' style=\'display:none;\'\'></form><script>document.forms[\'alipaysubmit\'].submit();</script>'
+2018-03-15 07:10:41  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831511832456"}
+2018-03-15 07:10:41  response: '<form id=\'alipaysubmit\' name=\'alipaysubmit\' action=\'https://openapi.alipaydev.com/gateway.do?charset=UTF-8\' method=\'POST\'><input type=\'hidden\' name=\'biz_content\' value=\'{"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831511832456"}\'/><input type=\'hidden\' name=\'app_id\' value=\'2016091100490007\'/><input type=\'hidden\' name=\'version\' value=\'1.0\'/><input type=\'hidden\' name=\'format\' value=\'json\'/><input type=\'hidden\' name=\'sign_type\' value=\'RSA2\'/><input type=\'hidden\' name=\'method\' value=\'alipay.trade.page.pay\'/><input type=\'hidden\' name=\'timestamp\' value=\'2018-03-15 07:10:41\'/><input type=\'hidden\' name=\'alipay_sdk\' value=\'alipay-sdk-php-20161101\'/><input type=\'hidden\' name=\'charset\' value=\'UTF-8\'/><input type=\'hidden\' name=\'sign\' value=\'WdNxXWx+TPhzMmAcXfXrigUUPRVtuMI8IidoKYUOhZaBQ4IV65g6DmGTWYj0Qzx+EYJcrras7nXp2s+LWX6cZhvP+nyaMy2YxXu9hh0r1C5WJAr7+AdMvvhRd5wlr9a8TIeU3T2qf3WVrEFK8MHrxQ5KEmTtjkvK20Sm8PljkLgCTWbKj/LPcQpceEjhWu0zC1ETJNmkF5HGDYrkVayhR4lBcViOlKhesccF8t6qf/aHEJ7q9e3RpmwRCiWtVNadz2UwCKZD20Z0NJxjCBWjDegZ7omSPJwbcT1CMXjbPJdKUB/qmBANmFoFU3Tf9SmajnuEPgtEzUa4kPja+nWX4g==\'/><input type=\'submit\' value=\'ok\' style=\'display:none;\'\'></form><script>document.forms[\'alipaysubmit\'].submit();</script>'
+2018-03-15 07:13:15  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831511832456"}
+2018-03-15 07:13:15  response: '<form id=\'alipaysubmit\' name=\'alipaysubmit\' action=\'https://openapi.alipaydev.com/gateway.do?charset=UTF-8\' method=\'POST\'><input type=\'hidden\' name=\'biz_content\' value=\'{"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831511832456"}\'/><input type=\'hidden\' name=\'app_id\' value=\'2016091100490007\'/><input type=\'hidden\' name=\'version\' value=\'1.0\'/><input type=\'hidden\' name=\'format\' value=\'json\'/><input type=\'hidden\' name=\'sign_type\' value=\'RSA2\'/><input type=\'hidden\' name=\'method\' value=\'alipay.trade.page.pay\'/><input type=\'hidden\' name=\'timestamp\' value=\'2018-03-15 07:13:15\'/><input type=\'hidden\' name=\'alipay_sdk\' value=\'alipay-sdk-php-20161101\'/><input type=\'hidden\' name=\'charset\' value=\'UTF-8\'/><input type=\'hidden\' name=\'sign\' value=\'ouJNygjJlnOqfnZO7m9q+XeQhlweEudewrK/X6m8i4FRB1STx9jsTxEAmlNUHkXkdkqBUALPOt8yNa242SGNg9s6CCR7JgtymRRUDoW8692buJGbPP5eQeDJCS2MMnRgFGTCe3q8KeqLaOWaEf2kerGlM1k2h0URgSFi45jiV3w0pSE0dNtCTKP+UQdZfEB821g5EY7i5YuoDaKTpIRmITwBNkg+az9p2c6gogSZ86wy/jYzCOZA0MutiWNAyKldgohA5l/mETTgioouH9IzRBbw7LGBtFjIyP4AxdI0gBePzhVMgsOF+LrUcjAsW93o/lVr5jP6YTeegmwzlt1HQA==\'/><input type=\'submit\' value=\'ok\' style=\'display:none;\'\'></form><script>document.forms[\'alipaysubmit\'].submit();</script>'
+2018-03-15 07:14:15  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"2018315151411971"}
+2018-03-15 07:14:15  response: '<form id=\'alipaysubmit\' name=\'alipaysubmit\' action=\'https://openapi.alipaydev.com/gateway.do?charset=UTF-8\' method=\'POST\'><input type=\'hidden\' name=\'biz_content\' value=\'{"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"2018315151411971"}\'/><input type=\'hidden\' name=\'app_id\' value=\'2016091100490007\'/><input type=\'hidden\' name=\'version\' value=\'1.0\'/><input type=\'hidden\' name=\'format\' value=\'json\'/><input type=\'hidden\' name=\'sign_type\' value=\'RSA2\'/><input type=\'hidden\' name=\'method\' value=\'alipay.trade.page.pay\'/><input type=\'hidden\' name=\'timestamp\' value=\'2018-03-15 07:14:15\'/><input type=\'hidden\' name=\'alipay_sdk\' value=\'alipay-sdk-php-20161101\'/><input type=\'hidden\' name=\'charset\' value=\'UTF-8\'/><input type=\'hidden\' name=\'sign\' value=\'dTX2Qpc+qq2XXLSLb48+YBbTy4cAMYNkJ8nsUy6mEt23sQUcG2Hls9h/hqqzhBOcTqVjKqn4Or+aoPHdLbnORjjeqTmtKUVJulEKNYG63dUpOIjo85RAVvMo+Up7yrfqZpJvMj58aqta9+k1x/obpl2zMMLebAHO2uIJ0wdLFw3viUy7pX7Bc7lR5uwfgnqIpZy9hjfycMmew+KCvJ6sH/kGkDzj/L7Q21N0mQmDMuaWnEHeblvOAYJCwfOlfQMcFunDgqz4l7MEBa98WK/PCPhBmNx6LU7O5zT7PJppdWVzeyH3qR8MSkzUcxndksW8OqCJD8jH1vOfHQl7yjnLfQ==\'/><input type=\'submit\' value=\'ok\' style=\'display:none;\'\'></form><script>document.forms[\'alipaysubmit\'].submit();</script>'
+2018-03-15 07:15:16  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"2018315151514814"}
+2018-03-15 07:15:17  response: '<form id=\'alipaysubmit\' name=\'alipaysubmit\' action=\'https://openapi.alipaydev.com/gateway.do?charset=UTF-8\' method=\'POST\'><input type=\'hidden\' name=\'biz_content\' value=\'{"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"2018315151514814"}\'/><input type=\'hidden\' name=\'app_id\' value=\'2016091100490007\'/><input type=\'hidden\' name=\'version\' value=\'1.0\'/><input type=\'hidden\' name=\'format\' value=\'json\'/><input type=\'hidden\' name=\'sign_type\' value=\'RSA2\'/><input type=\'hidden\' name=\'method\' value=\'alipay.trade.page.pay\'/><input type=\'hidden\' name=\'timestamp\' value=\'2018-03-15 07:15:16\'/><input type=\'hidden\' name=\'alipay_sdk\' value=\'alipay-sdk-php-20161101\'/><input type=\'hidden\' name=\'charset\' value=\'UTF-8\'/><input type=\'hidden\' name=\'sign\' value=\'cdHHMtq6Gg0Bg7XK+3UVcDJPYdWYjp5ucMPBLNgI0gIz5ktrMs3Xv2qjsAN8Y+P6hJOzPGQzUxIHG3H4fPLWpdctqQqRD3hSBXkzkCs3uQN82AvGq62lx21iZv456tlUn3bti3khcwoQs+GoK+2EMCtjZTFmKi+Eal404t2SJHlq+LtUAIjEIfzpHDAUh62iRAsdS4KhsWEwCvNrR2k0xE4dI/PzarU6KgL6eeXrtOPj81U0L3fmRUibyo8diAkDXy0/AE175T/TFvvdU804d1NmBB1KNB0J2oVnCUjYXZ+cve4eMWRUoNEmWtcqLyQhx8vOnDtxt23bLkFIK4R5kw==\'/><input type=\'submit\' value=\'ok\' style=\'display:none;\'\'></form><script>document.forms[\'alipaysubmit\'].submit();</script>'
+2018-03-15 07:20:31  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"2018315152029705"}
+2018-03-15 07:20:31  response: '<form id=\'alipaysubmit\' name=\'alipaysubmit\' action=\'https://openapi.alipaydev.com/gateway.do?charset=UTF-8\' method=\'POST\'><input type=\'hidden\' name=\'biz_content\' value=\'{"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"2018315152029705"}\'/><input type=\'hidden\' name=\'app_id\' value=\'2016091100490007\'/><input type=\'hidden\' name=\'version\' value=\'1.0\'/><input type=\'hidden\' name=\'format\' value=\'json\'/><input type=\'hidden\' name=\'sign_type\' value=\'RSA2\'/><input type=\'hidden\' name=\'method\' value=\'alipay.trade.page.pay\'/><input type=\'hidden\' name=\'timestamp\' value=\'2018-03-15 07:20:31\'/><input type=\'hidden\' name=\'alipay_sdk\' value=\'alipay-sdk-php-20161101\'/><input type=\'hidden\' name=\'charset\' value=\'UTF-8\'/><input type=\'submit\' value=\'ok\' style=\'display:none;\'\'></form><script>document.forms[\'alipaysubmit\'].submit();</script>'
+2018-03-15 07:20:42  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"2018315152040699"}
+2018-03-15 07:20:42  response: '<form id=\'alipaysubmit\' name=\'alipaysubmit\' action=\'https://openapi.alipaydev.com/gateway.do?charset=UTF-8\' method=\'POST\'><input type=\'hidden\' name=\'biz_content\' value=\'{"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"2018315152040699"}\'/><input type=\'hidden\' name=\'app_id\' value=\'2016091100490007\'/><input type=\'hidden\' name=\'version\' value=\'1.0\'/><input type=\'hidden\' name=\'format\' value=\'json\'/><input type=\'hidden\' name=\'sign_type\' value=\'RSA2\'/><input type=\'hidden\' name=\'method\' value=\'alipay.trade.page.pay\'/><input type=\'hidden\' name=\'timestamp\' value=\'2018-03-15 07:20:42\'/><input type=\'hidden\' name=\'alipay_sdk\' value=\'alipay-sdk-php-20161101\'/><input type=\'hidden\' name=\'charset\' value=\'UTF-8\'/><input type=\'submit\' value=\'ok\' style=\'display:none;\'\'></form><script>document.forms[\'alipaysubmit\'].submit();</script>'
+2018-03-15 07:20:59  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"2018315152057822"}
+2018-03-15 07:20:59  response: '<form id=\'alipaysubmit\' name=\'alipaysubmit\' action=\'https://openapi.alipaydev.com/gateway.do?charset=UTF-8\' method=\'POST\'><input type=\'hidden\' name=\'biz_content\' value=\'{"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"2018315152057822"}\'/><input type=\'hidden\' name=\'app_id\' value=\'2016091100490004\'/><input type=\'hidden\' name=\'version\' value=\'1.0\'/><input type=\'hidden\' name=\'format\' value=\'json\'/><input type=\'hidden\' name=\'sign_type\' value=\'RSA2\'/><input type=\'hidden\' name=\'method\' value=\'alipay.trade.page.pay\'/><input type=\'hidden\' name=\'timestamp\' value=\'2018-03-15 07:20:59\'/><input type=\'hidden\' name=\'alipay_sdk\' value=\'alipay-sdk-php-20161101\'/><input type=\'hidden\' name=\'charset\' value=\'UTF-8\'/><input type=\'hidden\' name=\'sign\' value=\'ZSpbqeRnMXzJN8fDU43Eoax+zlTPJ5F392JOGHLNF19P+daJ3Jl6TEdx7q2tNzfn6PeOG0jWeHPBASJEQq837FHE7d2nKE6q7czEBiQwdJFPiC1KbSl53I830MWOX1WUtGIEBXXSJWq2XZfAhF29tkHDRKU3FrYbiVqpe86ggpDG4lcphEphAr7DjlTD7NIKjUSuseOSYfE/Ln6qGGHTAJUv7evZPVT4cp/dWQPEvXiqFGdym1wLysRLANpKphHP21w+EYqcZsSHIvlx6iqtbsbon5WsILypL+SYfmfATZkKA3QxBtsx0MUh3uvdqSV6qZcatJAlbW+wm0NKqDbdjA==\'/><input type=\'submit\' value=\'ok\' style=\'display:none;\'\'></form><script>document.forms[\'alipaysubmit\'].submit();</script>'
+2018-03-15 07:21:11  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831515219700"}
+2018-03-15 07:21:11  response: '<form id=\'alipaysubmit\' name=\'alipaysubmit\' action=\'https://openapi.alipaydev.com/gateway.do?charset=UTF-8\' method=\'POST\'><input type=\'hidden\' name=\'biz_content\' value=\'{"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831515219700"}\'/><input type=\'hidden\' name=\'app_id\' value=\'2016091100490007\'/><input type=\'hidden\' name=\'version\' value=\'1.0\'/><input type=\'hidden\' name=\'format\' value=\'json\'/><input type=\'hidden\' name=\'sign_type\' value=\'RSA2\'/><input type=\'hidden\' name=\'method\' value=\'alipay.trade.page.pay\'/><input type=\'hidden\' name=\'timestamp\' value=\'2018-03-15 07:21:11\'/><input type=\'hidden\' name=\'alipay_sdk\' value=\'alipay-sdk-php-20161101\'/><input type=\'hidden\' name=\'charset\' value=\'UTF-8\'/><input type=\'hidden\' name=\'sign\' value=\'YMyo2MRbq+SA+oH7UjbP44J0VvftnY3E5QLtg544DXHs9UwEagK8EbbunvRHdOpOCnwA/oxqIpb3GsuDiao2SOReYwUfyv5V7JMWs/6LiOef6IzFMvjVJZuGr1chx7T0qANJE4q3fUvxhAU23JT4fufHsShlf4a/TaB3lca4yP1kYJMyFZUHId8xZBAyFkQTAhACRqyMmGihtrfD6jUjzzF5gbGeWARphEHqTFpkIrV5Zde+oPNdv/7cKgl7PoE1zZLXlEG5i+eqci+O4jgVx6djMPuSJauTV5KIhALsPV/HaYOag9DjSTVfnWyUQdlnR53wd7J+C29nHuEjQqmaRw==\'/><input type=\'submit\' value=\'ok\' style=\'display:none;\'\'></form><script>document.forms[\'alipaysubmit\'].submit();</script>'
+2018-03-15 07:23:01  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831515219700"}
+2018-03-15 07:23:01  response: '<form id=\'alipaysubmit\' name=\'alipaysubmit\' action=\'https://openapi.alipaydev.com/gateway.do?charset=UTF-8\' method=\'POST\'><input type=\'hidden\' name=\'biz_content\' value=\'{"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"201831515219700"}\'/><input type=\'hidden\' name=\'app_id\' value=\'2016091100490007\'/><input type=\'hidden\' name=\'version\' value=\'1.0\'/><input type=\'hidden\' name=\'format\' value=\'json\'/><input type=\'hidden\' name=\'sign_type\' value=\'RSA2\'/><input type=\'hidden\' name=\'method\' value=\'alipay.trade.page.pay\'/><input type=\'hidden\' name=\'timestamp\' value=\'2018-03-15 07:23:01\'/><input type=\'hidden\' name=\'alipay_sdk\' value=\'alipay-sdk-php-20161101\'/><input type=\'hidden\' name=\'charset\' value=\'UTF-8\'/><input type=\'hidden\' name=\'sign\' value=\'Es5R6yJGVIyk1jzGIRppVoonHiFYMBVskR+aiGETZDzsXTkMg5kul3vjZUd3oxjslwlz8u4veZr5Nnzpt0hVXemvi5tHee8lnqe+ZovgakXEkv0N1zfz5nFPBR3OfVWCxuT+z3t9vxHRoGMIPGhiIo/Upw2WthDDjRYrQG0/PEJsABIoYyrqm1tuo6/ACPHBcKcuHBpj2e2bWxLwtIeC+URQCvm2P3Wg/NZRmI1hccL0w3TGhUtIvsQJSRqHAFEYBe0wPAqVWWmhpjrf5G7zCkeWk0UTCrQLnCw5D+4NazVoZ2IQqN1uAhzeeH65gVvHAiZKkewjSpSr9Qh6r3XatA==\'/><input type=\'submit\' value=\'ok\' style=\'display:none;\'\'></form><script>document.forms[\'alipaysubmit\'].submit();</script>'
+2018-03-15 07:28:46  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"2018315152841100"}
+2018-03-15 07:28:46  response: '<form id=\'alipaysubmit\' name=\'alipaysubmit\' action=\'https://openapi.alipaydev.com/gateway.do?charset=UTF-8\' method=\'POST\'><input type=\'hidden\' name=\'biz_content\' value=\'{"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"2018315152841100"}\'/><input type=\'hidden\' name=\'app_id\' value=\'2016091100490007\'/><input type=\'hidden\' name=\'version\' value=\'1.0\'/><input type=\'hidden\' name=\'format\' value=\'json\'/><input type=\'hidden\' name=\'sign_type\' value=\'RSA2\'/><input type=\'hidden\' name=\'method\' value=\'alipay.trade.page.pay\'/><input type=\'hidden\' name=\'timestamp\' value=\'2018-03-15 07:28:46\'/><input type=\'hidden\' name=\'alipay_sdk\' value=\'alipay-sdk-php-20161101\'/><input type=\'hidden\' name=\'charset\' value=\'UTF-8\'/><input type=\'hidden\' name=\'sign\' value=\'vjyNlgn9OQqERo6bnB2vkZe6b8fra3axwGlwx9a6bQJVS/vzZxXAvot6zQf23FiYdniJhIWv97RSfw0ZCqhLk7N2ovoFyPdARf/tYg9HeDYE6K2EXCBz23tmRnagXivHbgPjWB5mF7fDmHBvj9EGXIOUBvS1lhtQoxM/+P910cbP6WPpa90ciOihiXIStrSKCsdXCWobz/kk8OS0VJFh+p8d22PN7lXHdQMYSDtKYa5zvtMpxlinMyStN8flNvlYCqGHnXMORdXm2fO35W0yeT9rSN6fsOJrDhRG89I3bXREelfOvbd9XrZaEDr7pijmYSUZmi/lKHep8KTIrpQvWQ==\'/><input type=\'submit\' value=\'ok\' style=\'display:none;\'\'></form><script>document.forms[\'alipaysubmit\'].submit();</script>'
+2018-03-15 07:30:59  {"out_trade_no":"2018315152841100","trade_no":""}
+2018-03-15 07:30:59  response: stdClass::__set_state(array(
+   'alipay_trade_query_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'buyer_logon_id' => 'buj***@sandbox.com',
+     'buyer_pay_amount' => '0.00',
+     'buyer_user_id' => '2088102175526407',
+     'buyer_user_type' => 'PRIVATE',
+     'invoice_amount' => '0.00',
+     'out_trade_no' => '2018315152841100',
+     'point_amount' => '0.00',
+     'receipt_amount' => '0.00',
+     'send_pay_date' => '2018-03-15 15:29:38',
+     'total_amount' => '0.01',
+     'trade_no' => '2018031521001004400200176930',
+     'trade_status' => 'TRADE_SUCCESS',
+  )),
+   'sign' => 'fADF3XtAkHqDVBA22R9BOlWkltWrIiKSbNs/bIR5F5g29VLa1iMLSLvKixZA3/R3tADy2xOAdiDzgUayQ1NISEM2mV9lqO68126IcELrsergWsGNyVY1mPxFvLHm4k4KZM1FjLDm9Zsa+PVwNUaQhwWzd2ctFqo6PxmmXVMIt1L9KGgBsh6ZSUWyAMD1P8A/9qQRcJk/f7EeyO5f6/9n/Hk3/JPc5cZNBh/pbXSd4HPVmlCeLzfoEIZvebIr0iWrNpjVgVdFcqcBAIAGB71aQYC64sK84B8XIwrv109IB1X2s3X1oLub2V5EIrJiQX6XvSLUMq7wcCAgprkJnwk7SQ==',
+))
+2018-03-15 07:36:21  {"out_trade_no":"2018315152841100","trade_no":"","refund_amount":"0.01","out_request_no":"","refund_reason":"不要了"}
+2018-03-15 07:36:22  response: stdClass::__set_state(array(
+   'alipay_trade_refund_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'buyer_logon_id' => 'buj***@sandbox.com',
+     'buyer_user_id' => '2088102175526407',
+     'fund_change' => 'Y',
+     'gmt_refund_pay' => '2018-03-15 15:36:22',
+     'out_trade_no' => '2018315152841100',
+     'refund_fee' => '0.01',
+     'send_back_fee' => '0.00',
+     'trade_no' => '2018031521001004400200176930',
+  )),
+   'sign' => 'UCW3+2IFQXQA6jU4fRWIPgmBV0XsbpKJaCnHU3j+VAaBSetOAzhwjPPmNUVtuoR24uAyn1w9zHQb6ruedEUYo8o/iCzexunDYFsV/5uUdFqeHnmZvyde2BfGQQp3Qz/uaF3jHl5FkWdOpsmMAzfgxQvlGyP/QM6D7BC/H8nxTRzDVUK1S1s9ky4eSCKLEzalCVJQbFGx1qK6w6K10Rlr/fQzbJ/uAdCpvo4LLsh4d2wbUXSOYWWaXwepz/AGoKH//6wjQEkNRkem2pLy9LSJVNfkqfHq1i7lSzNHGGpRmr62GbGg2N8kgNpmIuGXPn/OUjzHBCqLQCYeRsCBe51ydg==',
+))
+2018-03-15 07:37:08  {"out_trade_no":"2018315152841100","trade_no":""}
+2018-03-15 07:37:08  response: stdClass::__set_state(array(
+   'alipay_trade_query_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'buyer_logon_id' => 'buj***@sandbox.com',
+     'buyer_pay_amount' => '0.00',
+     'buyer_user_id' => '2088102175526407',
+     'buyer_user_type' => 'PRIVATE',
+     'invoice_amount' => '0.00',
+     'out_trade_no' => '2018315152841100',
+     'point_amount' => '0.00',
+     'receipt_amount' => '0.00',
+     'send_pay_date' => '2018-03-15 15:29:38',
+     'total_amount' => '0.01',
+     'trade_no' => '2018031521001004400200176930',
+     'trade_status' => 'TRADE_CLOSED',
+  )),
+   'sign' => 'pmUwcqLknFx62Q+4rldFIk3Cwo28RsLHN5NAEYOUD9JZEKDZk+hdTY8jquJVfdPobiVUFxfbHz65EZiCUPL2ZlHSPrL7FDH7HXMr/FOLcuW6qJVyrRm5weCt10GraSYZ7Yxf73Xqt9K7fJoQkrmDDf2pLwfDTIjzBtHw6Ey+OtlwdQ2e9AsapRLTSuQ8LUpGtVKSKY5kF5WLIm4vzGllmDxBqaXm9kYtCQexp3mhgd+AthmqDTELCZYP+DGQReMftvgIOJSL0bEBBUCR7Kp6t2gkxrzfyJnVMWP5EZB873pMIYFyEcQN9ONjqWjSxzr3sfESaheHBasM9ZHsILxwVQ==',
+))
+2018-03-15 07:41:40  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"2018315154138514"}
+2018-03-15 07:41:40  response: '<form id=\'alipaysubmit\' name=\'alipaysubmit\' action=\'https://openapi.alipaydev.com/gateway.do?charset=UTF-8\' method=\'POST\'><input type=\'hidden\' name=\'biz_content\' value=\'{"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"2018315154138514"}\'/><input type=\'hidden\' name=\'app_id\' value=\'2016091100490007\'/><input type=\'hidden\' name=\'version\' value=\'1.0\'/><input type=\'hidden\' name=\'format\' value=\'json\'/><input type=\'hidden\' name=\'sign_type\' value=\'RSA2\'/><input type=\'hidden\' name=\'method\' value=\'alipay.trade.page.pay\'/><input type=\'hidden\' name=\'timestamp\' value=\'2018-03-15 07:41:40\'/><input type=\'hidden\' name=\'alipay_sdk\' value=\'alipay-sdk-php-20161101\'/><input type=\'hidden\' name=\'charset\' value=\'UTF-8\'/><input type=\'hidden\' name=\'sign\' value=\'LzdBxVKB6vWziUDrdvkJHAwtNTcHxenUCV0uTBRMFROneLfL97iwKUZyTo9T1yXqsq+c8dVqP8cmYEquVBSrZbZ5oq7tI3Cb7/ooQelKU/LfjBZclaCbOP3nfHLQdCkg60yEBpByhZ/40CeyQEZMmoPbKIpPTKN/WWFOdQjsVlJow2B2GX6VAtOBXxH6bipdLblTIy+nnqlESGA5FGXgybRIDx1TLGPt0AhwxpFImzceF2rO3sdh/LTkbO8dc/eVXwv6qoBNg6CD6MFvs06xH5e+1H9A6qOxeJT6IP2UFhEUB3uppK8viWoH/YK0dQkh5UOkPP8hUt8H18ez6cG+MQ==\'/><input type=\'submit\' value=\'ok\' style=\'display:none;\'\'></form><script>document.forms[\'alipaysubmit\'].submit();</script>'
+2018-03-15 07:42:30  {"out_trade_no":"2018315154138514","trade_no":""}
+2018-03-15 07:42:30  response: stdClass::__set_state(array(
+   'alipay_trade_query_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'buyer_logon_id' => 'buj***@sandbox.com',
+     'buyer_pay_amount' => '0.00',
+     'buyer_user_id' => '2088102175526407',
+     'buyer_user_type' => 'PRIVATE',
+     'invoice_amount' => '0.00',
+     'out_trade_no' => '2018315154138514',
+     'point_amount' => '0.00',
+     'receipt_amount' => '0.00',
+     'send_pay_date' => '2018-03-15 15:42:15',
+     'total_amount' => '0.01',
+     'trade_no' => '2018031521001004400200176932',
+     'trade_status' => 'TRADE_SUCCESS',
+  )),
+   'sign' => 'OohfqZm5bZHzmy/lC2cHiIud+eAIKyvfaTVE9ruBMyxEo1Sc54PyEH5Hx3k4cQPYZdEgeF5gdXCrnU+BVAxdaIeeSbC4DJsttR6Df9SIyDkS0q++N4o4A1VQSAn//d+1ANP5r4FZpTrhZ30vSj2W2nRRxNNUbSQTMtSFiYZoIntdcgecE81VobNdMeVzMnrdP/hRD63eGfTuTZjt7PfSPD2Yakiu1OpLlw/lA1wZVRtQXtBK5SNDptP+Fcl82vZ62E+6vlfZvnXklIO7BIpVNIFaebnK7/ynqejBytpXVYR18FskecclItLNg6H9iBLsS4ch3LXOdh1096cjKNyE1Q==',
+))
+2018-03-15 07:42:56  {"out_trade_no":"2018315154138514","trade_no":"","refund_amount":"0.01","out_request_no":"123456","refund_reason":"buyaole"}
+2018-03-15 07:42:57  response: stdClass::__set_state(array(
+   'alipay_trade_refund_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'buyer_logon_id' => 'buj***@sandbox.com',
+     'buyer_user_id' => '2088102175526407',
+     'fund_change' => 'Y',
+     'gmt_refund_pay' => '2018-03-15 15:42:57',
+     'out_trade_no' => '2018315154138514',
+     'refund_fee' => '0.01',
+     'send_back_fee' => '0.00',
+     'trade_no' => '2018031521001004400200176932',
+  )),
+   'sign' => 'Q/RUSmp6qK2XK6Pmjc5JkQI/Q4r1qkOlCu2hfCo3sR1ImWSOpPzgoYl+17NpeMN19Hmjw+s8o5ELI7i5zT4HmWZhOSpfBkxCMlIPsNCQLy+ADgIFE7kpuj3aC0cxMXNPQPiTVWSdFzJMN5NKc2za+4E5n2/cg1y5h32SZNEnvg0fpRO3ArMQtqlywwPWVyPoE/X84r9dBonhmikQkecmQ8wLJY0uir8UxyjJTgNLi2wHZSpFnaHiFWYC3Hl7bW088jssi9G9RB4rjT/rSWs1vB+JYLbrGZRtJwovTsgCPYjZqyZW0xQrTNCR9xrwvB9PpGYs6Vf9Cj8ae6QaCHUwWQ==',
+))
+2018-03-15 07:43:45  {"out_trade_no":"2018315154138514","trade_no":"","out_request_no":"123456"}
+2018-03-15 07:43:46  response: stdClass::__set_state(array(
+   'alipay_trade_fastpay_refund_query_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'out_request_no' => '123456',
+     'out_trade_no' => '2018315154138514',
+     'refund_amount' => '0.01',
+     'total_amount' => '0.01',
+     'trade_no' => '2018031521001004400200176932',
+  )),
+   'sign' => 'hSeWOLsuKmjBk3ndLc4VMAxpNalc6OkyikH1HdMuni9V/uyEQJbSZK8jnUQjqe6SQ3RBSuER3qksx727z3nvANdhFD/tKYUPagU8GI6Cotd0zJaRR4GMy/A0lLNrq0mIHq3n/WY9jmLHx+Pnxcc+z9TLsrp4G15FJ+OrWoI6JF5RfrquLMTV6Jr3DiomaxhmepyIl+v7HnS1wGygXf1YtB56KtOTMN0Ryg0Ge/xBmtYNWm85JYAD7aMUeniK9soEfZxiuBFI6VT5n1IfIP8W3zyae/SAcloVGioloqGH6ttrmcX/LbeGY0jI02KblgfRfJFDXAbpeW1sR9FwX/Jyyg==',
+))
+2018-03-15 07:44:14  {"out_trade_no":"2018315154138514","trade_no":""}
+2018-03-15 07:44:14  response: stdClass::__set_state(array(
+   'alipay_trade_query_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'buyer_logon_id' => 'buj***@sandbox.com',
+     'buyer_pay_amount' => '0.00',
+     'buyer_user_id' => '2088102175526407',
+     'buyer_user_type' => 'PRIVATE',
+     'invoice_amount' => '0.00',
+     'out_trade_no' => '2018315154138514',
+     'point_amount' => '0.00',
+     'receipt_amount' => '0.00',
+     'send_pay_date' => '2018-03-15 15:42:15',
+     'total_amount' => '0.01',
+     'trade_no' => '2018031521001004400200176932',
+     'trade_status' => 'TRADE_CLOSED',
+  )),
+   'sign' => 'L0XEDWiOjYz99tWo3l/C5ezmgu6ynsrh8Ki4u4bWx17vkcZGBIdgILNtGQxzS9kq/3t4EsGbseJw5i425K7UMpR+o5z92aL5HEKJ66/7jCGAX8esN5T7GvNomprslf2rQIV6yDCf8CN80XcVN4cPkyatDgcNnRdRODu7U8QdQpirqFUZ3aA+4Nuk7hjlIj5qrglGqPuHePd33B1FV5swqESVlfsEAKhvJZMXsyPDVZ6Sibw1t2zgGpcSZvSI/0NGcqDILHsKnye7ch/5Af8l4nPitc/DNXssKXS5QYZyT0sUBcChUcVlwESxNsRuLITjob99emGWqyya5f4NUDN1CQ==',
+))
+2018-03-15 07:47:11  {"out_trade_no":"2018315154138514","trade_no":""}
+2018-03-15 07:47:11  response: stdClass::__set_state(array(
+   'alipay_trade_close_response' => 
+  stdClass::__set_state(array(
+     'code' => '40004',
+     'msg' => 'Business Failed',
+     'sub_code' => 'ACQ.TRADE_STATUS_ERROR',
+     'sub_msg' => '交易状态不合法',
+     'out_trade_no' => '2018315154138514',
+  )),
+   'sign' => 'qIyu7TSSy6uenNfQZl9WnpEJE0A6HH/8HPv/XQrwoRhuZdKOMfRmFYc4MX9mid/Ex2TKRgaFzNVkuHXD+fEMZK/emD+hzEBI/qOdyTlnhgthUE8j8WfQwfiw+jOp/uhn41gCk1CAqHSHYIJYkMGV78LoUngUPd71pyGyi2wWa0Mrcx67XDvXkw1vNag1nqLHIb5Fu7Ix9Yx/lFGbsTgMPFhGii8paZaoGNmkZOseIkbF9g4rrHRnV7KlaFQltTyS35grXG3ZGdWhp8u7sIyMVcL6l4aiAFhMXJv9Eoux5q7gOzDPbbYETY39fjUaIi/zq2Rn+nmPwFR02+tW415Pfw==',
+))
+2018-03-15 07:47:40  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"20183151547383"}
+2018-03-15 07:47:40  response: '<form id=\'alipaysubmit\' name=\'alipaysubmit\' action=\'https://openapi.alipaydev.com/gateway.do?charset=UTF-8\' method=\'POST\'><input type=\'hidden\' name=\'biz_content\' value=\'{"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"20183151547383"}\'/><input type=\'hidden\' name=\'app_id\' value=\'2016091100490007\'/><input type=\'hidden\' name=\'version\' value=\'1.0\'/><input type=\'hidden\' name=\'format\' value=\'json\'/><input type=\'hidden\' name=\'sign_type\' value=\'RSA2\'/><input type=\'hidden\' name=\'method\' value=\'alipay.trade.page.pay\'/><input type=\'hidden\' name=\'timestamp\' value=\'2018-03-15 07:47:40\'/><input type=\'hidden\' name=\'alipay_sdk\' value=\'alipay-sdk-php-20161101\'/><input type=\'hidden\' name=\'charset\' value=\'UTF-8\'/><input type=\'hidden\' name=\'sign\' value=\'OBzVB7lHnOeNHwGhEH53/nN61KZ7tmKaTggRVrtTd0Sb3mCNOKH/3b44z3C1GNk1lYo6ksEDI80A7aKNuZZhJ5UTWDZw3ao9V/xxa+9OxGRjZSi+FcNzx1oapBKKNTXp5Ko3TViN8+tJm28B0LotxeX+cQuk0GD/gAEdkuAsnu2qtv6ON/Y12Ietwoc41HaYtGBLDGvGhav9y+uSY06JNkNXJVT0SxNhj54QwoXl3iDBaj/fGLOnFlIaXNif8Q60vezuCNKasyYveaPaQs6T2isEojrTbPYrNwi8jyMMPdGu5TzYAqGRZg1UROU8rPTroHyfmGlIRnJZFvOQEeE8yw==\'/><input type=\'submit\' value=\'ok\' style=\'display:none;\'\'></form><script>document.forms[\'alipaysubmit\'].submit();</script>'
+2018-03-15 07:47:49  {"out_trade_no":"20183151547383","trade_no":""}
+2018-03-15 07:47:50  response: stdClass::__set_state(array(
+   'alipay_trade_close_response' => 
+  stdClass::__set_state(array(
+     'code' => '40004',
+     'msg' => 'Business Failed',
+     'sub_code' => 'ACQ.TRADE_NOT_EXIST',
+     'sub_msg' => '交易不存在',
+  )),
+   'sign' => 'D2ew9DxYTPaZlMY7OR7CO1OBgdQLpft+oXodCwlhGAqnUCAy0wVf9Lv/C/T8wP+/A/1BNYm1gpFHBJ7QGBr7EAg2g8yFdeBREYh6h6I1rjtpOPapSPnAwCcBrG/29x5GFbDHMvVYOgDHPc26QPvNbNLhEvzgEk9Izq4NKOCgw56IsHdW1h2T02k3xwnuiTYogzpbRzFtbQHf78+q+gntPFNpxbwEnoVLACWfypMikEA5suHbkHNXvDZ9WVKwP+rioWDQnPE7/Q8HDNRaBbiHgU17LejFFK8lYo9vzjk18YNDENrFbgNgLrWhooWmCd065LzbnN7h5dB4eqoe3WxpZA==',
+))
+2018-03-15 07:47:58  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"20183151547383"}
+2018-03-15 07:47:58  response: '<form id=\'alipaysubmit\' name=\'alipaysubmit\' action=\'https://openapi.alipaydev.com/gateway.do?charset=UTF-8\' method=\'POST\'><input type=\'hidden\' name=\'biz_content\' value=\'{"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"20183151547383"}\'/><input type=\'hidden\' name=\'app_id\' value=\'2016091100490007\'/><input type=\'hidden\' name=\'version\' value=\'1.0\'/><input type=\'hidden\' name=\'format\' value=\'json\'/><input type=\'hidden\' name=\'sign_type\' value=\'RSA2\'/><input type=\'hidden\' name=\'method\' value=\'alipay.trade.page.pay\'/><input type=\'hidden\' name=\'timestamp\' value=\'2018-03-15 07:47:58\'/><input type=\'hidden\' name=\'alipay_sdk\' value=\'alipay-sdk-php-20161101\'/><input type=\'hidden\' name=\'charset\' value=\'UTF-8\'/><input type=\'hidden\' name=\'sign\' value=\'n+R6XxkLg7ZuDyNIaNMGQbGKtZ2zqf6i2Q4gDe1lwb0Pm5+pgzSfmsrLg5rX86MeCiRSUO/BbZXOA2tven/0678DGWDLxiRBWVFlAHykYIzYweKTkRa+oNis6/y/PRR6qAL/qaV6kSz3YH/QzNH8kZLuWET/126h9yFaFNdxlxbuilbuqRC35BkgfkNY33RJKRSgYhtFy1dST7cUnDM3cH1t7I/gK/rpu3Xa9M3RRvkdeAZ48fqdQNe1qu9+xAfDV1qlHwA/HR+g7uBlpmbYLD4HSQTaRbVU3QgIniDknOmshks5ZUtn1lGmeB4uVm1Pjj4A6BePL3utXssOlsCuvQ==\'/><input type=\'submit\' value=\'ok\' style=\'display:none;\'\'></form><script>document.forms[\'alipaysubmit\'].submit();</script>'
+2018-03-15 07:48:53  {"out_trade_no":"20183151547383","trade_no":""}
+2018-03-15 07:48:53  response: stdClass::__set_state(array(
+   'alipay_trade_close_response' => 
+  stdClass::__set_state(array(
+     'code' => '40004',
+     'msg' => 'Business Failed',
+     'sub_code' => 'ACQ.TRADE_STATUS_ERROR',
+     'sub_msg' => '交易状态不合法',
+     'out_trade_no' => '20183151547383',
+  )),
+   'sign' => 'Snawqvksiju6/JdHIbmoyAfZFVM6buP+0SdvIGME8VlTRImXZDRdO4FlJZgfzt60h2/KGjzcOymfXAYkNx6BsyiWnJyuV/gMV2/SLetxjka87nGjtZurTyqWiMUhqgu4aCW3cU4PR/JkdWYr96eXa/JkiY6FaEb1+Bvm0Dbv46PXSu65/PEWhpF3QAr6XQoluiJNYbG2cx8em0FnD6GmBuk+mCZZCRmuHR+tbdaGO2OccBZX82U7O+ChvsZaiXrAEpkoQdDaGQrnrm3Dt2xlFAq5pTXfvPVmPeRdgRC5rRYC2RX7P7PbM4qaPlaY+m158favDkoRtFlNSnF4kLoZYg==',
+))
+2018-03-15 07:49:16  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"20183151547383"}
+2018-03-15 07:49:16  response: '<form id=\'alipaysubmit\' name=\'alipaysubmit\' action=\'https://openapi.alipaydev.com/gateway.do?charset=UTF-8\' method=\'POST\'><input type=\'hidden\' name=\'biz_content\' value=\'{"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"20183151547383"}\'/><input type=\'hidden\' name=\'app_id\' value=\'2016091100490007\'/><input type=\'hidden\' name=\'version\' value=\'1.0\'/><input type=\'hidden\' name=\'format\' value=\'json\'/><input type=\'hidden\' name=\'sign_type\' value=\'RSA2\'/><input type=\'hidden\' name=\'method\' value=\'alipay.trade.page.pay\'/><input type=\'hidden\' name=\'timestamp\' value=\'2018-03-15 07:49:16\'/><input type=\'hidden\' name=\'alipay_sdk\' value=\'alipay-sdk-php-20161101\'/><input type=\'hidden\' name=\'charset\' value=\'UTF-8\'/><input type=\'hidden\' name=\'sign\' value=\'DXvhhrSjx001u4iLsdaZpm+oO424ImKnlnPpTgoqXX1aqdtulhiUqoosBAzZRJyzEKUFPSsT6nrcjFbFhrxzfsLTBFn2eXGcYkX4OehHozWgut63DBH1elWKL+YVIFJ+eTk0z69trj+vdjDgEOiAo+wp0RO2RWb6mhTgKNC+TnpAoFoEoua6EGMLBWzMYvzcEuB3MoZtpQLPAeEZbUQkuRIKxJ7bNKKhCpzToSET9vawGH+hzKXZ7G61LiHvxJlfJZ5VLDW/QAe9lWih6W5ITVoca2xBfxnS8JirBxyt/SypgornjHmnYuCzKyNHYFyuWrwHBPNdyh5kvo5nx7ML5Q==\'/><input type=\'submit\' value=\'ok\' style=\'display:none;\'\'></form><script>document.forms[\'alipaysubmit\'].submit();</script>'
+2018-03-15 07:49:25  {"out_trade_no":"20183151547383","trade_no":""}
+2018-03-15 07:49:25  response: stdClass::__set_state(array(
+   'alipay_trade_query_response' => 
+  stdClass::__set_state(array(
+     'code' => '10000',
+     'msg' => 'Success',
+     'buyer_logon_id' => 'buj***@sandbox.com',
+     'buyer_pay_amount' => '0.00',
+     'buyer_user_id' => '2088102175526407',
+     'buyer_user_type' => 'PRIVATE',
+     'invoice_amount' => '0.00',
+     'out_trade_no' => '20183151547383',
+     'point_amount' => '0.00',
+     'receipt_amount' => '0.00',
+     'send_pay_date' => '2018-03-15 15:48:39',
+     'total_amount' => '0.01',
+     'trade_no' => '2018031521001004400200176933',
+     'trade_status' => 'TRADE_SUCCESS',
+  )),
+   'sign' => 'ofiL35yHRYii/RSIZjzFH2bqfEjy/kL8K86a38yfAhAOJbsuOpZBujkUOud7badyCOETA0E/crItFLg4+OLZ/aw3VngY++YIqovx1K0dIlplq2wWdT7/ETuaFbvoOoIFY1UtFV/TsmPhUFfbfZmNsgrIUjoi1DlFIDCv8JhUz/V/A88pr3lfjfgwlgoko09bLCTDrn7sAfaGz9rfM/c7B513v312TOPbNzceZ8r1l+6LtJZrgmVFx5EIZsFUHGCF83BDn8zxDlBtT9OsYGtVTnOp1DbjRsPNp41aCf+yEUk5+CytztDyx04IKhlc+3aFBwep1TeGFhejWsHm0HaWhg==',
+))
+2018-03-15 07:49:37  {"out_trade_no":"20183151547383","trade_no":""}
+2018-03-15 07:49:38  response: stdClass::__set_state(array(
+   'alipay_trade_close_response' => 
+  stdClass::__set_state(array(
+     'code' => '40004',
+     'msg' => 'Business Failed',
+     'sub_code' => 'ACQ.TRADE_STATUS_ERROR',
+     'sub_msg' => '交易状态不合法',
+     'out_trade_no' => '20183151547383',
+  )),
+   'sign' => 'Snawqvksiju6/JdHIbmoyAfZFVM6buP+0SdvIGME8VlTRImXZDRdO4FlJZgfzt60h2/KGjzcOymfXAYkNx6BsyiWnJyuV/gMV2/SLetxjka87nGjtZurTyqWiMUhqgu4aCW3cU4PR/JkdWYr96eXa/JkiY6FaEb1+Bvm0Dbv46PXSu65/PEWhpF3QAr6XQoluiJNYbG2cx8em0FnD6GmBuk+mCZZCRmuHR+tbdaGO2OccBZX82U7O+ChvsZaiXrAEpkoQdDaGQrnrm3Dt2xlFAq5pTXfvPVmPeRdgRC5rRYC2RX7P7PbM4qaPlaY+m158favDkoRtFlNSnF4kLoZYg==',
+))
+2018-03-15 07:50:58  {"out_trade_no":"20183151547384","trade_no":""}
+2018-03-15 07:50:59  response: stdClass::__set_state(array(
+   'alipay_trade_close_response' => 
+  stdClass::__set_state(array(
+     'code' => '40004',
+     'msg' => 'Business Failed',
+     'sub_code' => 'ACQ.TRADE_NOT_EXIST',
+     'sub_msg' => '交易不存在',
+  )),
+   'sign' => 'D2ew9DxYTPaZlMY7OR7CO1OBgdQLpft+oXodCwlhGAqnUCAy0wVf9Lv/C/T8wP+/A/1BNYm1gpFHBJ7QGBr7EAg2g8yFdeBREYh6h6I1rjtpOPapSPnAwCcBrG/29x5GFbDHMvVYOgDHPc26QPvNbNLhEvzgEk9Izq4NKOCgw56IsHdW1h2T02k3xwnuiTYogzpbRzFtbQHf78+q+gntPFNpxbwEnoVLACWfypMikEA5suHbkHNXvDZ9WVKwP+rioWDQnPE7/Q8HDNRaBbiHgU17LejFFK8lYo9vzjk18YNDENrFbgNgLrWhooWmCd065LzbnN7h5dB4eqoe3WxpZA==',
+))
+2018-03-15 07:51:10  {"out_trade_no":"20183151547383","trade_no":""}
+2018-03-15 07:51:10  response: stdClass::__set_state(array(
+   'alipay_trade_close_response' => 
+  stdClass::__set_state(array(
+     'code' => '40004',
+     'msg' => 'Business Failed',
+     'sub_code' => 'ACQ.TRADE_STATUS_ERROR',
+     'sub_msg' => '交易状态不合法',
+     'out_trade_no' => '20183151547383',
+  )),
+   'sign' => 'Snawqvksiju6/JdHIbmoyAfZFVM6buP+0SdvIGME8VlTRImXZDRdO4FlJZgfzt60h2/KGjzcOymfXAYkNx6BsyiWnJyuV/gMV2/SLetxjka87nGjtZurTyqWiMUhqgu4aCW3cU4PR/JkdWYr96eXa/JkiY6FaEb1+Bvm0Dbv46PXSu65/PEWhpF3QAr6XQoluiJNYbG2cx8em0FnD6GmBuk+mCZZCRmuHR+tbdaGO2OccBZX82U7O+ChvsZaiXrAEpkoQdDaGQrnrm3Dt2xlFAq5pTXfvPVmPeRdgRC5rRYC2RX7P7PbM4qaPlaY+m158favDkoRtFlNSnF4kLoZYg==',
+))
+2018-03-15 07:57:01  {"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"2018315155659791"}
+2018-03-15 07:57:01  response: '<form id=\'alipaysubmit\' name=\'alipaysubmit\' action=\'https://openapi.alipaydev.com/gateway.do?charset=UTF-8\' method=\'POST\'><input type=\'hidden\' name=\'biz_content\' value=\'{"product_code":"FAST_INSTANT_TRADE_PAY","body":"","subject":"测试","total_amount":"0.01","out_trade_no":"2018315155659791"}\'/><input type=\'hidden\' name=\'app_id\' value=\'2016091100490007\'/><input type=\'hidden\' name=\'version\' value=\'1.0\'/><input type=\'hidden\' name=\'format\' value=\'json\'/><input type=\'hidden\' name=\'sign_type\' value=\'RSA2\'/><input type=\'hidden\' name=\'method\' value=\'alipay.trade.page.pay\'/><input type=\'hidden\' name=\'timestamp\' value=\'2018-03-15 07:57:01\'/><input type=\'hidden\' name=\'alipay_sdk\' value=\'alipay-sdk-php-20161101\'/><input type=\'hidden\' name=\'charset\' value=\'UTF-8\'/><input type=\'hidden\' name=\'sign\' value=\'Vd7dqK3n9H589Lu0rUaxSmChMC2I6Rrcvr8wxS/eNsTfy4u9LGazyzuhIzGxOpgH2cQ7THVM0fGIHHXSSWKRVZATQocRLcHmu99CmQgl0HCBJI9i4DQPwYeEDwjvv+z1fNYFyai95eoN6HbwwMmnW3reVbKJI57UKc4JKLJY8edMJ7LlFReoen/zM0Z6PrIYPEDr4TOEvms8soUMZeb2i+mufx8OfP89LdYzYqPJbEN+EC+Nxk9sWzFJMH6C9a8cwSeAUWCW0LWs9ZDxzdY0ITifEoBYW+pIyz0teSnJ7N7WRjo95kt9VVhGZTtq8tVQ/FAzmEcOSugLIZsi7GcP9w==\'/><input type=\'submit\' value=\'ok\' style=\'display:none;\'\'></form><script>document.forms[\'alipaysubmit\'].submit();</script>'

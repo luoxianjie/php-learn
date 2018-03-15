@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.pass.tpl.add request
  *
  * @author auto create
- * @since 1.0, 2014-07-23 17:28:53
+ * @since 1.0, 2016-07-01 15:35:14
  */
 class AlipayPassTplAddRequest
 {

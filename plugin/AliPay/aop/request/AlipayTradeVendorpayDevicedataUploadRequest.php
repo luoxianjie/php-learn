@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.trade.vendorpay.devicedata.upload request
  *
  * @author auto create
- * @since 1.0, 2016-05-11 14:25:55
+ * @since 1.0, 2016-12-08 00:51:39
  */
 class AlipayTradeVendorpayDevicedataUploadRequest
 {

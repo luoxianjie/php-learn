@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.point.order.add request
  *
  * @author auto create
- * @since 1.0, 2014-06-12 17:16:00
+ * @since 1.0, 2017-04-07 18:36:26
  */
 class AlipayPointOrderAddRequest
 {

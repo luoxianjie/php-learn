@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.ebpp.merchant.config.get request
  *
  * @author auto create
- * @since 1.0, 2014-06-12 17:16:52
+ * @since 1.0, 2017-04-07 17:12:49
  */
 class AlipayEbppMerchantConfigGetRequest
 {

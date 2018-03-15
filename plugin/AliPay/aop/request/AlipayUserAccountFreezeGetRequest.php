@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.user.account.freeze.get request
  *
  * @author auto create
- * @since 1.0, 2016-03-03 17:45:53
+ * @since 1.0, 2016-08-11 15:48:05
  */
 class AlipayUserAccountFreezeGetRequest
 {

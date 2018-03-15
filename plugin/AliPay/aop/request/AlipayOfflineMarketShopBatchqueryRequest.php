@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.offline.market.shop.batchquery request
  *
  * @author auto create
- * @since 1.0, 2016-03-01 17:38:45
+ * @since 1.0, 2017-04-07 18:27:29
  */
 class AlipayOfflineMarketShopBatchqueryRequest
 {

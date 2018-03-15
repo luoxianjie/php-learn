@@ -1,9 +1,13 @@
 <?php
+namespace AliPay\Aop\Request;
+
+namespace AliPay\Aop\Request;
+
 /**
  * ALIPAY API: alipay.trade.refund request
  *
  * @author auto create
- * @since 1.0, 2016-05-05 16:27:41
+ * @since 1.0, 2017-01-13 19:12:23
  */
 class AlipayTradeRefundRequest
 {
