@@ -47,7 +47,7 @@ class WeixinLogin
 
         // 跳转到首页
         $url = '/index.php';
-        header('Location:',$url);
+        header('Location:', $url);
     }
 
     /**

@@ -38,7 +38,7 @@ class Image
      * @param $height 高度
      * @param string $prefix 缩放前缀
      */
-    public function thumb($width,$height,$prefix='th_')
+    public function thumb($width, $height, $prefix='th_')
     {
         $this->prefix = $prefix;
 
@@ -47,25 +47,25 @@ class Image
         // 创建图片资源
         $src_im = $this->createBackgroundIm($imageInfo);
 
-        //缩放比例
-        $scale_x = $imageInfo['width']/$width;
-        $scale_y = $imageInfo['height']/$height;
+        // 缩放比例
+        $scale_x = $imageInfo['width'] / $width;
+        $scale_y = $imageInfo['height'] / $height;
         $scale =  $scale_x > $scale_y ? $scale_x:$scale_y;
 
-        $dst_x = ($scale == $scale_x)? 0:($width - floor($imageInfo['width']/$scale))/2;
-        $dst_y = ($scale == $scale_x)? ($height - floor($imageInfo['height']/$scale))/2:0;
+        $dst_x = ($scale == $scale_x) ? 0 : ($width - floor($imageInfo['width'] / $scale)) /2;
+        $dst_y = ($scale == $scale_x) ? ($height - floor($imageInfo['height'] / $scale)) / 2 : 0;
 
-        $dst_w = ($scale == $scale_x)? $width:floor($imageInfo['width']/$scale);
-        $dst_h = ($scale == $scale_x)? floor($imageInfo['height']/$scale): $height;
+        $dst_w = ($scale == $scale_x) ? $width : floor($imageInfo['width'] / $scale);
+        $dst_h = ($scale == $scale_x) ? floor($imageInfo['height'] / $scale) : $height;
 
         // 创建目标图片资源
-        $dst_im = imagecreatetruecolor($width,$height);
+        $dst_im = imagecreatetruecolor($width, $height);
 
         // 复制图片
-        imagecopyresampled($dst_im,$src_im,$dst_x,$dst_y,0,0,$dst_w,$dst_h,$imageInfo['width'],$imageInfo['height']);
+        imagecopyresampled($dst_im, $src_im, $dst_x, $dst_y,0,0, $dst_w, $dst_h, $imageInfo['width'], $imageInfo['height']);
 
         // 输出图片
-        $dst_name = $this->outputImg($dst_im,$imageInfo);
+        $dst_name = $this->outputImg($dst_im, $imageInfo);
 
         imagedestroy($src_im);
         imagedestroy($dst_im);
@@ -80,7 +80,7 @@ class Image
      * @param string $prefix 前缀
      * @return string 加水印处理后图片路径
      */
-    public function watermark($waterImg,$pos = 5,$prefix = 'wt_')
+    public function watermark($waterImg, $pos = 5, $prefix = 'wt_')
     {
         // 原图片信息
         $srcInfo = $this->getImageInfo();
@@ -92,7 +92,7 @@ class Image
         $waterInfo = $this->getImageInfo($waterImg);
 
         // 创建水印图片目标资源
-        $waterIm = $this->createBackgroundIm($waterInfo,$waterImg);
+        $waterIm = $this->createBackgroundIm($waterInfo, $waterImg);
 
         // 水印位置
         $x=$y=0;
@@ -105,8 +105,8 @@ class Image
                 $y = 0;
                 break;
             case 3:         //居中
-                $x = ($srcInfo['width'] - $waterInfo['width'])/2;
-                $y = ($srcInfo['height'] - $waterInfo['height'])/2;
+                $x = ($srcInfo['width'] - $waterInfo['width']) / 2;
+                $y = ($srcInfo['height'] - $waterInfo['height']) / 2;
                 break;
             case 4:         //左下角
                 $x = 0;
@@ -118,10 +118,10 @@ class Image
                 break;
         }
 
-        imagecopymerge($dstIm,$waterIm,$x,$y,0,0,$waterInfo['width'],$waterInfo['height'],80);
+        imagecopymerge($dstIm, $waterIm, $x, $y,0,0, $waterInfo['width'], $waterInfo['height'],80);
 
         // 保存图片
-        $dst_name = $this->outputImg($dstIm,$srcInfo,$prefix);
+        $dst_name = $this->outputImg($dstIm, $srcInfo, $prefix);
 
         // 销毁资源
         imagedestroy($dstIm);
@@ -138,18 +138,18 @@ class Image
      * @param string $prefix 前缀
      * @return string 路径
      */
-    public function cut($width,$height,$pos = 3,$prefix = 'ct_')
+    public function cut($width, $height, $pos = 3, $prefix = 'ct_')
     {
         // 获取原图片信息
         $srcInfo = $this->getImageInfo();
 
-        if($srcInfo['width']<$width || $srcInfo['height']<$height) die('图片长度或宽度小于裁剪长度或宽度');
+        if($srcInfo['width'] < $width || $srcInfo['height'] < $height) die('图片长度或宽度小于裁剪长度或宽度');
 
         // 获取原图片资源
         $srcIm = $this->createBackgroundIm($srcInfo);
 
         // 创建目标图片背景资源
-        $dstIm = imagecreatetruecolor($width,$height);
+        $dstIm = imagecreatetruecolor($width, $height);
 
         switch ($pos){
             case 1:     // 从左上角开始裁剪
@@ -174,10 +174,10 @@ class Image
                 break;
         }
 
-        imagecopyresampled($dstIm,$srcIm,0,0,$x,$y,$width,$height,$width,$height);
+        imagecopyresampled($dstIm, $srcIm,0,0, $x, $y, $width, $height, $width, $height);
 
         // 输出图片
-        $dst_name = $this->outputImg($dstIm,$srcInfo,$prefix);
+        $dst_name = $this->outputImg($dstIm, $srcInfo, $prefix);
 
         // 销毁资源
         imagedestroy($dstIm);
@@ -193,7 +193,7 @@ class Image
      */
     private function getImageInfo($filename = '')
     {
-        $filename = empty($filename)?$this->picSrc:$filename;
+        $filename = empty($filename) ? $this->picSrc:$filename;
         $data = getimagesize($filename);
         $imageInfo['width'] = $data[0];
         $imageInfo['height'] = $data[1];
@@ -207,10 +207,10 @@ class Image
      * @param $imageInfo
      * @return resource
      */
-    private function createBackgroundIm($imageInfo,$filename = '')
+    private function createBackgroundIm($imageInfo, $filename = '')
     {
-        $filename = empty($filename)?$this->picSrc:$filename;
-        switch ($imageInfo['type']){
+        $filename = empty($filename) ? $this->picSrc : $filename;
+        switch  ($imageInfo['type']) {
             case 1:
                 $img = imagecreatefromgif($filename);
                 break;
@@ -233,21 +233,21 @@ class Image
      * @param $imageInfo
      * @return string
      */
-    private function outputImg($im,$imageInfo,$prefix = '')
+    private function outputImg($im, $imageInfo, $prefix = '')
     {
-        $prefix = empty($prefix)?$this->prefix:$prefix;
+        $prefix = empty($prefix) ? $this->prefix : $prefix;
         // 目标地址
-        $dst = rtrim($this->path,'/').'/'.$prefix.$this->filename;
+        $dst = rtrim($this->path, '/') .'/'.$prefix.$this->filename;
 
         switch ($imageInfo['type']){
             case 1:
-                imagegif($im,$dst);
+                imagegif($im, $dst);
                 break;
             case 2:
-                imagejpeg($im,$dst);
+                imagejpeg($im, $dst);
                 break;
             case 3:
-                imagepng($im,$dst);
+                imagepng($im, $dst);
                 break;
             default:
                 die('图片类型有误');

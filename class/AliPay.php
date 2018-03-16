@@ -55,7 +55,7 @@ class AliPay
          * @param $notify_url 异步通知地址，公网可以访问
          * @return $response 支付宝返回的信息
          */
-        $response = $aop->pagePay($payRequestBuilder,$this->config['return_url'],$this->config['notify_url']);
+        $response = $aop->pagePay($payRequestBuilder, $this->config['return_url'], $this->config['notify_url']);
 
         //输出表单
         var_dump($response);

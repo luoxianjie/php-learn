@@ -28,13 +28,13 @@ class page
 
     public $url;
 
-    public function __construct($total,$listRows = 10)
+    public function __construct($total, $listRows = 10)
     {
-        $currPage = isset($_REQUEST['page'])?intval($_REQUEST['page']):1;
+        $currPage = isset($_REQUEST['page']) ? intval($_REQUEST['page']) : 1;
         $this->totalNum = $total;
         $this->listRows = $listRows;
-        $this->pageNum  = ceil($total/$listRows);
-        $this->currPage = min($this->pageNum,max(1,$currPage));
+        $this->pageNum  = ceil($total / $listRows);
+        $this->currPage = min($this->pageNum, max(1, $currPage));
     }
 
 
@@ -51,7 +51,7 @@ class page
         if(empty($query_str)){
             $uri = 'http://'.$_SERVER['HTTP_HOST'].'?page='.$i;
         }else{
-            parse_str($query_str,$query_arr);
+            parse_str($query_str, $query_arr);
             unset($query_arr['page']);
             if(empty($query_arr))
                 $uri = 'http://'.$_SERVER['HTTP_HOST'].'?page='.$i;
@@ -105,7 +105,7 @@ class page
     private function pageList()
     {
         $pageStr = '';
-        for($i = $this->currPage-2;$i <= $this->currPage+2;$i++){
+        for($i = $this->currPage-2; $i <= $this->currPage+2; $i++){
             if($i > 0 && $i <= $this->pageNum){
                 if($i == $this->currPage){
                     $pageStr .= "<span class='current'>{$i}</span>";

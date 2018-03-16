@@ -42,7 +42,7 @@ class QQLogin
 
         $openId = $this->_getOpenId($accessToken);
 
-        $userInfo = $this->_getUserInfo($accessToken,$openId);
+        $userInfo = $this->_getUserInfo($accessToken, $openId);
 
         // 执行数据库操作......
 
@@ -61,7 +61,7 @@ class QQLogin
         $url = "https://graph.qq.com/oauth2.0/token?grant_type=authorization_code&client_id={$this->appid}&client_secret={$this->appkey}&code={$code}&state=123&redirect_uri={$this->redirect_url}";
 
         $data = $this->_curlGet($url);
-        parse_str($data,$arr);
+        parse_str($data, $arr);
 
         $accessToken = $arr['access_token'];
         return $accessToken;
@@ -82,7 +82,7 @@ class QQLogin
             $lpos = stripos($data,'(');
             $rpos = stripos($data,')');
 
-            $openId = json_decode(substr($data,$lpos,$rpos),true)['openid'];
+            $openId = json_decode(substr($data, $lpos, $rpos),true)['openid'];
         }
         return $openId;
     }

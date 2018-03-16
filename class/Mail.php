@@ -15,7 +15,7 @@ class Mail
      * @param $username
      * @param $password
      */
-    public function __construct($username,$password)
+    public function __construct($username, $password)
     {
         $this->mail = new PHPMailer\PHPMailer();
         $this->mail->isSMTP();              // 使用SMTP服务
@@ -38,9 +38,9 @@ class Mail
      * @param $body     邮件内容
      * @return bool     是否发送成功
      */
-    public function send($name,$from,$to,$sub,$body)
+    public function send($name, $from, $to, $sub, $body)
     {
-        $this->mail->setFrom($from,$name);      // 设置发件人信息，如邮件格式说明中的发件人，这里会显示为xxxx@qq.com
+        $this->mail->setFrom($from, $name);      // 设置发件人信息，如邮件格式说明中的发件人，这里会显示为xxxx@qq.com
         $this->mail->addAddress($to);           // 设置收件人信息，如邮件格式说明中的收件人，这里会显示为yyyy@163.com
         $this->mail->Subject = $sub;            // 邮件标题
         $this->mail->Body = $body;              // 邮件正文

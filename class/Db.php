@@ -118,7 +118,7 @@ class Db
      * @param $data sql语句中对应绑定的数据
      * @return array
      */
-    public function exec($sql,$data)
+    public function exec($sql, $data)
     {
         $this->sql = $sql;
 
@@ -165,9 +165,9 @@ class Db
 
         $sth = $this->pdo->prepare($this->sql);
 
-        $data = array_merge($this->where,$data);
+        $data = array_merge($this->where, $data);
         $bindData = [];
-        foreach ($data as $field =>$value){
+        foreach ($data as $field => $value){
             $bindData[':'.$field] = $value;
         }
         $sth->execute($bindData);
@@ -198,7 +198,7 @@ class Db
         $sth = $this->pdo->prepare($this->sql);
 
         $bindData = [];
-        foreach ($data as $field =>$value) {
+        foreach ($data as $field => $value) {
             $bindData[':'.$field] = $value;
         }
 
@@ -219,9 +219,9 @@ class Db
             die('condition cannot be null!');
         }
 
-        $data = array_merge($this->where,$data);
+        $data = array_merge($this->where, $data);
         $whereStr = '';
-        foreach ($data as $field =>$value){
+        foreach ($data as $field => $value){
             $whereStr .= "{$field} = :{$field},";
         }
         $whereStr = rtrim($whereStr,',');

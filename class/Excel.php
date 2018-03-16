@@ -91,7 +91,7 @@ class Excel
             $b = $objPHPExcel->getActiveSheet()->getCell("B".$j)->getValue();//获取B列的值
             $c = $objPHPExcel->getActiveSheet()->getCell("C".$j)->getValue();//获取C列的值
 
-            $res = $db->table('test')->insert(['id'=>$a,'name'=>$b,'sex'=>$c]);
+            $res = $db->table('test')->insert(['id'=>$a, 'name'=>$b, 'sex'=>$c]);
 
             $res && $insertNum++;
         }

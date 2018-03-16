@@ -15,9 +15,9 @@ class File
 
     private $file;             // 文件句柄
 
-    public $error;            // 错误信息
+    public $error;             // 错误信息
 
-    public function __construct($save_path = './upload',$allow_type = ['jpeg','jpg','png','gif','doc','txt'])
+    public function __construct($save_path = './upload', $allow_type = ['jpeg', 'jpg', 'png', 'gif', 'doc', 'txt'])
     {
         $this->save_path = $save_path;
         $this->allow_type = $allow_type;
@@ -89,7 +89,7 @@ class File
             return $this->upload($file);
         }
         $save_names = [];
-        foreach ($this->file['name'] as $key=> $name) {
+        foreach ($this->file['name'] as $key => $name) {
             $fileExt = $this->_getExt($this->file['name'][$key]);
 
             if (!in_array($fileExt, $this->allow_type)) {
@@ -176,7 +176,7 @@ class File
      */
     private function _getExt($filename)
     {
-        $arr = explode('.',$filename);
+        $arr = explode('.', $filename);
         $ext = end($arr);
         return $ext;
     }

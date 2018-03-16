@@ -21,11 +21,11 @@ class Config implements ArrayAccess
             return $config;
         }
 
-        if(is_array($config) && array_key_exists($key,$config)){
+        if(is_array($config) && array_key_exists($key, $config)){
             return $config[$key];
         }
 
-        foreach (explode('.',$key) as $segment){
+        foreach (explode('.', $key) as $segment){
             if(!is_array($config) || !array_key_exists($segment,$config)){
                 return $default;
             }
@@ -42,7 +42,7 @@ class Config implements ArrayAccess
             throw new \Exception('Invalid config key.');
         }
 
-        $keys = explode('.',$key);
+        $keys = explode('.', $key);
 
         if(count($keys) == 1){
             $this->config[$keys[0]] = $value;
@@ -64,9 +64,9 @@ class Config implements ArrayAccess
         return isset($this->config[$key]);
     }
 
-    public function offsetSet($key,$value)
+    public function offsetSet($key, $value)
     {
-        $this->set($key,$value);
+        $this->set($key, $value);
     }
 
     public function offsetGet($key)
