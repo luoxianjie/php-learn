@@ -23,6 +23,8 @@
             "class/PayPal.php",
             "class/AliPay.php",
             "class/File.php",
+            "class/UEditor.php",
+            "class/UEditorUploader.php",
             "plugin/TCPDF/tcpdf.php",
             "plugin/PHPExcel/PHPExcel.php"
         ],
