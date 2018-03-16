@@ -22,6 +22,7 @@
             "class/Config.php",
             "class/PayPal.php",
             "class/AliPay.php",
+            "class/File.php",
             "plugin/TCPDF/tcpdf.php",
             "plugin/PHPExcel/PHPExcel.php"
         ],
