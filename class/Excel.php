@@ -99,5 +99,10 @@ class Excel
         return $insertNum;
     }
 
+    public function run()
+    {
+
+    }
+
 
 }

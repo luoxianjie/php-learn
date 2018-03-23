@@ -25,7 +25,13 @@ class Db
         $dbname = 'test';
         $user = 'root';
         $passwd = '';
-        $this->pdo = new PDO("{$type}:host={$host};dbname={$dbname};charset=utf8",$user,$passwd);
+        try {
+            $this->pdo = new PDO("{$type}:host={$host};port=3306;dbname={$dbname};charset=utf8", $user, $passwd,[PDO::MYSQL_ATTR_INIT_COMMAND=>'SET NAMES utf8']);
+            $this->pdo->exec('set names utf8');
+        }catch (Exception $e){
+            header('Content-type:text/html;charset=utf8');
+            die($e->getMessage());
+        }
     }
 
     public static function getInstance()
@@ -163,17 +169,13 @@ class Db
 
         $this->sql = "UPDATE `{$this->table}` SET {$updateStr} WHERE {$this->whereStr}";
 
-        $sth = $this->pdo->prepare($this->sql);
-
         $data = array_merge($this->where, $data);
         $bindData = [];
         foreach ($data as $field => $value){
             $bindData[':'.$field] = $value;
         }
-        $sth->execute($bindData);
 
-        return $sth->rowCount();
-
+        return $this->execute($bindData);
     }
 
     /**
@@ -184,6 +186,9 @@ class Db
      */
     public function insert($data = [])
     {
+        if (!is_array($data)){
+            die('param should be an array');
+        }
         $fields = array_keys($data);
         $value = array_values($data);
 
@@ -195,15 +200,12 @@ class Db
 
         $this->sql = "INSERT INTO `{$this->table}` {$insertStr} ";
 
-        $sth = $this->pdo->prepare($this->sql);
-
         $bindData = [];
         foreach ($data as $field => $value) {
             $bindData[':'.$field] = $value;
         }
 
-        $sth->execute($bindData);
-        return $sth->rowCount();
+        return $this->execute($bindData);
     }
 
 
@@ -227,17 +229,24 @@ class Db
         $whereStr = rtrim($whereStr,',');
 
         $this->sql = "DELETE FROM `{$this->table}` WHERE {$whereStr}";
-        $sth = $this->pdo->prepare($this->sql);
 
         $bindData = [];
         foreach ($data as $field => $value){
             $bindData[':'.$field] = $value;
         }
 
-        $sth->execute($bindData);
+        return $this->execute($bindData);
+    }
 
-        return $sth->rowCount();
-
+    public function execute($bindData)
+    {
+        try{
+            $sth = $this->pdo->prepare($this->sql);
+            $sth->execute($bindData);
+            return $sth->rowCount();
+        }catch (Exception $e){
+            die($e->getMessage());
+        }
     }
 
 }
