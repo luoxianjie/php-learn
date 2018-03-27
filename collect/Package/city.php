@@ -21,7 +21,7 @@ else:
     </head>
     <body>
         <div id="el" v-cloak>
-            <select name="province" v-model="provinceId" @change="getCity"><option v-for="province,k in provinces" v-bind:value="province.id">{{province.name}}</option></select>
+            <select name="province" v-model="provinceId" @change="getCity"><option v-for="province,k in provinces" :value="province.id">{{province.name}}</option></select>
             <select name="city" v-model="cityId" @change="getArea"><option v-for="city in cities" :value="city.id">{{city.name}}</option></select>
             <select name="area" v-model="areaId"><option v-for="area in areas" :value="area.id">{{area.name}}</option></select>
             {{address}}
