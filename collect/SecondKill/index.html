@@ -18,7 +18,7 @@
         var end_time = new Date('2018-3-9 19:00:00').getTime();
         var now_time = new Date().getTime();
 
-        var getUrl = 'a.php?act=get_url';
+        var getUrl = 'index.php?act=getUrl';
         if(now_time > start_time && now_time < end_time){
             $.get(getUrl,{},function(rsp){
                 if(rsp.status == 200){
