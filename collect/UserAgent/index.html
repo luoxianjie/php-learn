@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>表单</title>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
     <style type="text/css" media="screen">
         /* RESET */ .elq-form * {
             margin: 0;
@@ -302,7 +303,7 @@
                 *
               </span>
                         </label>
-                        <input id="field0" name="lastName" type="text" value="" class="field-size-top-large"  />
+                        <input id="field0" name="lastName" type="text" value="<?php echo old('lastName');?>" class="field-size-top-large"  />
                     </p>
                 </div>
             </div>
@@ -319,7 +320,7 @@
                 *
               </span>
                         </label>
-                        <input id="field1" name="firstName" type="text" value="" class="field-size-top-large"  />
+                        <input id="field1" name="firstName" type="text" value="<?php echo old('firstName');?>" class="field-size-top-large"  />
                     </p>
                 </div>
             </div>
@@ -336,7 +337,7 @@
                 *
               </span>
                         </label>
-                        <input id="field2" name="busPhone" type="text" value="" class="field-size-top-large"  />
+                        <input id="field2" name="busPhone" type="text" value="<?php echo old('busPhone');?>" class="field-size-top-large"  />
                     </p>
                 </div>
             </div>
@@ -353,7 +354,7 @@
                 *
               </span>
                         </label>
-                        <input id="field3" name="emailAddress" type="text" value="" class="field-size-top-large"  />
+                        <input id="field3" name="emailAddress" type="text" value="<?php echo old('emailAddress');?>" class="field-size-top-large"  />
                     </p>
                 </div>
             </div>
@@ -370,7 +371,7 @@
                 *
               </span>
                         </label>
-                        <input id="field4" name="company" type="text" value="" class="field-size-top-large"  />
+                        <input id="field4" name="company" type="text" value="<?php echo old('company');?>" class="field-size-top-large"  />
                     </p>
                 </div>
             </div>
@@ -388,37 +389,37 @@
               </span>
                         </label>
                         <select id="field5" name="jobRole1" data-value="<eloqua type='emailfield' syntax='Job_Role1' />" class="field-size-top-large" >
-                            <option value="" selected="selected" >
+                            <option value="" <?php if(old('jobRole1') == '') echo "selected";?> >
                                 -- 请选择 --
                             </option>
-                            <option value="Component Engineer" >
+                            <option value="Component Engineer" <?php if(old('jobRole1') == 'Component Engineer') echo "selected";?> >
                                 元件工程师
                             </option>
-                            <option value="Design Engineer" >
+                            <option value="Design Engineer" <?php if(old('jobRole1') == 'Design Engineer') echo "selected";?> >
                                 设计工程师
                             </option>
-                            <option value="Distributor - Purchasing" >
+                            <option value="Distributor - Purchasing" <?php if(old('jobRole1') == 'Distributor - Purchasing') echo "selected";?> >
                                 经销商-采购
                             </option>
-                            <option value="Distributor - Sales" >
+                            <option value="Distributor - Sales" <?php if(old('jobRole1') == 'Distributor - Sales') echo "selected";?>  >
                                 经销商-销售
                             </option>
-                            <option value="Inventory Control" >
+                            <option value="Inventory Control" <?php if(old('jobRole1') == 'Inventory Control') echo "selected";?>  >
                                 库存管理
                             </option>
-                            <option value="Manufacturing Engineer" >
+                            <option value="Manufacturing Engineer" <?php if(old('jobRole1') == 'Manufacturing Engineer') echo "selected";?> >
                                 制造工程师
                             </option>
-                            <option value="Product Engineer" >
+                            <option value="Product Engineer" <?php if(old('jobRole1') == 'Product Engineer') echo "selected";?> >
                                 产品经理
                             </option>
-                            <option value="Purchasing" >
+                            <option value="Purchasing" <?php if(old('jobRole1') == 'Purchasing') echo "selected";?> >
                                 采购
                             </option>
-                            <option value="System Architects" >
+                            <option value="System Architects" <?php if(old('jobRole1') == 'System Architects') echo "selected";?> >
                                 系统架构师
                             </option>
-                            <option value="Other/Unknown" >
+                            <option value="Other/Unknown" <?php if(old('jobRole1') == 'Other/Unknown') echo "selected";?> >
                                 其它
                             </option>
                         </select>
@@ -439,79 +440,79 @@
               </span>
                         </label>
                         <select id="field6" name="industry1" data-value="<eloqua type='emailfield' syntax='Industry1' />" class="field-size-top-large" >
-                            <option value="" selected="selected" >
+                            <option value="" <?php if(old('industry1') == '') echo "selected";?> >
                                 -- 请选择 --
                             </option>
-                            <option value="Appliance" >
+                            <option value="Appliance" <?php if(old('industry1') == 'Appliance') echo "selected";?> >
                                 家用电器
                             </option>
-                            <option value="Automation & Control" >
+                            <option value="Automation & Control" <?php if(old('industry1') == 'Automation & Control') echo "selected";?> >
                                 自动化与控制
                             </option>
-                            <option value="Automotive" >
+                            <option value="Automotive" <?php if(old('industry1') == 'Automotive') echo "selected";?> >
                                 汽车
                             </option>
-                            <option value="Communications" >
+                            <option value="Communications" <?php if(old('industry1') == 'Communications') echo "selected";?> >
                                 通信
                             </option>
-                            <option value="Industrial Machinery" >
+                            <option value="Industrial Machinery" <?php if(old('industry1') == 'Industrial Machinery') echo "selected";?> >
                                 工业机械
                             </option>
-                            <option value="Lighting" >
+                            <option value="Lighting" <?php if(old('industry1') == 'Lighting') echo "selected";?> >
                                 照明
                             </option>
-                            <option value="Mobile/Consumer Electronics" >
+                            <option value="Mobile/Consumer Electronics" <?php if(old('industry1') == 'Mobile/Consumer Electronics') echo "selected";?> >
                                 消费电子
                             </option>
-                            <option value="Aerospace/Defense/Marine" >
+                            <option value="Aerospace/Defense/Marine" <?php if(old('industry1') == 'Aerospace/Defense/Marine') echo "selected";?> >
                                 航空航天/船舶
                             </option>
-                            <option value="Security" >
+                            <option value="Security" <?php if(old('industry1') == 'Security') echo "selected";?> >
                                 安防
                             </option>
-                            <option value="Alternative Energy" >
+                            <option value="Alternative Energy" <?php if(old('industry1') == 'Alternative Energy') echo "selected";?> >
                                 新能源
                             </option>
-                            <option value="Computer" >
+                            <option value="Computer" <?php if(old('industry1') == 'Computer') echo "selected";?> >
                                 计算机
                             </option>
-                            <option value="Energy Networks" >
+                            <option value="Energy Networks" <?php if(old('industry1') == 'Energy Networks') echo "selected";?> >
                                 能源网络
                             </option>
-                            <option value="HVAC" >
+                            <option value="HVAC" <?php if(old('industry1') == 'HVAC') echo "selected";?> >
                                 HVAC
                             </option>
-                            <option value="Instrumentation" >
+                            <option value="Instrumentation" <?php if(old('industry1') == 'Instrumentation') echo "selected";?> >
                                 仪器仪表
                             </option>
-                            <option value="Medical" >
+                            <option value="Medical" <?php if(old('industry1') == 'Medical') echo "selected";?> >
                                 医疗
                             </option>
-                            <option value="Premise Cabling Systems" >
+                            <option value="Premise Cabling Systems"  <?php if(old('industry1') == 'Premise Cabling Systems') echo "selected";?> >
                                 Premise Cabling Systems
                             </option>
-                            <option value="Railway and Mass Transportation" >
+                            <option value="Railway and Mass Transportation" <?php if(old('industry1') == 'Railway and Mass Transportation') echo "selected";?> >
                                 铁路和轨道交通
                             </option>
-                            <option value="Telecom Network" >
+                            <option value="Telecom Network" <?php if(old('industry1') == 'Telecom Network') echo "selected";?> >
                                 电信网络
                             </option>
-                            <option value="Other" >
+                            <option value="Other" <?php if(old('industry1') == 'Other') echo "selected";?> >
                                 其它
                             </option>
-                            <option value="Industrial Commercial Trans - Agricultural" >
+                            <option value="Industrial Commercial Trans - Agricultural" <?php if(old('industry1') == 'Industrial Commercial Trans - Agricultural') echo "selected";?> >
                                 工业商业运输-农业
                             </option>
-                            <option value="Industrial Commercial Trans - Construction" >
+                            <option value="Industrial Commercial Trans - Construction"  <?php if(old('industry1') == 'Industrial Commercial Trans - Construction') echo "selected";?>>
                                 工业商业运输-建筑
                             </option>
-                            <option value="Industrial Commercial Trans - General" >
+                            <option value="Industrial Commercial Trans - General" <?php if(old('industry1') == 'Industrial Commercial Trans - General') echo "selected";?> >
                                 工业商业运输-通用行业
                             </option>
-                            <option value="Industrial Commercial Trans - Transportation" >
+                            <option value="Industrial Commercial Trans - Transportation" <?php if(old('industry1') == 'Industrial Commercial Trans - Transportation') echo "selected";?> >
                                 工业商业运输-交通
                             </option>
-                            <option value="Sensors" >
+                            <option value="Sensors" <?php if(old('industry1') == 'Sensors') echo "selected";?> >
                                 传感器
                             </option>
                         </select>
@@ -532,736 +533,736 @@
               </span>
                         </label>
                         <select id="field7" name="country" class="field-size-top-large" >
-                            <option value="" >
+                            <option value="" <?php if(old('country') == '') echo "selected";?> >
                                 -- 请选择 --
                             </option>
-                            <option value="Aruba" >
+                            <option value="Aruba" <?php if(old('country') == 'Aruba') echo "selected";?> >
                                 阿鲁巴
                             </option>
-                            <option value="Afghanistan" >
+                            <option value="Afghanistan"  <?php if(old('country') == 'Afghanistan') echo "selected";?> >
                                 阿富汗
                             </option>
-                            <option value="Angola" >
+                            <option value="Angola" <?php if(old('country') == 'Angola') echo "selected";?> >
                                 安哥拉
                             </option>
-                            <option value="Anguilla" >
+                            <option value="Anguilla" <?php if(old('country') == 'Anguilla') echo "selected";?> >
                                 安圭拉岛
                             </option>
-                            <option value="Åland Islands" >
+                            <option value="Åland Islands" <?php if(old('country') == 'Åland Islands') echo "selected";?> >
                                 奥兰群岛
                             </option>
-                            <option value="Albania" >
+                            <option value="Albania" <?php if(old('country') == 'Albania') echo "selected";?> >
                                 阿尔巴尼亚
                             </option>
-                            <option value="Andorra" >
+                            <option value="Andorra" <?php if(old('country') == 'Andorra') echo "selected";?> >
                                 安道尔
                             </option>
-                            <option value="United Arab Emirates" >
+                            <option value="United Arab Emirates" <?php if(old('country') == 'United Arab Emirates') echo "selected";?> >
                                 阿拉伯联合酋长国
                             </option>
-                            <option value="Argentina" >
+                            <option value="Argentina" <?php if(old('country') == 'Argentina') echo "selected";?> >
                                 阿根廷
                             </option>
-                            <option value="Armenia" >
+                            <option value="Armenia" <?php if(old('country') == 'Armenia') echo "selected";?> >
                                 亚美尼亚
                             </option>
-                            <option value="American Samoa" >
+                            <option value="American Samoa" <?php if(old('country') == 'American Samoa') echo "selected";?> >
                                 美属萨摩亚
                             </option>
-                            <option value="Antarctica" >
+                            <option value="Antarctica" <?php if(old('country') == 'Antarctica') echo "selected";?> >
                                 南极洲
                             </option>
-                            <option value="French Southern Territories" >
+                            <option value="French Southern Territories" <?php if(old('country') == 'French Southern Territories') echo "selected";?> >
                                 法属南部领土
                             </option>
-                            <option value="Antigua and Barbuda" >
+                            <option value="Antigua and Barbuda" <?php if(old('country') == 'Antigua and Barbuda') echo "selected";?> >
                                 安提瓜和巴布达
                             </option>
-                            <option value="Australia" >
+                            <option value="Australia" <?php if(old('country') == 'Australia') echo "selected";?> >
                                 澳大利亚
                             </option>
-                            <option value="Austria" >
+                            <option value="Austria" <?php if(old('country') == 'Austria') echo "selected";?> >
                                 奥地利
                             </option>
-                            <option value="Azerbaijan" >
+                            <option value="Azerbaijan" <?php if(old('country') == 'Azerbaijan') echo "selected";?> >
                                 阿塞拜疆
                             </option>
-                            <option value="Burundi" >
+                            <option value="Burundi" <?php if(old('country') == 'Burundi') echo "selected";?> >
                                 布隆迪
                             </option>
-                            <option value="Belgium" >
+                            <option value="Belgium" <?php if(old('country') == 'Belgium') echo "selected";?> >
                                 比利时
                             </option>
-                            <option value="Benin" >
+                            <option value="Benin" <?php if(old('country') == 'Benin') echo "selected";?> >
                                 贝宁
                             </option>
-                            <option value="Bonaire, Sint Eustatius and Saba" >
+                            <option value="Bonaire, Sint Eustatius and Saba" <?php if(old('country') == 'Bonaire, Sint Eustatius and Saba') echo "selected";?> >
                                 博奈尔、圣尤斯特歇斯和萨巴
                             </option>
-                            <option value="Burkina Faso" >
+                            <option value="Burkina Faso" <?php if(old('country') == 'Burkina Faso') echo "selected";?> >
                                 布基纳法索
                             </option>
-                            <option value="Bangladesh" >
+                            <option value="Bangladesh" <?php if(old('country') == 'Bangladesh') echo "selected";?> >
                                 孟加拉国
                             </option>
-                            <option value="Bulgaria" >
+                            <option value="Bulgaria" <?php if(old('country') == 'Bulgaria') echo "selected";?> >
                                 保加利亚
                             </option>
-                            <option value="Bahrain" >
+                            <option value="Bahrain" <?php if(old('country') == 'Bahrain') echo "selected";?> >
                                 巴林
                             </option>
-                            <option value="Bahamas" >
+                            <option value="Bahamas" <?php if(old('country') == 'Bahamas') echo "selected";?> >
                                 巴哈马
                             </option>
-                            <option value="Bosnia and Herzegovina" >
+                            <option value="Bosnia and Herzegovina" <?php if(old('country') == 'Bosnia and Herzegovina') echo "selected";?> >
                                 波斯尼亚和黑塞哥维那
                             </option>
-                            <option value="Saint Barthélemy" >
+                            <option value="Saint Barthélemy" <?php if(old('country') == 'Saint Barthélemy') echo "selected";?> >
                                 圣巴泰勒米
                             </option>
-                            <option value="Belarus" >
+                            <option value="Belarus" <?php if(old('country') == 'Belarus') echo "selected";?> >
                                 白俄罗斯
                             </option>
-                            <option value="Belize" >
+                            <option value="Belize" <?php if(old('country') == 'Belize') echo "selected";?> >
                                 伯利兹
                             </option>
-                            <option value="Bermuda" >
+                            <option value="Bermuda" <?php if(old('country') == 'Bermuda') echo "selected";?> >
                                 百慕大
                             </option>
-                            <option value="Bolivia, Plurinational State of" >
+                            <option value="Bolivia, Plurinational State of" <?php if(old('country') == 'Bolivia, Plurinational State of') echo "selected";?> >
                                 多民族玻利维亚国
                             </option>
-                            <option value="Brazil" >
+                            <option value="Brazil" <?php if(old('country') == 'Brazil') echo "selected";?> >
                                 巴西
                             </option>
-                            <option value="Barbados" >
+                            <option value="Barbados" <?php if(old('country') == 'Barbados') echo "selected";?> >
                                 巴巴多斯
                             </option>
-                            <option value="Brunei Darussalam" >
+                            <option value="Brunei Darussalam" <?php if(old('country') == 'Brunei Darussalam') echo "selected";?> >
                                 文莱达鲁萨兰国
                             </option>
-                            <option value="Bhutan" >
+                            <option value="Bhutan" <?php if(old('country') == 'Bhutan') echo "selected";?> >
                                 不丹
                             </option>
-                            <option value="Bouvet Island" >
+                            <option value="Bouvet Island" <?php if(old('country') == 'Bouvet Island') echo "selected";?> >
                                 布维岛
                             </option>
-                            <option value="Botswana" >
+                            <option value="Botswana" <?php if(old('country') == 'Botswana') echo "selected";?> >
                                 博茨瓦纳
                             </option>
-                            <option value="Central African Republic" >
+                            <option value="Central African Republic" <?php if(old('country') == 'Central African Republic') echo "selected";?> >
                                 中非共和国
                             </option>
-                            <option value="Canada" >
+                            <option value="Canada" <?php if(old('country') == 'Canada') echo "selected";?> >
                                 加拿大
                             </option>
-                            <option value="Cocos (Keeling) Islands" >
+                            <option value="Cocos (Keeling) Islands" <?php if(old('country') == 'Cocos (Keeling) Islands') echo "selected";?> >
                                 科科斯（基林）群岛
                             </option>
-                            <option value="Switzerland" >
+                            <option value="Switzerland" <?php if(old('country') == 'Switzerland') echo "selected";?> >
                                 瑞士
                             </option>
-                            <option value="Chile" >
+                            <option value="Chile" <?php if(old('country') == 'Chile') echo "selected";?> >
                                 智利
                             </option>
-                            <option value="China" selected="selected" >
+                            <option value="China" selected="selected" <?php if(old('country') == 'China" selected="selected') echo "selected";?> >
                                 中国
                             </option>
-                            <option value="Côte d'Ivoire" >
+                            <option value="Côte d Ivoire" <?php if(old('country') == 'Côte d Ivoire') echo "selected";?> >
                                 科特迪瓦
                             </option>
-                            <option value="Cameroon" >
+                            <option value="Cameroon" <?php if(old('country') == 'Cameroon') echo "selected";?> >
                                 喀麦隆
                             </option>
-                            <option value="Congo, the Democratic Republic of the" >
+                            <option value="Congo, the Democratic Republic of the" <?php if(old('country') == 'Congo, the Democratic Republic of the') echo "selected";?> >
                                 刚果民主共和国
                             </option>
-                            <option value="Congo" >
+                            <option value="Congo" <?php if(old('country') == 'Congo') echo "selected";?> >
                                 刚果
                             </option>
-                            <option value="Cook Islands" >
+                            <option value="Cook Islands" <?php if(old('country') == 'Cook Islands') echo "selected";?> >
                                 库克群岛
                             </option>
-                            <option value="Colombia" >
+                            <option value="Colombia" <?php if(old('country') == 'Colombia') echo "selected";?> >
                                 哥伦比亚
                             </option>
-                            <option value="Comoros" >
+                            <option value="Comoros" <?php if(old('country') == 'Comoros') echo "selected";?> >
                                 科摩罗
                             </option>
-                            <option value="Cabo Verde" >
+                            <option value="Cabo Verde" <?php if(old('country') == 'Cabo Verde') echo "selected";?> >
                                 佛得角
                             </option>
-                            <option value="Costa Rica" >
+                            <option value="Costa Rica" <?php if(old('country') == 'Costa Rica') echo "selected";?> >
                                 哥斯达黎加
                             </option>
-                            <option value="Curaçao" >
+                            <option value="Curaçao" <?php if(old('country') == 'Curaçao') echo "selected";?> >
                                 库拉索岛
                             </option>
-                            <option value="Christmas Island" >
+                            <option value="Christmas Island" <?php if(old('country') == 'Christmas Island') echo "selected";?> >
                                 圣诞岛
                             </option>
-                            <option value="Cayman Islands" >
+                            <option value="Cayman Islands" <?php if(old('country') == 'Cayman Islands') echo "selected";?> >
                                 开曼群岛
                             </option>
-                            <option value="Cyprus" >
+                            <option value="Cyprus" <?php if(old('country') == 'Cyprus') echo "selected";?> >
                                 塞浦路斯
                             </option>
-                            <option value="Czech Republic" >
+                            <option value="Czech Republic" <?php if(old('country') == 'Czech Republic') echo "selected";?> >
                                 捷克共和国
                             </option>
-                            <option value="Germany" >
+                            <option value="Germany" <?php if(old('country') == 'Germany') echo "selected";?> >
                                 德国
                             </option>
-                            <option value="Djibouti" >
+                            <option value="Djibouti" <?php if(old('country') == 'Djibouti') echo "selected";?> >
                                 吉布提
                             </option>
-                            <option value="Dominica" >
+                            <option value="Dominica" <?php if(old('country') == 'Dominica') echo "selected";?> >
                                 多米尼加
                             </option>
-                            <option value="Denmark" >
+                            <option value="Denmark" <?php if(old('country') == 'Denmark') echo "selected";?> >
                                 丹麦
                             </option>
-                            <option value="Dominican Republic" >
+                            <option value="Dominican Republic" <?php if(old('country') == 'Dominican Republic') echo "selected";?> >
                                 多米尼加共和国
                             </option>
-                            <option value="Algeria" >
+                            <option value="Algeria" <?php if(old('country') == 'Algeria') echo "selected";?> >
                                 阿尔及利亚
                             </option>
-                            <option value="Ecuador" >
+                            <option value="Ecuador" <?php if(old('country') == 'Ecuador') echo "selected";?> >
                                 厄瓜多尔
                             </option>
-                            <option value="Egypt" >
+                            <option value="Egypt" <?php if(old('country') == 'Egypt') echo "selected";?> >
                                 埃及
                             </option>
-                            <option value="Eritrea" >
+                            <option value="Eritrea" <?php if(old('country') == 'Eritrea') echo "selected";?> >
                                 厄立特里亚
                             </option>
-                            <option value="Western Sahara" >
+                            <option value="Western Sahara" <?php if(old('country') == 'Western Sahara') echo "selected";?> >
                                 西撒哈拉
                             </option>
-                            <option value="Spain" >
+                            <option value="Spain" <?php if(old('country') == 'Spain') echo "selected";?> >
                                 西班牙
                             </option>
-                            <option value="Estonia" >
+                            <option value="Estonia" <?php if(old('country') == 'Estonia') echo "selected";?> >
                                 爱沙尼亚
                             </option>
-                            <option value="Ethiopia" >
+                            <option value="Ethiopia" <?php if(old('country') == 'Ethiopia') echo "selected";?> >
                                 埃塞俄比亚
                             </option>
-                            <option value="Finland" >
+                            <option value="Finland" <?php if(old('country') == 'Finland') echo "selected";?> >
                                 芬兰
                             </option>
-                            <option value="Fiji" >
+                            <option value="Fiji" <?php if(old('country') == 'Fiji') echo "selected";?> >
                                 斐济
                             </option>
-                            <option value="Falkland Islands (Malvinas)" >
+                            <option value="Falkland Islands (Malvinas)" <?php if(old('country') == 'Falkland Islands (Malvinas)') echo "selected";?> >
                                 福克兰群岛（马维纳斯）
                             </option>
-                            <option value="France" >
+                            <option value="France" <?php if(old('country') == 'France') echo "selected";?> >
                                 法国
                             </option>
-                            <option value="Faroe Islands" >
+                            <option value="Faroe Islands" <?php if(old('country') == 'Faroe Islands') echo "selected";?> >
                                 法罗群岛
                             </option>
-                            <option value="Micronesia, Federated States of" >
+                            <option value="Micronesia, Federated States of" <?php if(old('country') == 'Micronesia, Federated States of') echo "selected";?> >
                                 密克罗尼西亚联邦
                             </option>
-                            <option value="Gabon" >
+                            <option value="Gabon" <?php if(old('country') == 'Gabon') echo "selected";?> >
                                 加蓬
                             </option>
-                            <option value="United Kingdom" >
+                            <option value="United Kingdom" <?php if(old('country') == 'United Kingdom') echo "selected";?> >
                                 英国
                             </option>
-                            <option value="Georgia" >
+                            <option value="Georgia" <?php if(old('country') == 'Georgia') echo "selected";?> >
                                 格鲁吉亚
                             </option>
-                            <option value="Guernsey" >
+                            <option value="Guernsey" <?php if(old('country') == 'Guernsey') echo "selected";?> >
                                 格恩西岛
                             </option>
-                            <option value="Ghana" >
+                            <option value="Ghana" <?php if(old('country') == 'Ghana') echo "selected";?> >
                                 加纳
                             </option>
-                            <option value="Gibraltar" >
+                            <option value="Gibraltar" <?php if(old('country') == 'Gibraltar') echo "selected";?> >
                                 直布罗陀
                             </option>
-                            <option value="Guinea" >
+                            <option value="Guinea" <?php if(old('country') == 'Guinea') echo "selected";?> >
                                 几内亚
                             </option>
-                            <option value="Guadeloupe" >
+                            <option value="Guadeloupe" <?php if(old('country') == 'Guadeloupe') echo "selected";?> >
                                 瓜德罗普
                             </option>
-                            <option value="Gambia" >
+                            <option value="Gambia" <?php if(old('country') == 'Gambia') echo "selected";?> >
                                 冈比亚
                             </option>
-                            <option value="Guinea-Bissau" >
+                            <option value="Guinea-Bissau" <?php if(old('country') == 'Guinea-Bissau') echo "selected";?> >
                                 几内亚比绍
                             </option>
-                            <option value="Equatorial Guinea" >
+                            <option value="Equatorial Guinea" <?php if(old('country') == 'Equatorial Guinea') echo "selected";?> >
                                 赤道几内亚
                             </option>
-                            <option value="Greece" >
+                            <option value="Greece" <?php if(old('country') == 'Greece') echo "selected";?> >
                                 希腊
                             </option>
-                            <option value="Grenada" >
+                            <option value="Grenada" <?php if(old('country') == 'Grenada') echo "selected";?> >
                                 格林纳达
                             </option>
-                            <option value="Greenland" >
+                            <option value="Greenland" <?php if(old('country') == 'Greenland') echo "selected";?> >
                                 格陵兰
                             </option>
-                            <option value="Guatemala" >
+                            <option value="Guatemala" <?php if(old('country') == 'Guatemala') echo "selected";?> >
                                 危地马拉
                             </option>
-                            <option value="French Guiana" >
+                            <option value="French Guiana" <?php if(old('country') == 'French Guiana') echo "selected";?> >
                                 法属圭亚那
                             </option>
-                            <option value="Guam" >
+                            <option value="Guam" <?php if(old('country') == 'Guam') echo "selected";?> >
                                 关岛
                             </option>
-                            <option value="Guyana" >
+                            <option value="Guyana" <?php if(old('country') == 'Guyana') echo "selected";?> >
                                 圭亚那
                             </option>
-                            <option value="Hong Kong" >
+                            <option value="Hong Kong" <?php if(old('country') == 'Hong Kong') echo "selected";?> >
                                 中国香港
                             </option>
-                            <option value="Heard Island and McDonald Islands" >
+                            <option value="Heard Island and McDonald Islands" <?php if(old('country') == 'Heard Island and McDonald Islands') echo "selected";?> >
                                 赫德岛和麦克唐纳群岛
                             </option>
-                            <option value="Honduras" >
+                            <option value="Honduras" <?php if(old('country') == 'Honduras') echo "selected";?> >
                                 洪都拉斯
                             </option>
-                            <option value="Croatia" >
+                            <option value="Croatia" <?php if(old('country') == 'Croatia') echo "selected";?> >
                                 克罗地亚
                             </option>
-                            <option value="Haiti" >
+                            <option value="Haiti" <?php if(old('country') == 'Haiti') echo "selected";?> >
                                 海地
                             </option>
-                            <option value="Hungary" >
+                            <option value="Hungary" <?php if(old('country') == 'Hungary') echo "selected";?> >
                                 匈牙利
                             </option>
-                            <option value="Indonesia" >
+                            <option value="Indonesia" <?php if(old('country') == 'Indonesia') echo "selected";?> >
                                 印度尼西亚
                             </option>
-                            <option value="Isle of Man" >
+                            <option value="Isle of Man" <?php if(old('country') == 'Isle of Man') echo "selected";?> >
                                 马恩岛
                             </option>
-                            <option value="India" >
+                            <option value="India" <?php if(old('country') == 'India') echo "selected";?> >
                                 印度
                             </option>
-                            <option value="British Indian Ocean Territory" >
+                            <option value="British Indian Ocean Territory" <?php if(old('country') == 'British Indian Ocean Territory') echo "selected";?> >
                                 英属印度洋领地
                             </option>
-                            <option value="Ireland" >
+                            <option value="Ireland" <?php if(old('country') == 'Ireland') echo "selected";?> >
                                 爱尔兰
                             </option>
-                            <option value="Iraq" >
+                            <option value="Iraq" <?php if(old('country') == 'Iraq') echo "selected";?> >
                                 伊拉克
                             </option>
-                            <option value="Iceland" >
+                            <option value="Iceland" <?php if(old('country') == 'Iceland') echo "selected";?> >
                                 冰岛
                             </option>
-                            <option value="Israel" >
+                            <option value="Israel" <?php if(old('country') == 'Israel') echo "selected";?> >
                                 以色列
                             </option>
-                            <option value="Italy" >
+                            <option value="Italy" <?php if(old('country') == 'Italy') echo "selected";?> >
                                 意大利
                             </option>
-                            <option value="Jamaica" >
+                            <option value="Jamaica" <?php if(old('country') == 'Jamaica') echo "selected";?> >
                                 牙买加
                             </option>
-                            <option value="Jersey" >
+                            <option value="Jersey" <?php if(old('country') == 'Jersey') echo "selected";?> >
                                 泽西岛
                             </option>
-                            <option value="Jordan" >
+                            <option value="Jordan" <?php if(old('country') == 'Jordan') echo "selected";?> >
                                 约旦
                             </option>
-                            <option value="Japan" >
+                            <option value="Japan" <?php if(old('country') == 'Japan') echo "selected";?> >
                                 日本
                             </option>
-                            <option value="Kazakhstan" >
+                            <option value="Kazakhstan" <?php if(old('country') == 'Kazakhstan') echo "selected";?> >
                                 哈萨克斯坦
                             </option>
-                            <option value="Kenya" >
+                            <option value="Kenya" <?php if(old('country') == 'Kenya') echo "selected";?> >
                                 肯尼亚
                             </option>
-                            <option value="Kyrgyzstan" >
+                            <option value="Kyrgyzstan" <?php if(old('country') == 'Kyrgyzstan') echo "selected";?> >
                                 吉尔吉斯斯坦
                             </option>
-                            <option value="Cambodia" >
+                            <option value="Cambodia" <?php if(old('country') == 'Cambodia') echo "selected";?> >
                                 柬埔寨
                             </option>
-                            <option value="Kiribati" >
+                            <option value="Kiribati" <?php if(old('country') == 'Kiribati') echo "selected";?> >
                                 基里巴斯
                             </option>
-                            <option value="Saint Kitts and Nevis" >
+                            <option value="Saint Kitts and Nevis" <?php if(old('country') == 'Saint Kitts and Nevis') echo "selected";?> >
                                 圣基茨和尼维斯
                             </option>
-                            <option value="Korea, Republic of" >
+                            <option value="Korea, Republic of" <?php if(old('country') == 'Korea, Republic of') echo "selected";?> >
                                 大韩民国
                             </option>
-                            <option value="Kuwait" >
+                            <option value="Kuwait" <?php if(old('country') == 'Kuwait') echo "selected";?> >
                                 科威特
                             </option>
-                            <option value="Lao People's Democratic Republic" >
+                            <option value="Lao Peoples Democratic Republic" <?php if(old('country') == 'Lao Peoples Democratic Republic') echo "selected";?> >
                                 老挝人民民主共和国
                             </option>
-                            <option value="Lebanon" >
+                            <option value="Lebanon" <?php if(old('country') == 'Lebanon') echo "selected";?> >
                                 黎巴嫩
                             </option>
-                            <option value="Liberia" >
+                            <option value="Liberia" <?php if(old('country') == 'Liberia') echo "selected";?> >
                                 利比里亚
                             </option>
-                            <option value="Libya" >
+                            <option value="Libya" <?php if(old('country') == 'Libya') echo "selected";?> >
                                 利比亚
                             </option>
-                            <option value="Saint Lucia" >
+                            <option value="Saint Lucia" <?php if(old('country') == 'Saint Lucia') echo "selected";?> >
                                 圣卢西亚
                             </option>
-                            <option value="Liechtenstein" >
+                            <option value="Liechtenstein" <?php if(old('country') == 'Liechtenstein') echo "selected";?> >
                                 列支敦士登
                             </option>
-                            <option value="Sri Lanka" >
+                            <option value="Sri Lanka" <?php if(old('country') == 'Sri Lanka') echo "selected";?> >
                                 斯里兰卡
                             </option>
-                            <option value="Lesotho" >
+                            <option value="Lesotho" <?php if(old('country') == 'Lesotho') echo "selected";?> >
                                 莱索托
                             </option>
-                            <option value="Lithuania" >
+                            <option value="Lithuania" <?php if(old('country') == 'Lithuania') echo "selected";?> >
                                 立陶宛
                             </option>
-                            <option value="Luxembourg" >
+                            <option value="Luxembourg" <?php if(old('country') == 'Luxembourg') echo "selected";?> >
                                 卢森堡
                             </option>
-                            <option value="Latvia" >
+                            <option value="Latvia" <?php if(old('country') == 'Latvia') echo "selected";?> >
                                 拉脱维亚
                             </option>
-                            <option value="Macao" >
+                            <option value="Macao" <?php if(old('country') == 'Macao') echo "selected";?> >
                                 中国澳门
                             </option>
-                            <option value="Saint Martin (French part)" >
+                            <option value="Saint Martin (French part)" <?php if(old('country') == 'Saint Martin (French part)') echo "selected";?> >
                                 圣马丁（法属）
                             </option>
-                            <option value="Morocco" >
+                            <option value="Morocco" <?php if(old('country') == 'Morocco') echo "selected";?> >
                                 摩洛哥
                             </option>
-                            <option value="Monaco" >
+                            <option value="Monaco" <?php if(old('country') == 'Monaco') echo "selected";?> >
                                 摩纳哥
                             </option>
-                            <option value="Moldova, Republic of" >
+                            <option value="Moldova, Republic of" <?php if(old('country') == 'Moldova, Republic of') echo "selected";?> >
                                 摩尔多瓦共和国
                             </option>
-                            <option value="Madagascar" >
+                            <option value="Madagascar" <?php if(old('country') == 'Madagascar') echo "selected";?> >
                                 马达加斯加
                             </option>
-                            <option value="Maldives" >
+                            <option value="Maldives" <?php if(old('country') == 'Maldives') echo "selected";?> >
                                 马尔代夫
                             </option>
-                            <option value="Mexico" >
+                            <option value="Mexico" <?php if(old('country') == 'Mexico') echo "selected";?> >
                                 墨西哥
                             </option>
-                            <option value="Marshall Islands" >
+                            <option value="Marshall Islands" <?php if(old('country') == 'Marshall Islands') echo "selected";?> >
                                 马绍尔群岛
                             </option>
-                            <option value="Macedonia, the former Yugoslav Republic of" >
+                            <option value="Macedonia, the former Yugoslav Republic of" <?php if(old('country') == 'Macedonia, the former Yugoslav Republic of') echo "selected";?> >
                                 马其顿（前南斯拉夫马其顿共和国）
                             </option>
-                            <option value="Mali" >
+                            <option value="Mali" <?php if(old('country') == 'Mali') echo "selected";?> >
                                 马里
                             </option>
-                            <option value="Malta" >
+                            <option value="Malta" <?php if(old('country') == 'Malta') echo "selected";?> >
                                 马耳他
                             </option>
-                            <option value="Myanmar" >
+                            <option value="Myanmar" <?php if(old('country') == 'Myanmar') echo "selected";?> >
                                 缅甸
                             </option>
-                            <option value="Montenegro" >
+                            <option value="Montenegro" <?php if(old('country') == 'Montenegro') echo "selected";?> >
                                 黑山共和国
                             </option>
-                            <option value="Mongolia" >
+                            <option value="Mongolia" <?php if(old('country') == 'Mongolia') echo "selected";?> >
                                 蒙古
                             </option>
-                            <option value="Northern Mariana Islands" >
+                            <option value="Northern Mariana Islands" <?php if(old('country') == 'Northern Mariana Islands') echo "selected";?> >
                                 北马里亚纳群岛
                             </option>
-                            <option value="Mozambique" >
+                            <option value="Mozambique" <?php if(old('country') == 'Mozambique') echo "selected";?> >
                                 莫桑比克
                             </option>
-                            <option value="Mauritania" >
+                            <option value="Mauritania" <?php if(old('country') == 'Mauritania') echo "selected";?> >
                                 毛里塔尼亚
                             </option>
-                            <option value="Montserrat" >
+                            <option value="Montserrat" <?php if(old('country') == 'Montserrat') echo "selected";?> >
                                 蒙特塞拉特
                             </option>
-                            <option value="Martinique" >
+                            <option value="Martinique" <?php if(old('country') == 'Martinique') echo "selected";?> >
                                 马提尼克
                             </option>
-                            <option value="Mauritius" >
+                            <option value="Mauritius" <?php if(old('country') == 'Mauritius') echo "selected";?> >
                                 毛里求斯
                             </option>
-                            <option value="Malawi" >
+                            <option value="Malawi" <?php if(old('country') == 'Malawi') echo "selected";?> >
                                 马拉维
                             </option>
-                            <option value="Malaysia" >
+                            <option value="Malaysia" <?php if(old('country') == 'Malaysia') echo "selected";?> >
                                 马来西亚
                             </option>
-                            <option value="Mayotte" >
+                            <option value="Mayotte" <?php if(old('country') == 'Mayotte') echo "selected";?> >
                                 马约特
                             </option>
-                            <option value="Namibia" >
+                            <option value="Namibia" <?php if(old('country') == 'Namibia') echo "selected";?> >
                                 纳米比亚
                             </option>
-                            <option value="New Caledonia" >
+                            <option value="New Caledonia" <?php if(old('country') == 'New Caledonia') echo "selected";?> >
                                 新喀里多尼亚
                             </option>
-                            <option value="Niger" >
+                            <option value="Niger" <?php if(old('country') == 'Niger') echo "selected";?> >
                                 尼日尔
                             </option>
-                            <option value="Norfolk Island" >
+                            <option value="Norfolk Island" <?php if(old('country') == 'Norfolk Island') echo "selected";?> >
                                 诺福克岛
                             </option>
-                            <option value="Nigeria" >
+                            <option value="Nigeria" <?php if(old('country') == 'Nigeria') echo "selected";?> >
                                 尼日利亚
                             </option>
-                            <option value="Nicaragua" >
+                            <option value="Nicaragua" <?php if(old('country') == 'Nicaragua') echo "selected";?> >
                                 尼加拉瓜
                             </option>
-                            <option value="Niue" >
+                            <option value="Niue" <?php if(old('country') == 'Niue') echo "selected";?> >
                                 纽埃
                             </option>
-                            <option value="Netherlands" >
+                            <option value="Netherlands" <?php if(old('country') == 'Netherlands') echo "selected";?> >
                                 荷兰
                             </option>
-                            <option value="Norway" >
+                            <option value="Norway" <?php if(old('country') == 'Norway') echo "selected";?> >
                                 挪威
                             </option>
-                            <option value="Nepal" >
+                            <option value="Nepal" <?php if(old('country') == 'Nepal') echo "selected";?> >
                                 尼泊尔
                             </option>
-                            <option value="Nauru" >
+                            <option value="Nauru" <?php if(old('country') == 'Nauru') echo "selected";?> >
                                 瑙鲁
                             </option>
-                            <option value="New Zealand" >
+                            <option value="New Zealand" <?php if(old('country') == 'New Zealand') echo "selected";?> >
                                 新西兰
                             </option>
-                            <option value="Oman" >
+                            <option value="Oman" <?php if(old('country') == 'Oman') echo "selected";?> >
                                 阿曼
                             </option>
-                            <option value="Pakistan" >
+                            <option value="Pakistan" <?php if(old('country') == 'Pakistan') echo "selected";?> >
                                 巴基斯坦
                             </option>
-                            <option value="Panama" >
+                            <option value="Panama" <?php if(old('country') == 'Panama') echo "selected";?> >
                                 巴拿马
                             </option>
-                            <option value="Pitcairn" >
+                            <option value="Pitcairn" <?php if(old('country') == 'Pitcairn') echo "selected";?> >
                                 皮特凯恩
                             </option>
-                            <option value="Peru" >
+                            <option value="Peru" <?php if(old('country') == 'Peru') echo "selected";?> >
                                 秘鲁
                             </option>
-                            <option value="Philippines" >
+                            <option value="Philippines" <?php if(old('country') == 'Philippines') echo "selected";?> >
                                 菲律宾
                             </option>
-                            <option value="Palau" >
+                            <option value="Palau" <?php if(old('country') == 'Palau') echo "selected";?> >
                                 帕劳
                             </option>
-                            <option value="Papua New Guinea" >
+                            <option value="Papua New Guinea" <?php if(old('country') == 'Papua New Guinea') echo "selected";?> >
                                 巴布亚新几内亚
                             </option>
-                            <option value="Poland" >
+                            <option value="Poland" <?php if(old('country') == 'Poland') echo "selected";?> >
                                 波兰
                             </option>
-                            <option value="Puerto Rico" >
+                            <option value="Puerto Rico" <?php if(old('country') == 'Puerto Rico') echo "selected";?> >
                                 波多黎各
                             </option>
-                            <option value="Portugal" >
+                            <option value="Portugal" <?php if(old('country') == 'Portugal') echo "selected";?> >
                                 葡萄牙
                             </option>
-                            <option value="Paraguay" >
+                            <option value="Paraguay" <?php if(old('country') == 'Paraguay') echo "selected";?> >
                                 巴拉圭
                             </option>
-                            <option value="Palestine, State of" >
+                            <option value="Palestine, State of" <?php if(old('country') == 'Palestine, State of') echo "selected";?> >
                                 巴勒斯坦国
                             </option>
-                            <option value="French Polynesia" >
+                            <option value="French Polynesia" <?php if(old('country') == 'French Polynesia') echo "selected";?> >
                                 法属波利尼西亚
                             </option>
-                            <option value="Qatar" >
+                            <option value="Qatar" <?php if(old('country') == 'Qatar') echo "selected";?> >
                                 卡塔尔
                             </option>
-                            <option value="Réunion" >
+                            <option value="Réunion" <?php if(old('country') == 'Réunion') echo "selected";?> >
                                 留尼汪
                             </option>
-                            <option value="Romania" >
+                            <option value="Romania" <?php if(old('country') == 'Romania') echo "selected";?> >
                                 罗马尼亚
                             </option>
-                            <option value="Russian Federation" >
+                            <option value="Russian Federation" <?php if(old('country') == 'Russian Federation') echo "selected";?> >
                                 俄罗斯联邦
                             </option>
-                            <option value="Rwanda" >
+                            <option value="Rwanda" <?php if(old('country') == 'Rwanda') echo "selected";?> >
                                 卢旺达
                             </option>
-                            <option value="Saudi Arabia" >
+                            <option value="Saudi Arabia" <?php if(old('country') == 'Saudi Arabia') echo "selected";?> >
                                 沙特阿拉伯
                             </option>
-                            <option value="Senegal" >
+                            <option value="Senegal" <?php if(old('country') == 'Senegal') echo "selected";?> >
                                 塞内加尔
                             </option>
-                            <option value="Singapore" >
+                            <option value="Singapore" <?php if(old('country') == 'Singapore') echo "selected";?> >
                                 新加坡
                             </option>
-                            <option value="South Georgia and the South Sandwich Islands" >
+                            <option value="South Georgia and the South Sandwich Islands" <?php if(old('country') == 'South Georgia and the South Sandwich Islands') echo "selected";?> >
                                 南乔治亚岛和南桑威奇群岛
                             </option>
-                            <option value="Saint Helena, Ascension and Tristan da Cunha" >
+                            <option value="Saint Helena, Ascension and Tristan da Cunha" <?php if(old('country') == 'Saint Helena, Ascension and Tristan da Cunha') echo "selected";?> >
                                 圣赫勒拿岛、阿森松岛和特里斯坦-达库尼亚群岛
                             </option>
-                            <option value="Svalbard and Jan Mayen" >
+                            <option value="Svalbard and Jan Mayen" <?php if(old('country') == 'Svalbard and Jan Mayen') echo "selected";?> >
                                 斯瓦尔巴和扬马延
                             </option>
-                            <option value="Solomon Islands" >
+                            <option value="Solomon Islands" <?php if(old('country') == 'Solomon Islands') echo "selected";?> >
                                 所罗门群岛
                             </option>
-                            <option value="Sierra Leone" >
+                            <option value="Sierra Leone" <?php if(old('country') == 'Sierra Leone') echo "selected";?> >
                                 塞拉利昂
                             </option>
-                            <option value="El Salvador" >
+                            <option value="El Salvador" <?php if(old('country') == 'El Salvador') echo "selected";?> >
                                 萨尔瓦多
                             </option>
-                            <option value="San Marino" >
+                            <option value="San Marino" <?php if(old('country') == 'San Marino') echo "selected";?> >
                                 圣马力诺
                             </option>
-                            <option value="Somalia" >
+                            <option value="Somalia" <?php if(old('country') == 'Somalia') echo "selected";?> >
                                 索马里
                             </option>
-                            <option value="Saint Pierre and Miquelon" >
+                            <option value="Saint Pierre and Miquelon" <?php if(old('country') == 'Saint Pierre and Miquelon') echo "selected";?> >
                                 圣皮埃尔和密克隆岛
                             </option>
-                            <option value="Serbia" >
+                            <option value="Serbia" <?php if(old('country') == 'Serbia') echo "selected";?> >
                                 塞尔维亚
                             </option>
-                            <option value="Sao Tome and Principe" >
+                            <option value="Sao Tome and Principe" <?php if(old('country') == 'Sao Tome and Principe') echo "selected";?> >
                                 圣多美和普林西比
                             </option>
-                            <option value="Suriname" >
+                            <option value="Suriname" <?php if(old('country') == 'Suriname') echo "selected";?> >
                                 苏里南
                             </option>
-                            <option value="Slovakia" >
+                            <option value="Slovakia" <?php if(old('country') == 'Slovakia') echo "selected";?> >
                                 斯洛伐克
                             </option>
-                            <option value="Slovenia" >
+                            <option value="Slovenia" <?php if(old('country') == 'Slovenia') echo "selected";?> >
                                 斯洛文尼亚
                             </option>
-                            <option value="Sweden" >
+                            <option value="Sweden" <?php if(old('country') == 'Sweden') echo "selected";?> >
                                 瑞典
                             </option>
-                            <option value="Swaziland" >
+                            <option value="Swaziland" <?php if(old('country') == 'Swaziland') echo "selected";?> >
                                 斯威士兰
                             </option>
-                            <option value="Sint Maarten (Dutch part)" >
+                            <option value="Sint Maarten (Dutch part)" <?php if(old('country') == 'Sint Maarten (Dutch part)') echo "selected";?> >
                                 圣马丁岛（荷属）
                             </option>
-                            <option value="Seychelles" >
+                            <option value="Seychelles" <?php if(old('country') == 'Seychelles') echo "selected";?> >
                                 塞舌尔
                             </option>
-                            <option value="Turks and Caicos Islands" >
+                            <option value="Turks and Caicos Islands" <?php if(old('country') == 'Turks and Caicos Islands') echo "selected";?> >
                                 特克斯和凯科斯群岛
                             </option>
-                            <option value="Chad" >
+                            <option value="Chad" <?php if(old('country') == 'Chad') echo "selected";?> >
                                 乍得
                             </option>
-                            <option value="Togo" >
+                            <option value="Togo" <?php if(old('country') == 'Togo') echo "selected";?> >
                                 多哥
                             </option>
-                            <option value="Thailand" >
+                            <option value="Thailand" <?php if(old('country') == 'Thailand') echo "selected";?> >
                                 泰国
                             </option>
-                            <option value="Tajikistan" >
+                            <option value="Tajikistan" <?php if(old('country') == 'Tajikistan') echo "selected";?> >
                                 塔吉克斯坦
                             </option>
-                            <option value="Tokelau" >
+                            <option value="Tokelau" <?php if(old('country') == 'Tokelau') echo "selected";?> >
                                 托克劳
                             </option>
-                            <option value="Turkmenistan" >
+                            <option value="Turkmenistan" <?php if(old('country') == 'Turkmenistan') echo "selected";?> >
                                 土库曼斯坦
                             </option>
-                            <option value="Timor-Leste" >
+                            <option value="Timor-Leste" <?php if(old('country') == 'Timor-Leste') echo "selected";?> >
                                 东帝汶
                             </option>
-                            <option value="Tonga" >
+                            <option value="Tonga" <?php if(old('country') == 'Tonga') echo "selected";?> >
                                 汤加
                             </option>
-                            <option value="Trinidad and Tobago" >
+                            <option value="Trinidad and Tobago" <?php if(old('country') == 'Trinidad and Tobago') echo "selected";?> >
                                 特立尼达和多巴哥
                             </option>
-                            <option value="Tunisia" >
+                            <option value="Tunisia" <?php if(old('country') == 'Tunisia') echo "selected";?> >
                                 突尼斯
                             </option>
-                            <option value="Turkey" >
+                            <option value="Turkey" <?php if(old('country') == 'Turkey') echo "selected";?> >
                                 土耳其
                             </option>
-                            <option value="Tuvalu" >
+                            <option value="Tuvalu" <?php if(old('country') == 'Tuvalu') echo "selected";?> >
                                 图瓦卢
                             </option>
-                            <option value="Taiwan" >
+                            <option value="Taiwan" <?php if(old('country') == 'Taiwan') echo "selected";?> >
                                 中国台湾
                             </option>
-                            <option value="Tanzania, United Republic of" >
+                            <option value="Tanzania, United Republic of" <?php if(old('country') == 'Tanzania, United Republic of') echo "selected";?>  >
                                 坦桑尼亚联合共和国
                             </option>
-                            <option value="Uganda" >
+                            <option value="Uganda" <?php if(old('country') == 'Uganda') echo "selected";?>  >
                                 乌干达
                             </option>
-                            <option value="Ukraine" >
+                            <option value="Ukraine" <?php if(old('country') == 'Ukraine') echo "selected";?>  >
                                 乌克兰
                             </option>
-                            <option value="United States Minor Outlying Islands" >
+                            <option value="United States Minor Outlying Islands" <?php if(old('country') == 'United States Minor Outlying Islands') echo "selected";?>  >
                                 美国本土外小岛屿
                             </option>
-                            <option value="Uruguay" >
+                            <option value="Uruguay" <?php if(old('country') == 'Uruguay') echo "selected";?>  >
                                 乌拉圭
                             </option>
-                            <option value="United States" >
+                            <option value="United States"  <?php if(old('country') == 'United States') echo "selected";?> >
                                 美国
                             </option>
-                            <option value="Uzbekistan" >
+                            <option value="Uzbekistan"  <?php if(old('country') == 'Uzbekistan') echo "selected";?> >
                                 乌兹别克斯坦
                             </option>
-                            <option value="Holy See (Vatican City State)" >
+                            <option value="Holy See (Vatican City State)" <?php if(old('country') == 'Holy See (Vatican City State)') echo "selected";?>  >
                                 梵蒂冈（梵蒂冈城国）
                             </option>
-                            <option value="Saint Vincent and the Grenadines" >
+                            <option value="Saint Vincent and the Grenadines" <?php if(old('country') == 'Saint Vincent and the Grenadines') echo "selected";?>  >
                                 圣文森特和格林纳丁斯
                             </option>
-                            <option value="Venezuela, Bolivarian Republic of" >
+                            <option value="Venezuela, Bolivarian Republic of" <?php if(old('country') == 'Venezuela, Bolivarian Republic of') echo "selected";?>  >
                                 委内瑞拉玻利瓦尔共和国
                             </option>
-                            <option value="Virgin Islands, British" >
+                            <option value="Virgin Islands, British" <?php if(old('country') == 'Virgin Islands, British') echo "selected";?>  >
                                 英属维尔京群岛
                             </option>
-                            <option value="Virgin Islands, U.S." >
+                            <option value="Virgin Islands, U.S." <?php if(old('country') == 'Virgin Islands, U.S.') echo "selected";?>  >
                                 美属维尔京群岛
                             </option>
-                            <option value="Viet Nam" >
+                            <option value="Viet Nam" <?php if(old('country') == 'Viet Nam') echo "selected";?> >
                                 越南
                             </option>
-                            <option value="Vanuatu" >
+                            <option value="Vanuatu" <?php if(old('country') == 'Vanuatu') echo "selected";?> >
                                 瓦努阿图
                             </option>
-                            <option value="Wallis and Futuna" >
+                            <option value="Wallis and Futuna" <?php if(old('country') == 'Wallis and Futuna') echo "selected";?> >
                                 瓦利斯和富图纳
                             </option>
-                            <option value="Samoa" >
+                            <option value="Samoa" <?php if(old('country') == 'Samoa') echo "selected";?> >
                                 萨摩亚
                             </option>
-                            <option value="Yemen" >
+                            <option value="Yemen" <?php if(old('country') == 'Yemen') echo "selected";?> >
                                 也门
                             </option>
-                            <option value="South Africa" >
+                            <option value="South Africa" <?php if(old('country') == 'South Africa') echo "selected";?> >
                                 南非
                             </option>
-                            <option value="Zambia" >
+                            <option value="Zambia" <?php if(old('country') == 'Zambia') echo "selected";?> >
                                 赞比亚
                             </option>
-                            <option value="Zimbabwe" >
+                            <option value="Zimbabwe" <?php if(old('country') == 'Zimbabwe') echo "selected";?> >
                                 津巴布韦
                             </option>
                         </select>
@@ -1282,100 +1283,100 @@
               </span>
                         </label>
                         <select id="field8" name="stateProv" data-value="<eloqua type='emailfield' syntax='State_Prov' />" class="field-size-top-large" >
-                            <option value="" >
+                            <option value="" <?php if(old('stateProv') == '') echo "selected";?>  >
                                 -- 请选择 --
                             </option>
-                            <option value="安徽" >
+                            <option value="安徽" <?php if(old('stateProv') == '安徽') echo "selected";?> >
                                 安徽
                             </option>
-                            <option value="北京" >
+                            <option value="北京" <?php if(old('stateProv') == '北京') echo "selected";?> >
                                 北京
                             </option>
-                            <option value="附件" >
+                            <option value="附件"  <?php if(old('stateProv') == '附件') echo "selected";?> >
                                 福建
                             </option>
-                            <option value="广东" >
+                            <option value="广东"  <?php if(old('stateProv') == '广东') echo "selected";?> >
                                 广东
                             </option>
-                            <option value="甘肃" >
+                            <option value="甘肃"  <?php if(old('stateProv') == '甘肃') echo "selected";?> >
                                 甘肃
                             </option>
-                            <option value="广西" >
+                            <option value="广西"  <?php if(old('stateProv') == '广西') echo "selected";?> >
                                 广西
                             </option>
-                            <option value="贵州" >
+                            <option value="贵州"  <?php if(old('stateProv') == '贵州') echo "selected";?> >
                                 贵州
                             </option>
-                            <option value="湖北" >
+                            <option value="湖北"  <?php if(old('stateProv') == '湖北') echo "selected";?> >
                                 湖北
                             </option>
-                            <option value="河北" >
+                            <option value="河北" <?php if(old('stateProv') == '河北') echo "selected";?>  >
                                 河北
                             </option>
-                            <option value="河南" >
+                            <option value="河南" <?php if(old('stateProv') == '河南') echo "selected";?>  >
                                 河南
                             </option>
-                            <option value="海南" >
+                            <option value="海南"  <?php if(old('stateProv') == '海南') echo "selected";?> >
                                 海南
                             </option>
-                            <option value="黑龙江" >
+                            <option value="黑龙江" <?php if(old('stateProv') == '黑龙江') echo "selected";?>  >
                                 黑龙江
                             </option>
-                            <option value="湖南" >
+                            <option value="湖南"  <?php if(old('stateProv') == '湖南') echo "selected";?> >
                                 湖南
                             </option>
-                            <option value="吉林" >
+                            <option value="吉林" <?php if(old('stateProv') == '吉林') echo "selected";?>  >
                                 吉林
                             </option>
-                            <option value="江苏" >
+                            <option value="江苏" <?php if(old('stateProv') == '江苏') echo "selected";?>  >
                                 江苏
                             </option>
-                            <option value="江西" >
+                            <option value="江西" <?php if(old('stateProv') == '江西') echo "selected";?>  >
                                 江西
                             </option>
-                            <option value="辽宁" >
+                            <option value="辽宁"  <?php if(old('stateProv') == '辽宁') echo "selected";?> >
                                 辽宁
                             </option>
-                            <option value="内蒙古" >
+                            <option value="内蒙古"  <?php if(old('stateProv') == '内蒙古') echo "selected";?> >
                                 内蒙古
                             </option>
-                            <option value="宁夏" >
+                            <option value="宁夏"  <?php if(old('stateProv') == '宁夏') echo "selected";?> >
                                 宁夏
                             </option>
-                            <option value="青海" >
+                            <option value="青海" <?php if(old('stateProv') == '青海') echo "selected";?>  >
                                 青海
                             </option>
-                            <option value="四川" >
+                            <option value="四川" <?php if(old('stateProv') == '四川') echo "selected";?>  >
                                 四川
                             </option>
-                            <option value="山东" >
+                            <option value="山东" <?php if(old('stateProv') == '山东') echo "selected";?>  >
                                 山东
                             </option>
-                            <option value="上海" >
+                            <option value="上海"  <?php if(old('stateProv') == '上海') echo "selected";?> >
                                 上海
                             </option>
-                            <option value="陕西" >
+                            <option value="陕西" <?php if(old('stateProv') == '陕西') echo "selected";?>  >
                                 陕西
                             </option>
-                            <option value="山西" >
+                            <option value="山西" <?php if(old('stateProv') == '山西') echo "selected";?>  >
                                 山西
                             </option>
-                            <option value="天津" >
+                            <option value="天津"  <?php if(old('stateProv') == '天津') echo "selected";?> >
                                 天津
                             </option>
-                            <option value="台湾" >
+                            <option value="台湾"  <?php if(old('stateProv') == '台湾') echo "selected";?> >
                                 台湾
                             </option>
-                            <option value="新疆" >
+                            <option value="新疆"  <?php if(old('stateProv') == '新疆') echo "selected";?> >
                                 新疆
                             </option>
-                            <option value="西藏" >
+                            <option value="西藏"  <?php if(old('stateProv') == '西藏') echo "selected";?> >
                                 西藏
                             </option>
-                            <option value="云南" >
+                            <option value="云南"  <?php if(old('stateProv') == '云南') echo "selected";?> >
                                 云南
                             </option>
-                            <option value="浙江" >
+                            <option value="浙江"  <?php if(old('stateProv') == '浙江') echo "selected";?> >
                                 浙江
                             </option>
                         </select>
@@ -1395,7 +1396,7 @@
                 *
               </span>
                         </label>
-                        <input id="field9" name="city" type="text" value="" class="field-size-top-large"  />
+                        <input id="field9" name="city" type="text" value="<?php echo old('city');?>" class="field-size-top-large"  />
                     </p>
                 </div>
             </div>
@@ -1412,12 +1413,12 @@
                 *
               </span>
                         </label>
-                        <input id="field10" name="address1" type="text" value="" class="field-size-top-large"  />
+                        <input id="field10" name="address1" type="text" value="<?php echo old('address1');?>" class="field-size-top-large"  />
                     </p>
                 </div>
             </div>
         </div>
-        <div id="formElement11" class="sc-view form-design-field sc-static-layout item-padding sc-regular-size" >
+        <div id="formElement11" style="display: none" class="sc-view form-design-field sc-static-layout item-padding sc-regular-size" >
             <div class="field-wrapper" >
             </div>
             <div class="individual field-wrapper" >
@@ -1426,13 +1427,12 @@
                         <label for="field11" class="label-position top " >
                             您有哪些问题或需求？请详细描述
                         </label>
-                        <textarea id="field11" name="paragraphText" class="field-size-top-large" >
-            </textarea>
+                        <textarea id="field11" name="paragraphText" class="field-size-top-large" ><?php echo old('paragraphText');?></textarea>
                     </p>
                 </div>
             </div>
         </div>
-        <?php if($from == 'sample'): ?>
+        <?php if($from == 'Sample'): ?>
         <div id="formElement17" class="sc-view form-design-field sc-static-layout item-padding sc-regular-size">
             <div class="field-wrapper">
             </div>
@@ -1442,7 +1442,7 @@
                         <label for="field17" class="label-position top ">
                             描述
                         </label>
-                        <textarea id="field17" name="descripton" class="field-size-top-large"></textarea>
+                        <textarea id="field17" name="description" class="field-size-top-large"><?php echo old('description');?></textarea>
                     </p>
                 </div>
             </div>
@@ -1498,7 +1498,7 @@
             <div class="individual field-wrapper" >
                 <div class="_100 field-style" >
                     <p class="field-p" >
-                        <input type="hidden" name="mid" value=""  />
+                        <input type="hidden" name="uid" id="uid" value=""  />
                         <input type="hidden" name="from" value="<?php echo $from; ?>"  />
                         <input type="submit" value="提交" class="submit-button" style="font-size: 100%; height: 24px; width: 100px"  />
                     </p>
@@ -1529,6 +1529,10 @@
         }
     </style>
     <script type="text/javascript" >
+        $.getJSON('http://www.elecfans.com/webapi/passport/checklogin?callback=?',function(rsp){
+            $('#uid').val(rsp.uid + ' '+ rsp.username)
+        })
+
         var dom0 = document.querySelector('#form1665 #field0');
         var field0 = new LiveValidation(dom0, {
             validMessage: "", onlyOnBlur: false, wait: 300}

@@ -16,7 +16,7 @@ class A
          */
 
         // 成功返回
-        echo json_encode(['status'=>'200']);
+        echo json_encode(['status'=>'200','remote_addr'=>$_SERVER['REMOTE_ADDR']]);
     }
 }
 
