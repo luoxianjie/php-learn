@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单点登录</title>
+</head>
+<body>
+    <form action="index.php?action=login" method="post" >
+        <input type="hidden" name="server" value="<?php echo $server;?>" />
+        <?php if(isset($_SESSION['error'])): ?>
+            <span>error:</span><?php echo $_SESSION['error'];?><br>
+        <?php endif;?>
+        <label for="account">账号</label><input id="account" type="text" name="account" value="" />
+        <label for="password">密码</label><input id="password" type="text" name="password" value="" />
+        <input type="submit" name="submit" value="提交">
+    </form>
+</body>
+</html>

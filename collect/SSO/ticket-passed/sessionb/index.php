@@ -8,54 +8,92 @@
 session_start();
 class B
 {
+    /**
+     *
+     */
     public function login()
     {
         $ticket = @$_GET['ticket'];
         if(!empty($ticket)){
+            // 验证ticket有效性
+            $verify_url = 'http://passport.com/index.php?action=verify&ticket='.$ticket;
+            if(file_get_contents($verify_url)=='success'){
+                // 获取用户信息
+                $get_user_info_url = 'http://passport.com/index.php?action=user&ticket='.$ticket;
+                $user = file_get_contents($get_user_info_url);
+                $_SESSION['user'] = json_decode($user,true);
 
-            //去验证ticket有效性
-            $verify_url = 'http://passport.lxj.com/?route=verify&ticket='.$ticket;
-
-            if($this->curl_get($verify_url)=='success'){
-
-                $_SESSION['ticket'] = $ticket;
                 $this->index();
             }else{
-                echo "您还没有登录跳转到验证服务器。。。";
-                $server = 'http://passport.lxj.com/?server=http://b.lxj.com/';
-                header("Location: $server" );
+                $msg = "您还未登录";
+                $url = "http://passport.com/index.php?action=login&server=http://b.com/index.php";
+                $this->_jump($msg,$url);
             }
 
         }else{
-            echo "您还没有登录跳转到验证服务器。。。";
-            $server = 'http://passport.lxj.com/?server=http://b.lxj.com/';
-            header("Location: $server" );
+            $msg = "您还未登录";
+            $url = "http://passport.com/index.php?action=login&server=http://b.com/index.php";
+            $this->_jump($msg,$url);
         }
 
     }
 
-    private function curl_get($verify_url)
-    {
-        //初始化
-        $ch = curl_init($verify_url);
-        //设置选项，包括URL
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_HEADER, 0);
-        curl_setopt($ch,CURLOPT_TIMEOUT,13);
-        $output = curl_exec($ch);
-        curl_close($ch);
-        return $output;
-    }
-
-
+    /**
+     * 若用户未登陆，则跳转到单点登陆
+     */
     public function index()
     {
-        echo "B登陆成功<br>";
+        $ticket = @$_GET['ticket'];
+        if($ticket && !isset($_SESSION['user'])){
+            $verify_url = 'http://passport.com/index.php?action=verify&ticket=' . $ticket;
+            if(file_get_contents($verify_url)=='success') {
+                // 获取用户信息
+                $get_user_info_url = 'http://passport.com/index.php?action=user&ticket=' . $ticket;
+                $user = file_get_contents($get_user_info_url);
+                $_SESSION['user'] = json_decode($user, true);
+            }else{
+                $msg = "您还未登录";
+                $url = "http://passport.com/index.php?action=login&server=http://b.com/index.php";
+                $this->_jump($msg,$url);
+            }
+        }
 
-        echo "<a href='http://a.lxj.com/?ticket=".$_SESSION['ticket']."'>跳转到A</a>";
+        if($_SESSION['user']) {
+            $ticket = $_SESSION['user']['ticket'];
+            echo "<script src='http://a.com/index.php?action=login&ticket={$ticket}'></script>";
+            echo "B已登陆成功<a href='http://passport.com/index.php?action=logout&server=http://b.com/index.php'>退出</a><br>";
+            echo "<a href='http://a.com/index.php?action=index&ticket={$ticket}'>跳转到A</a>";
+        }else{
+            $msg = "您还未登录";
+            $url = "http://passport.com/index.php?action=login&server=http://b.com/index.php";
+            $this->_jump($msg,$url);
+        }
+    }
+
+    public function logout()
+    {
+        session_destroy();
+        $server = $_GET['server'];
+        $url2 = 'http://passport.com/index.php?action=login&server='.$server;
+        header('Location:'.$url2);
+    }
+
+    /**
+     * 跳转方法
+     * @param $msg
+     * @param $url
+     */
+    private function _jump($msg, $url)
+    {
+        ob_clean();
+        echo "<a href='$url'>{$msg}</a><span id='time' >3</span>秒后跳转。";
+        echo "<script type='text/javascript'> var time = document.getElementById('time'); setInterval(function(){ time.innerHTML = parseInt(time.innerHTML) -1; if(time.innerHTML<1){ location.href='$url'}; },1000);</script>";
+        die;
     }
 
 
 }
 
-(new B())->login();
+$action = isset($_GET['action'])?trim($_GET['action']):'index';
+
+(new B())->$action();
