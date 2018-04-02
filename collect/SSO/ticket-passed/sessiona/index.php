@@ -22,14 +22,12 @@ class A
                 $get_user_info_url = 'http://passport.com/index.php?action=user&ticket='.$ticket;
                 $user = file_get_contents($get_user_info_url);
                 $_SESSION['user'] = json_decode($user,true);
-
                 $this->index();
             }else{
                 $msg = "您还未登录";
                 $url = "http://passport.com/index.php?action=login&server=http://a.com/index.php";
                 $this->_jump($msg,$url);
             }
-
         }else{
             $msg = "您还未登录";
             $url = "http://passport.com/index.php?action=login&server=http://a.com/index.php";
@@ -57,7 +55,6 @@ class A
                 $this->_jump($msg,$url);
             }
         }
-
         if($_SESSION['user']) {
             $ticket = $_SESSION['user']['ticket'];
             echo "<script src='http://b.com/index.php?action=login&ticket={$ticket}'></script>";
