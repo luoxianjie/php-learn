@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="xss" action="index.php?action=save" method="post">
+    <label for="name">用户名</label><input id="name" name="name" type="text" />
+    <label for="password">密  码</label><input id="password" name="password" type="password"/>
+    <label for="repassword">确认密码</label><input id="repassword" name="repassword" type="password"/>
+    <input type="submit" name="submit" value="提交"/>
+</form>
+</body>
+</html>
