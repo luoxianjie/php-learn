@@ -4,6 +4,7 @@
 // | Date  : 2018/3/26
 // | Time  : 11:59
 // +----------------------------------------------------------------------
+set_time_limit(0);
 session_start();
 
 class Form
@@ -37,7 +38,7 @@ class Form
      * @param city      城市
      * @param address1        地址
      * @param description     描述
-     * @param form      来源
+     * @param from      来源
      */
     public function deal()
     {
@@ -112,7 +113,7 @@ class Form
         ];
 
         $_SESSION['data'] = $data;
-        header('Content-type:text/html;charset=utf-8');
+
         try {
 
             // 获取代理
@@ -125,7 +126,7 @@ class Form
             $res1 = $this->_curlPost($url1, $data, $referer, $proxy,true);
 
             if($res1['status']  != 200 || !empty(trim($res1['body']))){
-                /*var_dump($res1);*/
+                /*var_dump($res1);die;*/
                 $this->_jump('处理失败，请稍后重试!');
             }
 
@@ -176,9 +177,9 @@ class Form
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
 
         // 设置代理ip及端口号
-        curl_setopt($ch, CURLOPT_PROXYAUTH, CURLAUTH_BASIC);
+        /*curl_setopt($ch, CURLOPT_PROXYAUTH, CURLAUTH_BASIC);
         curl_setopt($ch, CURLOPT_PROXY, $proxy);
-        /*curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
+        curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
         curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, 1);*/
 
         if($https === true){
@@ -221,8 +222,10 @@ class Form
     private function _jump($msg)
     {
         ob_clean();
-        echo "<a href='/'>{$msg}</a><span id='time' >3</span>秒后跳转。";
-        echo "<script type='text/javascript'> var time = document.getElementById('time'); setInterval(function(){ time.innerHTML = parseInt(time.innerHTML) -1; if(time.innerHTML<1){ location.href='/'}; },1000);</script>";
+        header('Content-type:text/html;charset=utf-8');
+        $referer = $_SERVER['HTTP_REFERER'];
+        echo "<a href='{$referer}'>{$msg}</a><span id='time' >3</span>秒后跳转。";
+        echo "<script type='text/javascript'> var time = document.getElementById('time'); setInterval(function(){ time.innerHTML = parseInt(time.innerHTML) -1; if(time.innerHTML<1){ location.href='{$referer}'}; },1000);</script>";
         die;
     }
 }
