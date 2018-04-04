@@ -67,9 +67,11 @@ class Form
         $elqFormName = 'sg-cn-elecfans';
         $elqSiteId = '2070786569';
         $fid = 111;
-        $field4 = '运动系统';
+        $field4 = '';
         $field8 = 'te-test';
         $uid = trim($_POST['uid']);
+
+        header('Content-type:text/html;charset=utf-8');
 
         if(empty($uid)){
             die('请先登录');
@@ -177,9 +179,9 @@ class Form
         curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
 
         // 设置代理ip及端口号
-        /*curl_setopt($ch, CURLOPT_PROXYAUTH, CURLAUTH_BASIC);
+        curl_setopt($ch, CURLOPT_PROXYAUTH, CURLAUTH_BASIC);
         curl_setopt($ch, CURLOPT_PROXY, $proxy);
-        curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
+        /*curl_setopt($ch, CURLOPT_PROXYTYPE, CURLPROXY_HTTP);
         curl_setopt($ch, CURLOPT_HTTPPROXYTUNNEL, 1);*/
 
         if($https === true){
