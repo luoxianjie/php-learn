@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <style>
+        .tip{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <p>注册表单</p>
+    <p id="errorContainer"></p>
+    <form id="register" name="register" action="index.php?action=submit">
+        <label for="account"><input id="account" placeholder="请输入账号" name="account"/><span class="tip"></span></label><br/>
+        <label for="password"><input id="password" placeholder="请输入密码" name="password"/><span class="tip"></span></label><br/>
+        <label for="repassword"><input id="repassword" placeholder="请确认密码" name="repassword"/><span class="tip"></span></label><br/>
+        <label for="email"><input id="email" placeholder="请输入邮箱" name="email"/><span class="tip"></span></label><br/>
+        <label for="mobile"><input id="mobile" placeholder="请输入手机号" name="mobile"/><span class="tip"></span></label><br/>
+        <label for="code"><input id="code" placeholder="请输入验证码" name="code"/><span class="tip"></span><img src=""/></label><br/>
+        <input type="submit" name="submit" value="提交"/>
+    </form>
+</div>
+<script type="text/javascript">
+    $(function(){
+        /**
+         *  默认验证类型
+            required: "这是必填字段",
+            remote: "请修正此字段",
+            email: "请输入有效的电子邮件地址",
+            url: "请输入有效的网址",
+            date: "请输入有效的日期",
+            dateISO: "请输入有效的日期 (YYYY-MM-DD)",
+            number: "请输入有效的数字",
+            digits: "只能输入数字",
+            creditcard: "请输入有效的信用卡号码",
+            equalTo: "你的输入不相同",
+            extension: "请输入有效的后缀",
+            maxlength: $.validator.format("最多可以输入 {0} 个字符"),
+            minlength: $.validator.format("最少要输入 {0} 个字符"),
+            rangelength: $.validator.format("请输入长度在 {0} 到 {1} 之间的字符串"),
+            range: $.validator.format("请输入范围在 {0} 到 {1} 之间的数值"),
+            max: $.validator.format("请输入不大于 {0} 的数值"),
+            min: $.validator.format("请输入不小于 {0} 的数值")
+         */
+
+
+        jQuery.validator.addMethod("isMobile", function(value, element) {               // 自定义验证类型
+            var length = value.length;
+            var mobile = /^1[34578]\d{9}$/;/*/^1(3|4|5|7|8)\d{9}$/*/
+            return this.optional(element) || (length == 11 && mobile.test(value));
+        }, "请正确填写您的手机号码");
+
+
+
+        $('#register').validate({
+            onfocusout: function(element) { $(element).valid(); },      // 失去焦点触发
+            onfocusin: function(element) { $(element).valid(); },       // 获得焦点触发
+            onkeyup: function(element) { $(element).valid(); },         // 获得焦点触发
+            submitHandler: function(form) {                             // ajax提交方式
+                $(form).ajaxSubmit({
+                    url:'index.php?action=save',
+                    type:'post',
+                    success:function(rsp){
+                        // 提交成功后处理
+                    },
+                    error:function(){
+                        // 提交失败后处理
+                    }
+                });
+            },
+            errorPlacement: function(error, element) {                  // 设置错误提示显示位置 (若errorLabelContainer不存在，则此设置生效)
+                element.parent('label').find('.tip').html(error);
+            },
+            errorLabelContainer: $("#errorContainer"),                  // 设置错误提示显示位置（所有错误显示在一处）
+            showErrors:function(errorMap,errorList){                    // 只显示第一条错误提示 (与errorLabelContainer配合使用)
+
+                //这里做的目的是为了避免错误信息无限追加
+                $("#errorContainer label").remove();
+                $("#errorContainer").append('<label class="tip">'+errorList[0].message+'</label>');
+            },
+            rules:{
+                account:{
+                    required:true,
+                    minlength:3,
+                    maxlength:20,
+                    /*remote:{                                           // ajax验证
+                        url:'index.php?action=check_account',
+                        type:'post',
+                        data:{
+                            acount:function(){ return $('#account').val() }
+                        }
+                    }*/
+                },
+                password:{
+                    required:true
+                },
+                repassword:{
+                    required:true,
+                    equalTo:'#password'
+                },
+                email:{
+                    required:true,
+                    email:true
+                },
+                mobile:{
+                    required:true,
+                    isMobile:true
+                },
+                code:{
+                    required:true
+                }
+            },
+            messages:{
+                account:{
+                    required:'请输入账号',
+                    minlength:'账号长度不得小于3',
+                    maxlength:'账号长度不得大于20',
+                    /*remote:'账号已存在'*/
+                },
+                password:'请输入密码',                                  // 验证提示可以简写
+                repassword:{
+                    required:'请确认密码',
+                    equalTo:'两次密码不一致'
+                },
+                email:{
+                    required:'请输入邮箱',
+                    email:'邮箱格式有误'
+                },
+                mobile:{
+                    required:'请填写手机号',
+                    isMobile:'手机号格式有误'
+                },
+                code:{
+                    required:'请输入验证码'
+                }
+            }
+        })
+    });
+</script>
+</body>
+</html>
