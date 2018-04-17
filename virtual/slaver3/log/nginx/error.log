@@ -1,0 +1,17 @@
+2018/04/16 10:00:51 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/04/16 10:01:20 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/04/16 10:02:04 [error] 5#5: *1 directory index of "/var/www/html/" is forbidden, client: 192.168.234.1, server: localhost, request: "GET / HTTP/1.1", host: "192.168.234.130"
+2018/04/16 10:02:05 [error] 5#5: *1 directory index of "/var/www/html/" is forbidden, client: 192.168.234.1, server: localhost, request: "GET / HTTP/1.1", host: "192.168.234.130"
+2018/04/16 10:02:06 [error] 5#5: *1 directory index of "/var/www/html/" is forbidden, client: 192.168.234.1, server: localhost, request: "GET / HTTP/1.1", host: "192.168.234.130"
+2018/04/16 10:02:06 [error] 5#5: *1 directory index of "/var/www/html/" is forbidden, client: 192.168.234.1, server: localhost, request: "GET / HTTP/1.1", host: "192.168.234.130"
+2018/04/16 10:02:06 [error] 5#5: *1 directory index of "/var/www/html/" is forbidden, client: 192.168.234.1, server: localhost, request: "GET / HTTP/1.1", host: "192.168.234.130"
+2018/04/16 10:02:07 [error] 5#5: *1 directory index of "/var/www/html/" is forbidden, client: 192.168.234.1, server: localhost, request: "GET / HTTP/1.1", host: "192.168.234.130"
+2018/04/16 10:02:07 [error] 5#5: *1 directory index of "/var/www/html/" is forbidden, client: 192.168.234.1, server: localhost, request: "GET / HTTP/1.1", host: "192.168.234.130"
+2018/04/16 10:02:07 [error] 5#5: *1 directory index of "/var/www/html/" is forbidden, client: 192.168.234.1, server: localhost, request: "GET / HTTP/1.1", host: "192.168.234.130"
+2018/04/16 10:02:07 [error] 5#5: *1 directory index of "/var/www/html/" is forbidden, client: 192.168.234.1, server: localhost, request: "GET / HTTP/1.1", host: "192.168.234.130"
+2018/04/16 10:02:08 [error] 5#5: *1 directory index of "/var/www/html/" is forbidden, client: 192.168.234.1, server: localhost, request: "GET / HTTP/1.1", host: "192.168.234.130"
+2018/04/17 01:15:33 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/04/17 01:16:16 [error] 5#5: *1 open() "/var/www/html/favicon.ico" failed (2: No such file or directory), client: 192.168.234.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "192.168.234.130"
+2018/04/17 04:03:38 [warn] 1#1: conflicting server name "localhost" on 0.0.0.0:80, ignored
+2018/04/17 04:03:46 [error] 5#5: *1 open() "/var/www/html/favicon.ico" failed (2: No such file or directory), client: 192.168.234.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "192.168.234.130:83"
+2018/04/17 04:03:46 [error] 5#5: *1 open() "/var/www/html/favicon.ico" failed (2: No such file or directory), client: 192.168.234.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "192.168.234.130:83"
