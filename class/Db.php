@@ -51,13 +51,13 @@ class Db
     public function where($where = [])
     {
         $this->where = $where;
+        $this->whereStr = '1 = 1';
 
         if(!empty($where)){
             foreach($where as $field => $value){
                 $this->whereStr .= " AND  `{$field}` = :{$field}";
             }
         }
-
         return $this;
     }
 
