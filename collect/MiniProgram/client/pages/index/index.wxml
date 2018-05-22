@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='header'>
+      <view class='city'>{{city}}</view>
+      <view class='date'>{{date}}</view>
+  </view>
+  <view class='body'>
+      <view class='weather' wx:for="{{weather}}" wx:for-item="n">
+        <view class='main'>
+          <view class='desc'>{{n.date}} {{n.high}}/{{n.low}} {{n.type}}</view>
+          <image class='img'  src="{{imageSrc[n.type]}}" mode="aspectFit" ></image>
+        </view>
+      </view>
+  </view>
+</view>

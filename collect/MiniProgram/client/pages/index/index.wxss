@@ -1,0 +1,59 @@
+/**index.wxss**/
+.container{
+  display: flex;
+  flex: row;
+  padding:0rpx;
+  box-sizing:border-box;
+  text-align: center;
+  background:#fbf9fe;
+}
+
+.header{
+  background:#fff;
+  width: 100%;
+}
+
+.city{
+  font-size: 50rpx;
+}
+
+.body{
+  width:100%;
+}
+
+.weather{
+  display: block;
+  margin:30rpx 0rpx;
+  height:150rpx;
+  width:100%;
+  text-align:center;
+}
+
+.weather .main{
+  display: flex;
+  flex-direction: row;
+  width:90%;
+  margin:0 5%;
+  background-color: #fff;
+  height:150rpx;
+  align-items:center;
+  font-size: 32rpx;
+  justify-content:space-around;
+}
+
+.weather .main .desc{
+  display:flex;
+  padding-left:8%;
+  width:150%;
+  box-sizing: border-box;
+  text-align: left;
+}
+.weather .main .img{
+  display:flex;
+  width:50%;
+  height:60%;
+  box-sizing: border-box;
+}
+
+
+

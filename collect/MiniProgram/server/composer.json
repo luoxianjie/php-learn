@@ -1,0 +1,25 @@
+{
+    "name": "jack/php",
+    "authors": [
+        {
+            "name": "luoxianjie",
+            "email": "jiexianluo@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "classmap":[
+            "class/Db.php",
+            "class/Config.php",
+            "class/File.php"
+        ],
+        "files":[
+            "function/functions.php"
+        ]
+    },
+    "require": {
+        "psr/log": "^1.0"
+    }
+}
+
+
+

@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/happy/happy"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weather Forecast",
+    "navigationBarTextStyle":"black",
+    "navigationStyle":"default",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"./images/home.png",
+        "selectedIconPath":"./images/home_hover.png"
+      },
+      {
+        "pagePath": "pages/happy/happy",
+        "text": "笑话",
+        "iconPath": "./images/happy.png",
+        "selectedIconPath": "./images/happy_hover.png"
+      }
+    ],
+    "networkTimeout": {
+      "request": 10000,
+      "downloadFile": 10000
+    },
+    "color":"#000000",
+    "borderStyle":"black",
+    "backgroundColor":"#eeeeee",
+    "selectedColor":"#ff0000",
+    "position":"bottom"
+  },
+  "debug":false
+}
