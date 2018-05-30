@@ -33,7 +33,7 @@
     "color":"#000000",
     "borderStyle":"black",
     "backgroundColor":"#eeeeee",
-    "selectedColor":"#ff0000",
+    "selectedColor":"#00ff00",
     "position":"bottom"
   },
   "debug":false

@@ -11,6 +11,8 @@ class Db
 {
 
     private static $_instance;
+    private $master_pdo;
+    private $slave_pdo;
     private $pdo;
     private $sql;
 
@@ -18,22 +20,126 @@ class Db
     private $where = [];
     private $whereStr = '1 = 1';
 
-    private function __construct()
+    /**
+     * 构造方法
+     * 初始化pdo
+     *
+     * Db constructor.
+     * @param array $config
+     */
+    private function __construct($config = [])
     {
-        $type = 'mysql';
-        $host = '127.0.0.1';
-        $dbname = 'test';
-        $user = 'root';
-        $passwd = '';
+        $this->_pdo($config);
+    }
+
+    /**
+     * 初始化pdo
+     * @param $config
+     */
+    public function _pdo($config)
+    {
+        if(isset($config['RW_SEP']) && $config['rw_sep'] === true){
+            $this->_initMaster($config);
+            $this->_initSlave($config);
+        }else{
+            $this->_initPDO($config);
+        }
+    }
+
+    /**
+     * 解析配置信息
+     * @param array $config
+     * @return array
+     */
+    private function _parseConfig($config = [])
+    {
+        $conf['type']     = 'mysql';
+        $conf['host']     = '127.0.0.1';
+        $conf['dbname']   = 'test';
+        $conf['user']     = 'root';
+        $conf['passwd']   = '';
+
+        $config = array_merge($conf,$config);
+        return  $config;
+    }
+
+    /**
+     * 无读写分离情况下初始化pdo
+     *
+     * @param array $config
+     * @param string $pdo
+     */
+    private function _initPDO($config = [],$pdo = 'pdo')
+    {
+        $config = $this->_parseConfig($config);
         try {
-            $this->pdo = new PDO("{$type}:host={$host};port=3306;dbname={$dbname};charset=utf8", $user, $passwd,[PDO::MYSQL_ATTR_INIT_COMMAND=>'SET NAMES utf8']);
-            $this->pdo->exec('set names utf8');
+            $this->$pdo = new PDO("{$config['type']}:host={$config['host']};port=3306;dbname={$config['dbname']};charset=utf8", $config['user'], $config['passwd'],[PDO::MYSQL_ATTR_INIT_COMMAND=>'SET NAMES utf8']);
+            $this->$pdo->exec('set names utf8');
         }catch (Exception $e){
             header('Content-type:text/html;charset=utf8');
             die($e->getMessage());
         }
     }
 
+    /**
+     * 初始化 奴隶数据库 pdo
+     *
+     * @param array $config
+     */
+    private function _initSlave($config = [])
+    {
+        if(isset($config['slave'])){
+            if(isset($config['slave']['host'])){
+                // 单主模式
+                $this->_initPDO($config['slave'],'slave_pdo');
+            }else{
+                // 多主模式
+
+                // 获取随机主机Id
+                $host_id = $this->_getRandHostId($config['slave']);
+                $this->_initPDO($config['slave'][$host_id], 'slave_pdo');
+            }
+        }
+    }
+
+    /**
+     * 初始化 主数据库 pdo
+     *
+     * @param array $config
+     */
+    private function _initMaster($config = [])
+    {
+        if(isset($config['master'])){
+            if(isset($config['master']['host'])){
+                // 单主模式
+                $this->_initPDO($config['master'],'master_pdo');
+            }else{
+                // 多主模式
+
+                // 获取随机主机Id
+                $host_id = $this->_getRandHostId($config['master']);
+                $this->_initPDO($config['master'][$host_id], 'master_pdo');
+            }
+        }
+    }
+
+    /**
+     * 多主机情况随机获取单个主机
+     *
+     * @param array $host
+     * @return int
+     */
+    private function _getRandHostId($host = [])
+    {
+        $count = count($host);
+        return mt_rand(0,$count-1);
+    }
+
+    /**
+     * 单例模式获取类实例
+     *
+     * @return Db|null
+     */
     public static function getInstance()
     {
         if(!self::$_instance instanceof self){
@@ -48,6 +154,12 @@ class Db
         die('cannot clone!');
     }
 
+    /**
+     * where 条件
+     *
+     * @param array $where
+     * @return $this
+     */
     public function where($where = [])
     {
         $this->where = $where;
@@ -61,6 +173,12 @@ class Db
         return $this;
     }
 
+    /**
+     * 指定数据表
+     *
+     * @param $table
+     * @return $this
+     */
     public function table($table)
     {
         $this->table = $table;
@@ -90,6 +208,11 @@ class Db
     }
 
 
+    /**
+     * 获取执行的sql
+     *
+     * @return mixed
+     */
     public function getLastSql()
     {
         return $this->sql;
@@ -238,6 +361,13 @@ class Db
         return $this->execute($bindData);
     }
 
+
+    /**
+     * 执行原生pdo
+     *
+     * @param $bindData
+     * @return int
+     */
     public function execute($bindData)
     {
         try{

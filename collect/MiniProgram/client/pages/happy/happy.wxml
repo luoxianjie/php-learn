@@ -1,4 +1,37 @@
 <!--pages/happy/happy.wxml-->
-<view class="container">
+<view class="container"  wx:for-items="{{data}}">
   
+  <view wx:if="{{item.single_mode}}" class="article_item_single_pic">
+    <view class="single_pic">
+       <image src='{{item.image_url}}' mode='aspectFill'></image>
+    </view>
+    <view class='single_content'>
+        <view class="single_title">{{item.title}}</view>
+        <view class='single_detail'>
+            <view class="single_tag" wx:if="{{item.source == '悟空问答'}}">悟</view>
+            <image class="single_tag" src="{{item.media_avatar_url}}"   wx:else></image>
+            <view class="single_from">{{item.source}}</view>·
+            <view class="single_comment">{{item.comments_count}}评论</view>·
+            <view class="single_time">{{item.publishTime}}</view>
+        </view>
+    </view>
+  </view>
+
+  <view class="article_item_mutiple_pic" wx:else>
+    <view class="mutiple_title">
+        <text>{{item.title}} </text>
+    </view>
+    <view class="mutiple_pic">
+       <image  src="{{item.image_list[0].url}}" mode='aspectFill'></image>
+       <image  src="{{item.image_list[1].url}}" mode='aspectFill'></image>
+       <image  src="{{item.image_list[2].url}}" mode='aspectFill'></image>
+    </view>
+    <view class='mutiple_detail'>
+        <view class="mutiple_tag" wx:if="{{item.source == '悟空问答'}}">悟</view>
+        <image class="mutiple_tag" src="{{item.media_avatar_url}}"   wx:else></image>
+        <view class="mutiple_from">{{item.source}}</view>·
+        <view class="mutiple_comment">{{item.comments_count}}评论</view>·
+        <view class="mutiple_time">{{item.publishTime}}</view>
+    </view>
+  </view>
 </view>
