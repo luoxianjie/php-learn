@@ -30,6 +30,7 @@
         ],
         "files":[
             "function/functions.php",
+            "function/Helper.php",
             "plugin/AliPay/AopSdk.php"
         ]
     },

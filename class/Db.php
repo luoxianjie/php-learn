@@ -38,7 +38,7 @@ class Db
      */
     public function _pdo($config)
     {
-        if(isset($config['RW_SEP']) && $config['rw_sep'] === true){
+        if(isset($config['rw_sep']) && $config['rw_sep'] === true){
             $this->_initMaster($config);
             $this->_initSlave($config);
         }else{
@@ -58,6 +58,7 @@ class Db
         $conf['dbname']   = 'test';
         $conf['user']     = 'root';
         $conf['passwd']   = '';
+        $conf['port']     = '3306';
 
         $config = array_merge($conf,$config);
         return  $config;
@@ -73,7 +74,7 @@ class Db
     {
         $config = $this->_parseConfig($config);
         try {
-            $this->$pdo = new PDO("{$config['type']}:host={$config['host']};port=3306;dbname={$config['dbname']};charset=utf8", $config['user'], $config['passwd'],[PDO::MYSQL_ATTR_INIT_COMMAND=>'SET NAMES utf8']);
+            $this->$pdo = new PDO("{$config['type']}:host={$config['host']};port={$config['port']};dbname={$config['dbname']};charset=utf8", $config['user'], $config['passwd'],[PDO::MYSQL_ATTR_INIT_COMMAND=>'SET NAMES utf8']);
             $this->$pdo->exec('set names utf8');
         }catch (Exception $e){
             header('Content-type:text/html;charset=utf8');
@@ -140,10 +141,10 @@ class Db
      *
      * @return Db|null
      */
-    public static function getInstance()
+    public static function getInstance($config = [])
     {
         if(!self::$_instance instanceof self){
-            self::$_instance = new self();
+            self::$_instance = new self($config);
         }
 
         return self::$_instance;
@@ -192,17 +193,14 @@ class Db
      */
     public function find()
     {
-        $this->sql = "SELECT * FROM `{$this->table}` WHERE {$this->whereStr}";
+        $sql = "SELECT * FROM `{$this->table}` WHERE {$this->whereStr}";
 
-        $sth = $this->pdo->prepare($this->sql);
         $bindData = [];
         foreach ($this->where as $field => $value) {
             $bindData[':'.$field] = $value;
         }
 
-        $sth->execute($bindData);
-
-        $result = $sth->fetch(PDO::FETCH_ASSOC);
+        $result = $this->query($sql,$bindData);
 
         return $result;
     }
@@ -225,18 +223,14 @@ class Db
      */
     public function select()
     {
-        $this->sql = "SELECT * FROM `{$this->table}` WHERE {$this->whereStr}";
+        $sql = "SELECT * FROM `{$this->table}` WHERE {$this->whereStr}";
 
-        $sth = $this->pdo->prepare($this->sql);
         $bindData = [];
         foreach ($this->where as $field => $value){
             $bindData[':'.$field] = $value;
         }
 
-        $sth->execute($bindData);
-
-        $result = $sth->fetchAll(PDO::FETCH_ASSOC);
-
+        $result = $this->query($sql,$bindData);
         return $result;
     }
 
@@ -247,10 +241,13 @@ class Db
      * @param $data sql语句中对应绑定的数据
      * @return array
      */
-    public function exec($sql, $data)
+    public function query($sql, $data = [])
     {
-        $this->sql = $sql;
+        if(!empty($this->slave_pdo)){
+            $this->pdo = $this->slave_pdo;
+        }
 
+        $this->sql = $sql;
         $sth = $this->pdo->prepare($sql);
         $sth->execute($data);
         $result = $sth->fetchAll(PDO::FETCH_ASSOC);
@@ -258,21 +255,6 @@ class Db
         return $result;
     }
 
-    /**
-     * $db->query('select * from test');
-     *
-     * @param $sql
-     * @return array
-     */
-    public function query($sql)
-    {
-        $this->sql = $sql;
-
-        $sth = $this->pdo->query($this->sql);
-        $result = $sth->fetchAll(PDO::FETCH_ASSOC);
-
-        return $result;
-    }
 
     /**
      * $db->table('test')->where(['id'=>10])->update(['sex'=>'female']);
@@ -370,6 +352,10 @@ class Db
      */
     public function execute($bindData)
     {
+        if(!empty($this->master_pdo)){
+            $this->pdo = $this->master_pdo;
+        }
+
         try{
             $sth = $this->pdo->prepare($this->sql);
             $sth->execute($bindData);
@@ -399,7 +385,7 @@ class Db
 //$res = $db->table('test')->where(['name'=>'tom'])->select();
 
 // 执行sql
-//$res = $db->exec('select * from test where id = :id',[':id'=>4]);
+//$res = $db->query('select * from test where id = :id',[':id'=>4]);
 //$res = $db->query('select * from test');
 
 //$sql = $db->getLastSql();

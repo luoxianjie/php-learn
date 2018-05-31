@@ -169,3 +169,13 @@ function stripPKSC7Padding($source){
     $source = substr($source,0,-$num);
     return $source;
 }
+
+
+function dd(...$args){
+    ob_clean();
+    echo "<pre>";
+    foreach ($args as $arg){
+        var_dump($arg);
+    }
+    die;
+}
