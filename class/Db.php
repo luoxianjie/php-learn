@@ -202,7 +202,11 @@ class Db
 
         $result = $this->query($sql,$bindData);
 
-        return $result;
+        if(is_array($result)){
+            return $result[0];
+        }
+
+        return null;
     }
 
 
