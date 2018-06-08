@@ -158,20 +158,6 @@ class InterfaceDoc
      */
     public static function parseComment($comment,$onlyTitle = false)
     {
-
-        $comment = <<<EOF
-    /**
-     * 取消订单
-     *
-     * api: POST /order/cancel
-     *
-     * @param id	  integer 订单ID
-     * @param reason  string 选择的原因
-     * @param content string 其他原因
-     */
-EOF;
-
-
         $title_pattern  = "/\*\s+([\x{4e00}-\x{9fa5}a-zA-Z0-9\(\)]+)\s+/u";
         $method_pattern = "/\*\s+api[:：]\s?(\w+)\s+/s";
         $url_pattern    = "/\*\s+api[:：]\s?\w+\s+([0-9a-z\/\_\-]+)\s+/s";
@@ -190,8 +176,6 @@ EOF;
         if($onlyTitle){
             return $title;
         }
-
-        var_dump($param);die;
 
         return ['title'=>$title,'method'=>$method,'url'=>$url,'param'=>$param];
     }
