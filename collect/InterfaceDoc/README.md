@@ -9,11 +9,11 @@ Node环境搭建（略），node环境搭建好后，进入Node目录 npm instal
 
 ### 生成html文件
 
-#### 打开Node目录，修改config.js文件中相应配置
+打开Node目录，修改config.js文件中相应配置
 
-#### 控制台进入Node目录，执行npm start 命令，将在项目根目录生成一个doc.html文件
+控制台进入Node目录，执行npm start 命令，将在项目根目录生成一个doc.html文件
 
-#### 打开浏览器输入上一步browsersync服务创建的local服务器地址，如http://192.168.13.55:3000
+打开浏览器输入上一步browsersync服务创建的local服务器地址，如http://192.168.13.55:3000
 
 ### 生成响应结果
 
