@@ -25,9 +25,9 @@ Node环境搭建（略），node环境搭建好后，进入Node目录 npm instal
 ```
 /Node/config.js 中 js_host 为browsersync服务创建的本地服务器ip地址，如192.168.13.55
 /Node/config.js 中 php_host 对应PHP处理程序服务器地址
-index.php 中 __INTERFACE_DIR__ 为接口所在目录路径
-index.php 中 __MARKDOWN__       为markdown文件路径
-index.php 中 __INTERFACE_URI__ 为要处理的接口地址
+/index.php 中 __INTERFACE_DIR__ 为接口所在目录路径
+/index.php 中 __MARKDOWN__       为markdown文件路径
+/index.php 中 __INTERFACE_URI__ 为要处理的接口地址
 ```
 
 
