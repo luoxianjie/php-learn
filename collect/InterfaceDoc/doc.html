@@ -1,0 +1,807 @@
+<!DOCTYPE html><html lang="en"><head>    <meta charset="UTF-8">    <title>Markdown to Html</title>    <link href="http://192.168.13.55:3000/json/s.css" type="text/css" rel="stylesheet"></link>    <link href="http://192.168.13.55:3000/stylesheets/index.css" type="text/css" rel="stylesheet"></link>    <script type="text/javascript" src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js" ></script>    <script type="text/javascript">        php_host = 'http://project.com';        js_host  = 'http://192.168.13.55';    </script></head><body>    <div class='btns'>        <input class='fl' id='keyword' type='text' placeholder='请输入接口地址或接口名称' />        <button class='fl' id='search'>搜索</button>        <button class='fr'id='refresh'>重新生成文档</button>    </div>    <div style='clear:both'></div>    <div class='vs'>     <h3 id="-">财务相关接口</h3>
+<h4 id="-">余额列表</h4>
+<p>接口地址: /finance/balance</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">offset</td>
+<td align="center">数据偏移量 （默认 0）</td>
+</tr>
+<tr>
+<td align="center">limit</td>
+<td align="center">数据返回限制条数（默认10，最大100）</td>
+</tr>
+<tr>
+<td align="center">order</td>
+<td align="center">数据排序（默认 ASC 正序，可选 DESC 倒序）</td>
+</tr>
+<tr>
+<td align="center">type</td>
+<td align="center">筛选类型，如0:全部,1:充值 2:退款 3:余额支付4:提现</td>
+</tr>
+<tr>
+<td align="center">begintime</td>
+<td align="center">起始时间  可选</td>
+</tr>
+<tr>
+<td align="center">endtime</td>
+<td align="center">结束时间  可选</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/finance/balance'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">提现列表</h4>
+<p>接口地址: /finance/earn</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">offset</td>
+<td align="center">数据偏移量 （默认 0）</td>
+</tr>
+<tr>
+<td align="center">limit</td>
+<td align="center">数据返回限制条数（默认10，最大100）</td>
+</tr>
+<tr>
+<td align="center">order</td>
+<td align="center">数据排序（默认 ASC 正序，可选 DESC 倒序）</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/finance/earn'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">提现操作</h4>
+<p>接口地址: /finance/cashout</p>
+<p>请求方式: POST</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">realname</td>
+<td align="center">收款人</td>
+</tr>
+<tr>
+<td align="center">bnum</td>
+<td align="center">账号</td>
+</tr>
+<tr>
+<td align="center">province</td>
+<td align="center">开户行省</td>
+</tr>
+<tr>
+<td align="center">city</td>
+<td align="center">开户行城市</td>
+</tr>
+<tr>
+<td align="center">bank</td>
+<td align="center">开户行详情</td>
+</tr>
+<tr>
+<td align="center">money</td>
+<td align="center">提现金额</td>
+</tr>
+<tr>
+<td align="center">note</td>
+<td align="center">备注</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='POST' data-url='/finance/cashout'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">获取省</h4>
+<p>接口地址: /finance/province</p>
+<p>请求方式: GET</p>
+<p>接口参数: 无</p>
+<div class='btn response-btn' data-method='GET' data-url='/finance/province'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">获取市</h4>
+<p>接口地址: /finance/city</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">province</td>
+<td align="center">省id</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/finance/city'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">发票列表</h4>
+<p>接口地址: /finance/invoice</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">offset</td>
+<td align="center">数据偏移量 （默认 0）</td>
+</tr>
+<tr>
+<td align="center">limit</td>
+<td align="center">数据返回限制条数（默认10，最大100）</td>
+</tr>
+<tr>
+<td align="center">type</td>
+<td align="center">发票类型  0:全部，1:增值发票，2:普通电子发票，3:不需要发票</td>
+</tr>
+<tr>
+<td align="center">status</td>
+<td align="center">发票状态  0:全部，1:未开票，2:待审核，3:待开票，4:已开票，5:作废</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/finance/invoice'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">发票详情</h4>
+<p>接口地址: /finance/invoice_detail</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">id</td>
+<td align="center">发票id</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/finance/invoice_detail'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">优惠券列表</h4>
+<p>接口地址: /finance/bonus</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">offset</td>
+<td align="center">数据偏移量 （默认 0）</td>
+</tr>
+<tr>
+<td align="center">limit</td>
+<td align="center">数据返回限制条数（默认10，最大100）</td>
+</tr>
+<tr>
+<td align="center">type</td>
+<td align="center">类型 0:全部，1:未使用，2:已使用，3:已过期</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/finance/bonus'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">积分列表</h4>
+<p>接口地址: /finance/score</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">offset</td>
+<td align="center">数据偏移量 （默认 0）</td>
+</tr>
+<tr>
+<td align="center">limit</td>
+<td align="center">数据返回限制条数（默认10，最大100）</td>
+</tr>
+<tr>
+<td align="center">type</td>
+<td align="center">类型 0:全部，1:获取记录，2:扣除记录</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/finance/score'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h3 id="-">默认控制器</h3>
+<h4 id="-">首页幻灯片</h4>
+<p>接口地址: /index/banner</p>
+<p>请求方式: GET</p>
+<p>接口参数: 无</p>
+<div class='btn response-btn' data-method='GET' data-url='/index/banner'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h3 id="-">订单相关接口</h3>
+<h4 id="-">订单列表</h4>
+<p>接口地址: /order/list</p>
+<p>请求方式: GET</p>
+<p>接口参数: 无</p>
+<div class='btn response-btn' data-method='GET' data-url='/order/list'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">删除订单</h4>
+<p>接口地址: /order/delete</p>
+<p>请求方式: GET</p>
+<p>接口参数: 无</p>
+<div class='btn response-btn' data-method='GET' data-url='/order/delete'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">订单详情</h4>
+<p>接口地址: /order/detail</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">id</td>
+<td align="center">订单ID</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/order/detail'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">取消订单</h4>
+<p>接口地址: /order/cancel</p>
+<p>请求方式: POST</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">id</td>
+<td align="center">integer 订单ID</td>
+</tr>
+<tr>
+<td align="center">reason</td>
+<td align="center">string  选择的原因</td>
+</tr>
+<tr>
+<td align="center">content</td>
+<td align="center">string  其他原因</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='POST' data-url='/order/cancel'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">返单列表</h4>
+<p>接口地址: /order/fandan</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">offset</td>
+<td align="center">数据偏移量 （默认 0）</td>
+</tr>
+<tr>
+<td align="center">limit</td>
+<td align="center">数据返回限制条数（默认10，最大100）</td>
+</tr>
+<tr>
+<td align="center">order</td>
+<td align="center">数据排序（默认 ASC 正序，可选 DESC 倒序）</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/order/fandan'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">返单详情</h4>
+<p>接口地址: /order/fandan_detail</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">id</td>
+<td align="center">integer    订单id</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/order/fandan_detail'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">退款列表</h4>
+<p>接口地址: /order/refund</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">offset</td>
+<td align="center">数据偏移量 （默认 0）</td>
+</tr>
+<tr>
+<td align="center">limit</td>
+<td align="center">数据返回限制条数（默认10，最大100）</td>
+</tr>
+<tr>
+<td align="center">order</td>
+<td align="center">数据排序（默认 ASC 正序，可选 DESC 倒序）</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/order/refund'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">订单收货地址</h4>
+<p>接口地址: /order/address</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">id</td>
+<td align="center">订单id</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/order/address'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">修改订单收货地址</h4>
+<p>接口地址: /order/address</p>
+<p>请求方式: POST</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">id</td>
+<td align="center">订单id</td>
+</tr>
+<tr>
+<td align="center">orderman</td>
+<td align="center">下单联系人</td>
+</tr>
+<tr>
+<td align="center">ordertel</td>
+<td align="center">下单联系人手机</td>
+</tr>
+<tr>
+<td align="center">recevman</td>
+<td align="center">收货人</td>
+</tr>
+<tr>
+<td align="center">recevtel</td>
+<td align="center">收货人手机</td>
+</tr>
+<tr>
+<td align="center">address</td>
+<td align="center">收货人地址</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='POST' data-url='/order/address'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h3 id="-">账号通道</h3>
+<h4 id="-code-">验证微信code信息</h4>
+<p>接口地址: /passport/auth</p>
+<p>请求方式: POST</p>
+<p>接口参数: 无</p>
+<div class='btn response-btn' data-method='POST' data-url='/passport/auth'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">登陆验证</h4>
+<p>接口地址: /passport/login</p>
+<p>请求方式: POST</p>
+<p>接口参数: 无</p>
+<div class='btn response-btn' data-method='POST' data-url='/passport/login'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h3 id="-">客户服务相关接口</h3>
+<h4 id="-">投诉列表</h4>
+<p>接口地址: /service/complaint</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">offset</td>
+<td align="center">数据偏移量 （默认 0）</td>
+</tr>
+<tr>
+<td align="center">limit</td>
+<td align="center">数据返回限制条数（默认10，最大100）</td>
+</tr>
+<tr>
+<td align="center">order</td>
+<td align="center">数据排序（默认 ASC 正序，可选 DESC 倒序）</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/service/complaint'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">提交投诉</h4>
+<p>接口地址: /service/complaint</p>
+<p>请求方式: POST</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">oid</td>
+<td align="center">订单号</td>
+</tr>
+<tr>
+<td align="center">subject</td>
+<td align="center">投诉主题</td>
+</tr>
+<tr>
+<td align="center">content</td>
+<td align="center">投诉内容</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='POST' data-url='/service/complaint'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">投诉详情</h4>
+<p>接口地址: /service/complaint_detail</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">id</td>
+<td align="center">投诉id主键</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/service/complaint_detail'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">删除投诉</h4>
+<p>接口地址: /service/complaint_delete</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">id</td>
+<td align="center">投诉id主键</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/service/complaint_delete'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">生产稿列表</h4>
+<p>接口地址: /service/pcbfile</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">offset</td>
+<td align="center">数据偏移量 （默认 0）</td>
+</tr>
+<tr>
+<td align="center">limit</td>
+<td align="center">数据返回限制条数（默认10，最大100）</td>
+</tr>
+<tr>
+<td align="center">order</td>
+<td align="center">数据排序（默认 ASC 正序，可选 DESC 倒序）</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/service/pcbfile'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">申请生产稿</h4>
+<p>接口地址: /service/pcbfile_apply</p>
+<p>请求方式: POST</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">id</td>
+<td align="center">生产稿id主键</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='POST' data-url='/service/pcbfile_apply'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h3 id="-">设置相关接口</h3>
+<h4 id="-">地址列表</h4>
+<p>接口地址: /setting/address</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">offset</td>
+<td align="center">数据偏移量 （默认 0）</td>
+</tr>
+<tr>
+<td align="center">limit</td>
+<td align="center">数据返回限制条数（默认10，最大100）</td>
+</tr>
+<tr>
+<td align="center">order</td>
+<td align="center">数据排序（默认 ASC 正序，可选 DESC 倒序）</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/setting/address'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">添加地址</h4>
+<p>接口地址: /setting/address</p>
+<p>请求方式: POST</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">orderman</td>
+<td align="center">下单人</td>
+</tr>
+<tr>
+<td align="center">ordertel</td>
+<td align="center">下单人电话</td>
+</tr>
+<tr>
+<td align="center">recevman</td>
+<td align="center">收货人</td>
+</tr>
+<tr>
+<td align="center">recevtel</td>
+<td align="center">电话</td>
+</tr>
+<tr>
+<td align="center">province</td>
+<td align="center">region_id</td>
+</tr>
+<tr>
+<td align="center">city</td>
+<td align="center">region_id</td>
+</tr>
+<tr>
+<td align="center">district</td>
+<td align="center">街道地址</td>
+</tr>
+<tr>
+<td align="center">extaddress</td>
+<td align="center">详细地址</td>
+</tr>
+<tr>
+<td align="center">shipping_id</td>
+<td align="center">快递</td>
+</tr>
+<tr>
+<td align="center">default</td>
+<td align="center">设为默认</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='POST' data-url='/setting/address'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">删除地址</h4>
+<p>接口地址: /setting/address_delete</p>
+<p>请求方式: GET</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">id</td>
+<td align="center">地址id</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='GET' data-url='/setting/address_delete'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">获取个人资料</h4>
+<p>接口地址: /setting/profile</p>
+<p>请求方式: GET</p>
+<p>接口参数: 无</p>
+<div class='btn response-btn' data-method='GET' data-url='/setting/profile'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+<h4 id="-">编辑个人资料</h4>
+<p>接口地址: /setting/profile</p>
+<p>请求方式: POST</p>
+<p>接口参数: </p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">realname</td>
+<td align="center">姓名</td>
+</tr>
+<tr>
+<td align="center">mobile</td>
+<td align="center">手机</td>
+</tr>
+<tr>
+<td align="center">telephone</td>
+<td align="center">固定电话</td>
+</tr>
+<tr>
+<td align="center">qq</td>
+<td align="center">qq</td>
+</tr>
+<tr>
+<td align="center">company_type</td>
+<td align="center">企业类型</td>
+</tr>
+<tr>
+<td align="center">job_type</td>
+<td align="center">工作性质</td>
+</tr>
+</tbody></table>
+<div class='btn response-btn' data-method='POST' data-url='/setting/profile'>输入参数生成响应</div>
+
+<div class='response-area'></div>
+
+
+    </div>    <script type="text/javascript" src="http://192.168.13.55:3000/json/c.js" ></script>    <script type="text/javascript">    $(function(){        // 重新生成md文档        $('#refresh').click(function(){            $(this).html('正在更新，请稍后！')            $(this).attr('disabled','disabled');            var that = $(this);            $.get(                php_host,                {},                function(rsp){                     that.html('重新生成文档！')                     that.attr('disabled',false);                },                'json'            );        });        // 搜索        $('#search').click(function(){            $(this).html('正在搜索，请稍后！')            $(this).attr('disabled','disabled');            var that = $(this);            $.get(                php_host,                {keyword:$('#keyword').val()},                function(rsp){                     that.html('搜索！')                     that.attr('disabled',false);                },                'json'            );        });        // 生成单个接口响应        $('.response-btn').click(function(){            $(this).html('点击获取响应结果');            var paramTable = $(this).prev('table');            // 若接口无参数则直接请求接口返回响应结果            // 若已显示输入参数框，则直接请求接口            var hasInput = paramTable.find('tbody tr').eq(0).find('td').length;            if(paramTable.length==0 || hasInput == 3){                var data = {};                paramTable.find('input').each(function(k,v){                    var key = $(this).attr('name');                    var value = $(this).val();                    data[key] = value;                })                data['url'] = $(this).attr('data-url');                data['method'] = $(this).attr('data-method');                var responseArea = $(this).next('.response-area');                responseArea.empty();                $.post(                    php_host+"?act=getResponse",                    data,                    function(rsp){                        parseJson(JSON.stringify(rsp),responseArea);                    },                    'json'                );                return false;            }            // 显示参数输入框            paramTable.find('thead tr').each(function(){                $(this).append('<th>请输入参数</th>');            });            paramTable.find('tbody tr').each(function(){                var name = $(this).find('td').eq(0).html();                $(this).append('<td><input type="text" style="border:0;background:none;" name='+ name +' /></td>');            });        });    })    </script></body></html>

@@ -1,0 +1,50 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.btns{
+  width: 500px;
+}
+
+.fl{
+  float:left;
+}
+
+.fr{
+  float:right;
+}
+
+input{
+  padding:5px 10px;
+  border:1px solid #ccc;
+  height:18px;
+  margin-right:15px;
+}
+
+button,.btn{
+  display: inline-block;
+  padding:5px 10px;
+  border:1px solid #ccc;
+  vertical-align: middle;
+  background: #eee;
+  cursor: pointer;
+}
+.btn{
+  margin:10px 0;
+}
+table{
+  border:1px solid #ccc;
+  border-collapse:collapse;
+  min-width: 500px;
+}
+
+table tr td,table tr th{
+  border:1px solid #ccc;
+  min-height: 30px;
+  line-height: 30px;
+}
+
+table tr:nth-child(2n){
+  background: #eee;
+}
