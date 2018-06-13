@@ -19,9 +19,9 @@ router.get('/', function(req, res, next) {
     const template = fs.readFileSync('views/index.ejs',{encoding:"utf-8"});
 
     // php处理请求地址
-    const php_host = config.php_host || 'http://project.com';
+    const php_host = config.php_host || 'http://127.0.0.1:80';
     // js前台文件同步地址
-    const js_host  = config.js_host || 'http://192.168.13.55';
+    const js_host  = config.js_host || 'http://127.0.0.1:3000';
 
     //通过browser-sync创建一个文件服务器
     browserSync({

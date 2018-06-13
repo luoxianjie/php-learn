@@ -1,6 +1,6 @@
 ﻿window.SINGLE_TAB = "  ";
-window.ImgCollapsed = js_host+":3000/json/Collapsed.gif";
-window.ImgExpanded =  js_host+":3000/json/Expanded.gif";
+window.ImgCollapsed = js_host+"/json/Collapsed.gif";
+window.ImgExpanded =  js_host+"/json/Expanded.gif";
 window.QuoteKeys = true;
 function IsArray(obj) {
   return  obj && 
