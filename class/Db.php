@@ -372,7 +372,23 @@ class Db
 }
 
 
-//$db = Db::getInstance();
+// 多数据库配置
+/*$config = [
+    'rw_sep'    => true,
+    'slave'     =>[
+        ['type'=>'mysql','host'=>'192.168.234.130','dbname'=>'test','user'=>'root','passwd'=>'123456','port'=>'3308'],
+        ['type'=>'mysql','host'=>'192.168.234.130','dbname'=>'test','user'=>'root','passwd'=>'123456','port'=>'3309'],
+    ],
+    'master'    =>[
+        ['type'=>'mysql','host'=>'192.168.234.130','dbname'=>'test','user'=>'root','passwd'=>'123456','port'=>'3306'],
+        ['type'=>'mysql','host'=>'192.168.234.130','dbname'=>'test','user'=>'root','passwd'=>'123456','port'=>'3307'],
+    ]
+];*/
+
+// 单数据库配置
+//$config = ['type'=>'mysql','host'=>'192.168.234.130','dbname'=>'test','user'=>'root','passwd'=>'123456','port'=>'3306'];
+
+//$db = Db::getInstance($config);
 
 // 增
 //$db->table('test')->insert(['sex'=>'male','name'=>'tom']);
