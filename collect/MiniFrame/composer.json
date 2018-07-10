@@ -1,0 +1,12 @@
+{
+    "name": "jack/project",
+    "authors": [
+        {
+            "name": "luoxianjie",
+            "email": "jiexianluo@hotmail.com"
+        }
+    ],
+    "require": {
+        "elasticsearch/elasticsearch": "^5.3"
+    }
+}

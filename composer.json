@@ -35,9 +35,7 @@
         ]
     },
     "require": {
-        "psr/log": "^1.0"
+        "psr/log": "^1.0",
+        "elasticsearch/elasticsearch": "^5.3"
     }
 }
-
-
-
