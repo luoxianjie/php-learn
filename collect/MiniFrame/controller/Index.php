@@ -5,10 +5,7 @@ namespace controller;
 // | Date  : 2018/6/22
 // | Time  : 9:53
 // +----------------------------------------------------------------------
-
-
 use mini\Controller;
-use mini\DB;
 use model\User;
 
 class Index extends Controller

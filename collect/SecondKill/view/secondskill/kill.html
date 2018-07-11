@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>秒杀系统</title>
+  <script type="text/javascript" src="https://cdn.bootcss.com/zepto/1.2.0/zepto.min.js"></script>
+  <style>
+       *{padding:0;margin:0;}
+       #warp{width:50%;min-height:320px;border:1px solid #ccc;margin:0 auto;}
+       h2{text-align: right;height:40px;line-height: 40px;}
+       h2 a{margin-right: 18px;}
+       h2 span{float: left;margin-left: 16px;}
+       ul{list-style: none;display:flex;flex-direction:row;}
+       ul li{width:25%;min-height:200px;display: inline-block;text-align: center;}
+       ul li img{width:100%;}
+       ul li input[type=submit]{cursor: not-allowed;}
+       
+  </style>
+</head>
+<body>
+    <div id="warp">
+    <h2><span>hi!<?php echo session('nickname');?></span><a href="/secondskill/logout">退出</a></h2>
+    <ul>
+        <li>
+            <form action="/secondskill/kill" method="post">
+                <input name="id" type="hidden" value="1">
+                <img src="https://7nsts.w3cschool.cn/images/w3c/w3cschool.png" />
+                <input type="submit" disabled="disabled" value="立即购买"/>
+            </form>
+        </li>
+        <li>
+            <form action="/secondskill/kill" method="post">
+                <input name="id" type="hidden" value="2">
+                <img src="https://7nsts.w3cschool.cn/images/w3c/w3cschool.png" />
+                <input type="submit" disabled="disabled" value="立即购买"/>
+            </form>
+        </li>
+        <li>
+            <form action="/secondskill/kill" method="post">
+                <input name="id" type="hidden" value="3">
+                <img src="https://7nsts.w3cschool.cn/images/w3c/w3cschool.png" />
+                <input type="submit" disabled="disabled" value="立即购买"/>
+            </form>
+        </li>
+        <li>
+            <form action="/secondskill/kill" method="post">
+                <input name="id" type="hidden" value="4">
+                <img src="https://7nsts.w3cschool.cn/images/w3c/w3cschool.png" />
+                <input type="submit" disabled="disabled" value="立即购买"/>
+            </form>
+        </li>
+    </ul>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+           var submitFlag = true;
+           var startTime = new Date(Date.parse("2018/07/11 18:00:00"));
+           var now = new Date();
+
+           if(startTime<now){
+              $('input[type=submit]').removeAttr('disabled');
+              $('input[type=submit]').css('cursor','pointer');
+           }
+           
+           $('form').submit(function() {
+             if(submitFlag == true){
+               submitFlag = false;
+               $('input[type=submit]').attr('disabled','disabled');
+               $('input[type=submit]').css('cursor','not-allowed');
+               return true;
+             }
+             return false;
+           });
+        });
+    </script>
+</body>
+</html>
