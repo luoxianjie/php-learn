@@ -73,7 +73,7 @@ class DB
     {
         $config = $this->_parseConfig($config);
         try {
-            $this->pdo = new \PDO("{$config['type']}:host={$config['host']};port={$config['port']};dbname={$config['dbname']};charset=utf8", $config['user'], $config['passwd'],[\PDO::MYSQL_ATTR_INIT_COMMAND=>'SET NAMES utf8']);
+            $this->pdo = new \PDO("{$config['type']}:host={$config['host']};port={$config['port']};dbname={$config['dbname']};charset=utf8", $config['user'], $config['passwd']);
             $this->pdo->exec('set names utf8');
         }catch (\Exception $e){
             header('Content-type:text/html;charset=utf8');

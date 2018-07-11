@@ -17,12 +17,14 @@ class Controller
 
     protected function success($msg,$url = '')
     {
-        $this->_jump($msg,$_SERVER['HTTP_REFERER']);
+        if(empty($url)) $url = $_SERVER['HTTP_REFERER'];
+        $this->_jump($msg,$url);
     }
 
     protected function error($msg,$url = '')
     {
-        $this->_jump($msg,$_SERVER['HTTP_REFERER']);
+        if(empty($url)) $url = $_SERVER['HTTP_REFERER'];
+        $this->_jump($msg,$url);
     }
 
     private function _jump($msg,$url)
@@ -42,5 +44,10 @@ class Controller
     protected function display($template = '')
     {
         $this->view->display($template);
+    }
+
+    public function __call($name, $arguments)
+    {
+        $this->display($name);
     }
 }

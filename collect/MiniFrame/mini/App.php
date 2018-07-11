@@ -1,6 +1,9 @@
 <?php
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 define("__ROOT__",dirname(__DIR__));
+session_start();
+date_default_timezone_set('Asia/shanghai');
+
 class App
 {
     /**

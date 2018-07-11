@@ -22,7 +22,7 @@ class View
         }
         ob_start();
         ob_implicit_flush(1);
-        extract($this->var);
+        if(!empty($this->var)) extract($this->var);
         require $template;
         $content = ob_get_clean();
         header('Content-Type:text/html; charset=utf8');
