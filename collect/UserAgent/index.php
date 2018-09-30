@@ -42,19 +42,19 @@ class Form
      */
     public function deal()
     {
-        $firstName = isset($_POST['firstName'])?addslashes(trim($_POST['firstName'])):null;
-        $lastName = isset($_POST['lastName'])?addslashes(trim($_POST['lastName'])):null;
-        $busPhone = isset($_POST['busPhone'])?addslashes(trim($_POST['busPhone'])):null;
-        $emailAddress = isset($_POST['emailAddress'])?addslashes(trim($_POST['emailAddress'])):null;
-        $company = isset($_POST['company'])?addslashes(trim($_POST['company'])):null;
-        $jobRole1 = isset($_POST['jobRole1'])?addslashes(trim($_POST['jobRole1'])):null;
-        $industry1 = isset($_POST['industry1'])?addslashes(trim($_POST['industry1'])):null;
-        $country = isset($_POST['country'])?addslashes(trim($_POST['country'])):null;
-        $stateProv = isset($_POST['stateProv'])?addslashes(trim($_POST['stateProv'])):null;
-        $city = isset($_POST['city'])?addslashes(trim($_POST['city'])):null;
-        $address1 = isset($_POST['address1'])?addslashes(trim($_POST['address1'])):null;
-        $description = isset($_POST['description'])?addslashes(trim($_POST['description'])):null;
-        $from = isset($_POST['from'])?addslashes(trim($_POST['from'])):null;
+        $firstName = isset($_POST['firstName'])?htmlspecialchars(trim($_POST['firstName'])):null;
+        $lastName = isset($_POST['lastName'])?htmlspecialchars(trim($_POST['lastName'])):null;
+        $busPhone = isset($_POST['busPhone'])?htmlspecialchars(trim($_POST['busPhone'])):null;
+        $emailAddress = isset($_POST['emailAddress'])?htmlspecialchars(trim($_POST['emailAddress'])):null;
+        $company = isset($_POST['company'])?htmlspecialchars(trim($_POST['company'])):null;
+        $jobRole1 = isset($_POST['jobRole1'])?htmlspecialchars(trim($_POST['jobRole1'])):null;
+        $industry1 = isset($_POST['industry1'])?htmlspecialchars(trim($_POST['industry1'])):null;
+        $country = isset($_POST['country'])?htmlspecialchars(trim($_POST['country'])):null;
+        $stateProv = isset($_POST['stateProv'])?htmlspecialchars(trim($_POST['stateProv'])):null;
+        $city = isset($_POST['city'])?htmlspecialchars(trim($_POST['city'])):null;
+        $address1 = isset($_POST['address1'])?htmlspecialchars(trim($_POST['address1'])):null;
+        $description = isset($_POST['description'])?htmlspecialchars(trim($_POST['description'])):null;
+        $from = isset($_POST['from'])?htmlspecialchars(trim($_POST['from'])):null;
 
         $dUNSConfidence1 = '';
         $dUNSNumber1 = '';
