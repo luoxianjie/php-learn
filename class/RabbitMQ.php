@@ -42,21 +42,15 @@ class RabbitMQ
      */
     public function __construct($config = [])
     {
-        $conf = [
-            'host'  => $this->host,
-            'port'  => $this->port,
-            'login' => $this->login,
-            'password'  => $this->password,
-            'vhost' => $this->vhost
-        ];
-        $config = array_merge($conf,$config);
+        $conf = ['host' => $this->host, 'port' => $this->port, 'login' => $this->login, 'password' => $this->password, 'vhost' => $this->vhost];
+        $config = array_merge($conf, $config);
         try {
             $this->conn = new AMQPConnection($config);
             // 建立连接
             if (!$this->conn->connect()) {
                 die('Cannot connect to the borker!');
             }
-        }catch (Exception $e){
+        } catch (Exception $e) {
             die($e->getMessage());
         }
     }
@@ -65,7 +59,8 @@ class RabbitMQ
     /**
      * 生产者
      */
-    public function publish($message,$queue_name = ''){
+    public function publish($message, $queue_name = '')
+    {
         $exchange_name = $this->exchange_name;
         $route_key = $this->route_key;
 
@@ -78,8 +73,8 @@ class RabbitMQ
             $exchange->setName($exchange_name);
 
             // 发布消息
-            $exchange->publish($message,$route_key);
-        }catch (Exception $e){
+            $exchange->publish($message, $route_key);
+        } catch (Exception $e) {
             die($e->getMessage());
         }
     }
@@ -87,7 +82,8 @@ class RabbitMQ
     /**
      * 消费者
      */
-    public function consume($queue_name){
+    public function consume($queue_name)
+    {
         $exchange_name = $this->exchange_name;
         $route_key = $this->route_key;
         // 创建通道
@@ -110,10 +106,10 @@ class RabbitMQ
         // 声明队列
         $queue->declareQueue();
         // 绑定交换机与路由
-        $queue->bind($exchange_name,$route_key);
-        while (true){
+        $queue->bind($exchange_name, $route_key);
+        while (true) {
             // 获取队列消息，并处理
-            $queue->consume(function ($envelope, $queue){
+            $queue->consume(function ($envelope, $queue) {
                 // 获取消息
                 $msg = $envelope->getBody();
                 var_dump(" [x] Received:" . $msg);
@@ -121,7 +117,7 @@ class RabbitMQ
                 $queue->ack($envelope->getDeliveryTag());
             });
             // 当有任务在处理时，不再接受消息
-            $channel->qos(0,1);
+            $channel->qos(0, 1);
         }
     }
 }
